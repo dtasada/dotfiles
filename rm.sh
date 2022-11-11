@@ -1,0 +1,10 @@
+rm ./.config/shell/.oh-my-zsh/plugins/per-directory-history/per-directory-history.plugin.zsh
+rm ./.config/shell/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/highlighters/regexp/README.md
+rm ./.config/shell/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/highlighters/root/README.md
+rm ./.config/shell/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/highlighters/line/README.md
+rm ./.config/shell/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/highlighters/main/README.md
+rm ./.config/shell/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/highlighters/pattern/README.md
+rm ./.config/shell/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/highlighters/brackets/README.md
+rm ./.config/shell/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/highlighters/cursor/README.md
+rm ./.config/shell/.oh-my-zsh/themes/dracula.zsh-theme
+rm ./.config/shell/.oh-my-zsh/themes/macovsky-ruby.zsh-theme
