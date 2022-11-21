@@ -108,7 +108,8 @@ bindsym $mod+r mode "resize"
 ######################################
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Shift+Return exec alacritty
+bindsym $mod+Return exec i3-msg workspace 2:dev; exec alacritty
 
 # kill focused window
 bindsym $mod+q kill
@@ -123,7 +124,7 @@ bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu
 bindsym $mod+o exec ~/.config/i3/scripts/blur-lock
 
 # reload the configuration file
-#bindsym $mod+Shift+c reload
+bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to update i3)
 bindsym $mod+Shift+r restart
@@ -186,7 +187,7 @@ bindsym $mod+space focus mode_toggle
 #bindsym $mod+n focus parent
 
 # open new empty workspace
-bindsym $mod+n exec ~/.config/i3/scripts/empty_workspace
+#bindsym $mod+n exec ~/.config/i3/scripts/empty_workspace
 
 # Multimedia Keys
 
@@ -211,7 +212,8 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+p exec /usr/local/bin/switch-audio-port
 
 ## App shortcuts
-bindsym $mod+f exec firefox
+bindsym $mod+f workspace $ws1; exec firefox
+bindsym $mod+Shift+f exec firefox
 bindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
 # Power Profiles menu switcher (rofi)
@@ -246,9 +248,8 @@ set $ws9 "9"
 set $ws10 "10"
 
 # bind program to workspace and focus to them on startup:
-assign [class="firefox"] $ws1
-assign [class="/usr/bin/alacritty"] $ws2
-assign [class="/var/lib/flatpak/exports/share/applications/com.visualstudio.code.desktop"] $ws2
+#assign [class="firefox"] $ws1
+#assign [class="Alacritty"] $ws2
 assign [class="Thunar"] $ws3
 assign [class="geary"] $ws4
 assign [class="discord"] $ws4
@@ -258,7 +259,7 @@ assign [class="spt"] $ws6
 
 # automatic set focus new window if it opens on another workspace then the current:
 for_window [class=firefox] focus
-for_window [class=alacritty] focus
+for_window [class=Alacritty] focus
 for_window [class=Thunar] focus
 for_window [class=geary] focus
 for_window [class=dolphin] focus
@@ -383,13 +384,15 @@ bindsym $mod+t exec rofi -show window \
 
 #Autostart
 exec_always --no-startup-id rclone --vfs-cache-mode writes mount "OneDrive": ~/OneDrive
-exec nitrogen --restore
-bindsym $mod+e exec --no-startup-id alacritty -e /usr/bin/ranger ~/
-bindsym $mod+c exec emacs
-exec firefox
-exec mount.cifs //192.168.0.100/Public ~/WDMyCloud/ -o credentials=/home/dt/.credentials
-#exec --no-startup-id shutter
-bindsym $mod+Shift+s exec shutter -s
 exec_always spotifyd
-exec --no-startup-id ~/startup.sh
+exec_always nm-applet
+exec_always blueman-applet
+exec_always ~/.config/i3/current-workspace.sh
 exec sudo pacman -S Syyu
+exec nitrogen --restore
+exec --no-startup-id ~/startup.sh
+exec mount.cifs //192.168.0.100/Public ~/WDMyCloud/ -o credentials=/home/dt/.credentials
+bindsym $mod+Shift+s exec shutter -s
+bindsym $mod+m exec alacritty -e spt
+bindsym $mod+e exec --no-startup-id alacritty -e /usr/bin/ranger ~/
+bindsym $mod+n exec xfce4-terminal -e nmtui

@@ -88,13 +88,6 @@ source /home/dt/.config/shell/.oh-my-zsh/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -103,30 +96,35 @@ source /home/dt/.config/shell/.oh-my-zsh/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
+if [[ $(pwd) == "$HOME"* ]]; then
+	alias v='vim'
+else
+	alias v='sudo vim'
+fi
+
+alias ls='exa -l --icons --color=always --group-directories-first'
+alias la='exa -la --icons --color=always --group-directories-first'
+alias ld='exa -D --icons --color=always --group-directories-first'
+alias lg='exa -G --icons --color=always --group-directories-first'
+alias lt='exa -T --icons --color=always --group-directories-first'
+
 alias s='sudo pacman -S'
 alias ss='pacman -Ss'
 alias syu='sudo pacman -Syyu'
+alias rns='sudo pacman -Rns'
 alias ys='yay -S'
 alias yss='yay -Ss'
 alias fs='flatpak install'
 alias fss='flatpak search'
-alias ls='exa -al --icons --no-time --no-user --color=always --group-directories-first'
-alias ld='exa -D --icons --no-time --no-user --color=always --group-directories-first'
-alias lg='exa -Ga --icons --no-time --no-user --color=always --group-directories-first'
-alias lt='exa -Ta --icons --no-time --no-user --color=always --group-directories-first'
 alias cpa='cp'
 alias v='vim'
 alias sv='sudo vim'
-alias w='cd ~/Downloads'
+alias dw='cd ~/Downloads'
 alias od='cd ~/OneDrive && ls'
 alias ..='cd ..'
 alias cfgi3='vim ~/.config/i3/config'
@@ -136,10 +134,8 @@ alias downsh='cp ~/OneDrive/Personal/dotfiles/.zshrc ~/'
 alias backi3='cpa ~/.config/i3/config ~/OneDrive/Personal/dotfiles/new/i3/'
 alias downi3='cpa ~/OneDrive/Personal/dotfiles/new/i3/config ~/.config/i3/'
 alias cl='clear'
-alias find='sudo find / | grep '
 set fish_greeting
 export EDITOR=vim
-#~/git/fm6000/fm6000.pl -c random -r 
 pfetch
 
 #For plugins:
