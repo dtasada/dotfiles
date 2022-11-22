@@ -250,7 +250,7 @@ set $ws10 "10"
 # bind program to workspace and focus to them on startup:
 #assign [class="firefox"] $ws1
 #assign [class="Alacritty"] $ws2
-assign [class="Thunar"] $ws3
+#assign [class="Thunar"] $ws3
 assign [class="geary"] $ws4
 assign [class="discord"] $ws4
 assign [class="dolphin"] $ws5
@@ -394,5 +394,6 @@ exec --no-startup-id ~/startup.sh
 exec mount.cifs //192.168.0.100/Public ~/WDMyCloud/ -o credentials=/home/dt/.credentials
 bindsym $mod+Shift+s exec shutter -s
 bindsym $mod+m exec alacritty -e spt
-bindsym $mod+e exec --no-startup-id alacritty -e /usr/bin/ranger ~/
+bindsym $mod+w workspace $ws3; exec thunar
+bindsym $mod+Shift+w exec thunar
 bindsym $mod+n exec xfce4-terminal -e nmtui
