@@ -99,6 +99,10 @@ source /home/dt/.config/shell/.oh-my-zsh/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+command_exists () {
+	type "$1" &> /dev/null ;
+}
+
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 if [[ $(pwd) == "$HOME"* ]]; then
@@ -107,18 +111,36 @@ else
 	alias v='sudo vim'
 fi
 
+if command_exists pacman ; then
+	alias s='sudo pacman -S'
+	alias ss='pacman -Ss'
+	alias syu='sudo pacman -Syyu'
+	alias rns='sudo pacman -Rns'
+	alias ys='yay -S'
+	alias yss='yay -Ss'
+fi
+
+if command_exists nala ; then
+	alias s='sudo nala install'
+	alias ss='nala search'
+	alias syu='sudo nala update'
+	alias rns='sudo nala remove'
+fi
+
+if command_exists dnf ; then
+	alias s='sudo dnf install'
+	alias ss='dnf search'
+	alias syu='sudo dnf update'
+	alias rns='sudo dnf remove'
+fi
+
+
 alias ls='exa -l --icons --color=always --group-directories-first'
 alias la='exa -la --icons --color=always --group-directories-first'
 alias ld='exa -D --icons --color=always --group-directories-first'
 alias lg='exa -G --icons --color=always --group-directories-first'
 alias lt='exa -T --icons --color=always --group-directories-first'
 
-alias s='sudo pacman -S'
-alias ss='pacman -Ss'
-alias syu='sudo pacman -Syyu'
-alias rns='sudo pacman -Rns'
-alias ys='yay -S'
-alias yss='yay -Ss'
 alias fs='flatpak install'
 alias fss='flatpak search'
 alias cpa='cp'
@@ -134,7 +156,7 @@ alias downsh='cp ~/OneDrive/Personal/dotfiles/.zshrc ~/'
 alias backi3='cpa ~/.config/i3/config ~/OneDrive/Personal/dotfiles/new/i3/'
 alias downi3='cpa ~/OneDrive/Personal/dotfiles/new/i3/config ~/.config/i3/'
 alias cl='clear'
-set fish_greeting
+alias push='git commit -am "$(read commitmsg)" && git push origin main'
 export EDITOR=vim
 pfetch
 

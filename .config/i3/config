@@ -251,6 +251,7 @@ set $ws10 "10"
 #assign [class="firefox"] $ws1
 #assign [class="Alacritty"] $ws2
 #assign [class="Thunar"] $ws3
+assign [class="/usr/lib/libre*"] $ws3]
 assign [class="geary"] $ws4
 assign [class="discord"] $ws4
 assign [class="dolphin"] $ws5
@@ -385,6 +386,7 @@ bindsym $mod+t exec rofi -show window \
 #Autostart
 exec_always --no-startup-id rclone --vfs-cache-mode writes mount "OneDrive": ~/OneDrive
 exec_always spotifyd
+exec_always picom
 exec_always nm-applet
 exec_always blueman-applet
 exec_always ~/.config/i3/current-workspace.sh
@@ -397,3 +399,4 @@ bindsym $mod+m exec alacritty -e spt
 bindsym $mod+w workspace $ws3; exec thunar
 bindsym $mod+Shift+w exec thunar
 bindsym $mod+n exec xfce4-terminal -e nmtui
+
