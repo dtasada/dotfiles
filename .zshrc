@@ -156,7 +156,7 @@ alias downsh='cp ~/OneDrive/Personal/dotfiles/.zshrc ~/'
 alias backi3='cpa ~/.config/i3/config ~/OneDrive/Personal/dotfiles/new/i3/'
 alias downi3='cpa ~/OneDrive/Personal/dotfiles/new/i3/config ~/.config/i3/'
 alias cl='clear'
-alias push='git commit -am "$(read commitmsg)" && git push origin main'
+alias push='~/.gitpush.sh'
 export EDITOR=vim
 pfetch
 
