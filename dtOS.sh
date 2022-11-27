@@ -4,35 +4,35 @@ command_exists () {
 	type "$1" &> /dev/null ;
 }
 
-if command_exists pacman ; then
-	alias s='sudo pacman -S'
-	alias ss='pacman -Ss'
-	alias syu='sudo pacman -Syyu'
-	alias rns='sudo pacman -Rns'
-	alias ys='yay -S'
-	alias yss='yay -Ss'
-fi
+#if command_exists pacman ; then
+#	alias s='sudo pacman -S'
+#	alias ss='pacman -Ss'
+#	alias syu='sudo pacman -Syyu'
+#	alias rns='sudo pacman -Rns'
+#	alias ys='yay -S'
+#	alias yss='yay -Ss'
+#fi
 
-if command_exists nala ; then
-	alias s='sudo nala install'
-	alias ss='nala search'
-	alias syu='sudo nala update'
-	alias rns='sudo nala remove'
-fi
+#if command_exists nala ; then
+#	alias s='sudo nala install'
+#	alias ss='nala search'
+#	alias syu='sudo nala update'
+#	alias rns='sudo nala remove'
+#fi
 
-if command_exists dnf ; then
-	alias s='sudo dnf install'
-	alias ss='dnf search'
-	alias syu='sudo dnf update'
-	alias rns='sudo dnf remove'
-fi
+#if command_exists dnf ; then
+#	alias s='sudo dnf install'
+#	alias ss='dnf search'
+#	alias syu='sudo dnf update'
+#	alias rns='sudo dnf remove'
+#fi
 
 ### SETTING UP BASE PROGRAMS ###
 
-apt update && apt upgrade
-apt install nala
-syu
-s zsh make vim exa ranger rclone alacritty firefox
+sudo apt update && apt upgrade && sudo apt install nala
+nala install zsh make vim exa ranger rclone alacritty firefox
+dnf install zsh make vim exa ranger rclone alacritty firefox
+pacman -S zsh make vim exa ranger rclone alacritty firefox
 
 ### SETTING UP ZSH CONFIG ###
 
