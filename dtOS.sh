@@ -15,3 +15,10 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/dylanaraps/pfetch ~/git/
 
+cp .gitpush.sh ~/
+cp .p10k.zsh ~/
+cp .vimrc ~/
+cp .zshrc ~/
+cp startup.sh ~/
+cp -r .vim ~/
+cp -r .config/* ~/.config/
