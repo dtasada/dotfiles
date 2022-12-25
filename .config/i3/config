@@ -251,7 +251,7 @@ set $ws10 "10"
 #assign [class="firefox"] $ws1
 #assign [class="Alacritty"] $ws2
 #assign [class="Thunar"] $ws3
-assign [class="/usr/lib/libre*"] $ws3]
+#assign [class="/usr/lib/libre*"] $ws3]
 assign [class="geary"] $ws4
 assign [class="discord"] $ws4
 assign [class="dolphin"] $ws5
@@ -390,6 +390,7 @@ exec_always picom
 exec_always nm-applet
 exec_always blueman-applet
 exec_always ~/.config/i3/current-workspace.sh
+exec_always /usr/bin/emacs --daemon
 exec sudo pacman -S Syyu
 exec nitrogen --restore
 exec --no-startup-id ~/startup.sh
@@ -399,4 +400,4 @@ bindsym $mod+m exec alacritty -e spt
 bindsym $mod+w workspace $ws3; exec thunar
 bindsym $mod+Shift+w exec thunar
 bindsym $mod+n exec xfce4-terminal -e nmtui
-
+bindsym $mod+c exec emacsclient -c -a 'emacs'
