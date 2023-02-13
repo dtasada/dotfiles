@@ -112,12 +112,10 @@ else
 fi
 
 if command_exists pacman ; then
-	alias s='sudo pacman -S'
-	alias ss='pacman -Ss'
-	alias syu='sudo pacman -Syyu'
-	alias rns='sudo pacman -Rns'
-	alias ys='yay -S'
-	alias yss='yay -Ss'
+	alias s='yay -S'
+	alias ss='yay -Ss'
+	alias syu='yay -Syyu'
+	alias rns='yay -Rns'
 fi
 
 if command_exists nala ; then
@@ -150,13 +148,15 @@ alias dw='cd ~/Downloads'
 alias od='cd ~/OneDrive && ls'
 alias ..='cd ..'
 alias cfgi3='vim ~/.config/i3/config'
+alias cfgwm='vim ~/.config/hypr/hyprland.conf'
 alias cfgsh='vim ~/.zshrc'
 alias backsh='cp ~/.zshrc ~/OneDrive/Personal/dotfiles/new/'
 alias downsh='cp ~/OneDrive/Personal/dotfiles/.zshrc ~/'
 alias backi3='cpa ~/.config/i3/config ~/OneDrive/Personal/dotfiles/new/i3/'
 alias downi3='cpa ~/OneDrive/Personal/dotfiles/new/i3/config ~/.config/i3/'
 alias cl='clear'
-alias push='~/.gitpush.sh'
+alias push='~/scripts/gitpush.sh'
+alias glone='~/scripts/gitclone.sh'
 export EDITOR=vim
 pfetch
 

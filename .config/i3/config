@@ -11,6 +11,12 @@ font pango: Noto Sans Regular 10
 # set the mod key to the winkey:
 set $mod Mod4
 
+#### SET VARIABLES ####
+set $browser /opt/google/chrome/chrome
+#set $browser firefox	
+set $terminal alacritty
+set $fileman thunar
+
 #####################
 # workspace layout: #
 #####################
@@ -31,7 +37,8 @@ workspace_layout default
 ##############################
 
 # border indicator on windows:
-new_window pixel 1
+#new_window pixel 1
+default_border pixel 1
 for_window [class="^.*"] border pixel 1
 
 # thin borders
@@ -108,8 +115,8 @@ bindsym $mod+r mode "resize"
 ######################################
 
 # start a terminal
-bindsym $mod+Shift+Return exec alacritty
-bindsym $mod+Return exec i3-msg workspace 2:dev; exec alacritty
+bindsym $mod+Shift+Return exec $terminal
+bindsym $mod+Return exec i3-msg workspace 2:dev; exec $terminal
 
 # kill focused window
 bindsym $mod+q kill
@@ -124,7 +131,7 @@ bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu
 bindsym $mod+o exec ~/.config/i3/scripts/blur-lock
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+#bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to update i3)
 bindsym $mod+Shift+r restart
@@ -212,8 +219,8 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+p exec /usr/local/bin/switch-audio-port
 
 ## App shortcuts
-bindsym $mod+f workspace $ws1; exec firefox
-bindsym $mod+Shift+f exec firefox
+bindsym $mod+f workspace $ws1; exec $browser
+bindsym $mod+Shift+f exec $browser
 bindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
 # Power Profiles menu switcher (rofi)
@@ -248,9 +255,9 @@ set $ws9 "9"
 set $ws10 "10"
 
 # bind program to workspace and focus to them on startup:
-#assign [class="firefox"] $ws1
-#assign [class="Alacritty"] $ws2
-#assign [class="Thunar"] $ws3
+#assign [class="$browser"] $ws1
+#assign [class="$terminal"] $ws2
+#assign [class="$fileman"] $ws3
 #assign [class="/usr/lib/libre*"] $ws3]
 assign [class="geary"] $ws4
 assign [class="discord"] $ws4
@@ -259,9 +266,9 @@ assign [class="retroarch"] $ws5
 assign [class="spt"] $ws6
 
 # automatic set focus new window if it opens on another workspace then the current:
-for_window [class=firefox] focus
-for_window [class=Alacritty] focus
-for_window [class=Thunar] focus
+for_window [class=$browser] focus
+for_window [class=$terminal] focus
+for_window [class=$fileman] focus
 for_window [class=geary] focus
 for_window [class=dolphin] focus
 for_window [class=retroarch] focus
@@ -275,9 +282,9 @@ for_window [class=spt] focus
 # set floating (nontiling) for apps needing it
 for_window [class="Yad" instance="yad"] floating enable
 for_window [class="Galculator" instance="galculator"] floating enable
-for_window [class="firefox" instance="firefox"] floating enable
+for_window [class="$browser" instance="$browser"] floating enable
 for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
-#for_window [class="Thunar" instance="Thunar"] floating enable
+#for_window [class="$fileman" instance="$fileman"] floating enable
 
 # set floating (nontiling) for special apps
 for_window [class="Xsane" instance="xsane"] floating enable
@@ -364,7 +371,7 @@ strip_workspace_numbers yes
 ## rofi bindings fancy application menu ($mod+d /F9 optional disabled)
 
 bindsym $mod+d exec rofi -modi drun -show drun \
-		-config ~/.config/rofi/rofidmenu.rasi
+	-config ~/.config/rofi/rofidmenu.rasi
 
 #bindsym F9 exec rofi -modi drun -show drun \
 #		-config ~/.config/rofi/rofidmenu.rasi
@@ -386,18 +393,20 @@ bindsym $mod+t exec rofi -show window \
 #Autostart
 exec_always --no-startup-id rclone --vfs-cache-mode writes mount "OneDrive": ~/OneDrive
 exec_always spotifyd
-exec_always picom
+#exec_always picom
 exec_always nm-applet
 exec_always blueman-applet
 exec_always ~/.config/i3/current-workspace.sh
 exec_always /usr/bin/emacs --daemon
 exec sudo pacman -S Syyu
-exec nitrogen --restore
-exec --no-startup-id ~/startup.sh
+#exec nitrogen --restore
+exec nitrogen --random
+exec --no-startup-id ~/scripts/startup.sh
 exec mount.cifs //192.168.0.100/Public ~/WDMyCloud/ -o credentials=/home/dt/.credentials
 bindsym $mod+Shift+s exec shutter -s
-bindsym $mod+m exec alacritty -e spt
-bindsym $mod+w workspace $ws3; exec thunar
-bindsym $mod+Shift+w exec thunar
+bindsym $mod+m exec $terminal -e spt
+bindsym $mod+w workspace $ws3; exec $fileman
+bindsym $mod+Shift+w exec $fileman
 bindsym $mod+n exec xfce4-terminal -e nmtui
-bindsym $mod+c exec emacsclient -c -a 'emacs'
+bindsym $mod+c workspace $ws2; exec emacsclient -c -a 'emacs'
+bindsym $mod+Shift+c exec emacsclient -c -a 'emacs'

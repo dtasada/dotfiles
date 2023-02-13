@@ -44,8 +44,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 1.0
-  # opacity: 0.80
+  opacity: 0.8
 
   # Window decorations
   #
@@ -108,86 +107,101 @@ scrolling:
 
 # Font configuration
 font:
-  # Normal (roman) font face
   normal:
-    # Font family
-    #
-    # Default:
-    #   - (macOS) Menlo
-    #   - (Linux/BSD) monospace
-    #   - (Windows) Consolas
-    family: Source Code Pro
-    # family: CodeNewRoman Nerd Font
-    # family: RobotoMono Nerd Font
-    # family: Hack
-    # family: JetBrains Mono
-    # family: UbuntuMono Nerd Font
-    # family: Monofur Nerd Font
-    # family: TerminessTTF Nerd Font
-    # family: Mononoki Nerd Font
-
-    # The `style` can be specified to pick a specific face.
-    style: Regular
-
-  # Bold font face
+    family: JetBrains Mono Nerd Font
+    style:  Bold
   bold:
-    # Font family
-    #
-    # If the bold family is not specified, it will fall back to the
-    # value specified for the normal font.
-    family: Source Code Pro
-    # family: CodeNewRoman Nerd Font
-    # family: RobotoMono Nerd Font
-    # family: Hack
-    # family: JetBrains Mono
-    # family: UbuntuMono Nerd Font
-    # family: Monofur Nerd Font
-    # family: TerminessTTF Nerd Font
-    # family: Mononoki Nerd Font
-
-    # The `style` can be specified to pick a specific face.
-    style: Bold
-
-  # Italic font face
+    family: JetBrains Mono Nerd Font
+    style:  Bold
   italic:
-    # Font family
-    #
-    # If the italic family is not specified, it will fall back to the
-    # value specified for the normal font.
-    family: Source Code Pro
-    # family: CodeNewRoman Nerd Font
-    # family: RobotoMono Nerd Font
-    # family: Hack
-    # family: JetBrains Mono
-    # family: UbuntuMono Nerd Font
-    # family: Monofuritalic Nerd Font Mono
-    # family: TerminessTTF Nerd Font
-    # family: Mononoki Nerd Font
-
-    # The `style` can be specified to pick a specific face.
-    style: Italic
-
-  # Bold italic font face
+    family: JetBrains Mono Nerd Font
+    style:  MediumItalic
   bold_italic:
-    # Font family
-    #
-    # If the bold italic family is not specified, it will fall back to the
-    # value specified for the normal font.
-    family: Source Code Pro
-    # family: CodeNewRoman Nerd Font
-    # family: RobotoMono Nerd Font
-    # family: Hack
-    # family: JetBrains Mono
-    # family: UbuntuMono Nerd Font
-    # family: Monofuritalic Nerd Font Mono
-    # family: TerminessTTF Nerd Font
-    # family: Mononoki Nerd Font
-
-    # The `style` can be specified to pick a specific face.
-    style: Bold Italic
+    family: JetBrains Mono Nerd Font
+    style: BoldItalic
+  size: 10
+draw_bold_text_with_bright_colors: true
+#font:
+#  # Normal (roman) font face
+#  normal:
+#    # Font family
+#    #
+#    # Default:
+#    #   - (macOS) Menlo
+#    #   - (Linux/BSD) monospace
+#    #   - (Windows) Consolas
+#    family: Source Code Pro
+#    # family: CodeNewRoman Nerd Font
+#    # family: RobotoMono Nerd Font
+#    # family: Hack
+#    # family: JetBrains Mono
+#    # family: UbuntuMono Nerd Font
+#    # family: Monofur Nerd Font
+#    # family: TerminessTTF Nerd Font
+#    # family: Mononoki Nerd Font
+#
+#    # The `style` can be specified to pick a specific face.
+#    style: Regular
+#
+#  # Bold font face
+#  bold:
+#    # Font family
+#    #
+#    # If the bold family is not specified, it will fall back to the
+#    # value specified for the normal font.
+#    family: Source Code Pro
+#    # family: CodeNewRoman Nerd Font
+#    # family: RobotoMono Nerd Font
+#    # family: Hack
+#    # family: JetBrains Mono
+#    # family: UbuntuMono Nerd Font
+#    # family: Monofur Nerd Font
+#    # family: TerminessTTF Nerd Font
+#    # family: Mononoki Nerd Font
+#
+#    # The `style` can be specified to pick a specific face.
+#    style: Bold
+#
+#  # Italic font face
+#  italic:
+#    # Font family
+#    #
+#    # If the italic family is not specified, it will fall back to the
+#    # value specified for the normal font.
+#    family: Source Code Pro
+#    # family: CodeNewRoman Nerd Font
+#    # family: RobotoMono Nerd Font
+#    # family: Hack
+#    # family: JetBrains Mono
+#    # family: UbuntuMono Nerd Font
+#    # family: Monofuritalic Nerd Font Mono
+#    # family: TerminessTTF Nerd Font
+#    # family: Mononoki Nerd Font
+#
+#    # The `style` can be specified to pick a specific face.
+#    style: Italic
+#
+#  # Bold italic font face
+#  bold_italic:
+#    # Font family
+#    #
+#    # If the bold italic family is not specified, it will fall back to the
+#    # value specified for the normal font.
+#    family: Source Code Pro
+#    # family: CodeNewRoman Nerd Font
+#    # family: RobotoMono Nerd Font
+#    # family: Hack
+#    # family: JetBrains Mono
+#    # family: UbuntuMono Nerd Font
+#    # family: Monofuritalic Nerd Font Mono
+#    # family: TerminessTTF Nerd Font
+#    # family: Mononoki Nerd Font
+#
+#    # The `style` can be specified to pick a specific face.
+#    style: Bold Italic
 
   # Point size
-  size: 14.0
+#  size: 14.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
