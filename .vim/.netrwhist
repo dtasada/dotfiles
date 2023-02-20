@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =8
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/dt/.config/kitty'
 let g:netrw_dirhist_8='/home/dt/.config/waybar/scripts'
 let g:netrw_dirhist_7='/home/dt/.config/waybar'
 let g:netrw_dirhist_6='/home/dt'

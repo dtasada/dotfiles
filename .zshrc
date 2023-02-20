@@ -105,12 +105,6 @@ command_exists () {
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
-if [[ $(pwd) == "$HOME"* ]]; then
-	alias v='vim'
-else
-	alias v='sudo vim'
-fi
-
 if command_exists pacman ; then
 	alias s='yay -S'
 	alias ss='yay -Ss'
@@ -132,6 +126,9 @@ if command_exists dnf ; then
 	alias rns='sudo dnf remove'
 fi
 
+edit='lvim'
+browser='brave'
+fileman='thunar'
 
 alias ls='exa -l --icons --color=always --group-directories-first'
 alias la='exa -la --icons --color=always --group-directories-first'
@@ -142,14 +139,14 @@ alias lt='exa -T --icons --color=always --group-directories-first'
 alias fs='flatpak install'
 alias fss='flatpak search'
 alias cpa='cp'
-alias v='vim'
-alias sv='sudo vim'
+alias v='$edit'
+alias sv='sudo $edit'
 alias dw='cd ~/Downloads'
 alias od='cd ~/OneDrive && ls'
 alias ..='cd ..'
-alias cfgi3='vim ~/.config/i3/config'
-alias cfgwm='vim ~/.config/hypr/hyprland.conf'
-alias cfgsh='vim ~/.zshrc'
+alias cfgi3='$edit ~/.config/i3/config'
+alias cfgwm='$edit ~/.config/hypr/hyprland.conf'
+alias cfgsh='$edit ~/.zshrc'
 alias backsh='cp ~/.zshrc ~/OneDrive/Personal/dotfiles/new/'
 alias downsh='cp ~/OneDrive/Personal/dotfiles/.zshrc ~/'
 alias backi3='cpa ~/.config/i3/config ~/OneDrive/Personal/dotfiles/new/i3/'
