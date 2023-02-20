@@ -6,31 +6,35 @@
  */
 
 * {
-    background-color:           #282c34;
+    background-color:           #282a36;
     border-color:               #282c34;
     text-color:                 #bbc2cf;
-    height:                     40px;
-    font:                       "SauceCodePro Nerd Font Mono 9";
+    height:                     35px;
+    //font:                       "SauceCodePro Nerd Font Mono 9";
+    font:                       "JetBrains Mono Nerd Font Bold 10";
+    prompt-font:                "JetBrains Mono Nerd Font Bold 10";
     prompt-font:                "Ubuntu Bold 9";
     prompt-background:          #51afef;
-    prompt-foreground:          #282c34;
-    prompt-padding:             10px;
+    prompt-foreground:          #f8f8f2;
+    prompt-padding:             09px;
     selected-normal-background: #ae3f3e;
     selected-normal-foreground: #ffffff;
 }
 window {
     anchor: north west;
     location: north west;
-    width: 100%;
+    width: 099.00%;
     padding: 0px;
     children: [ horibox ];
-    y-offset: -35px;
+    y-offset: -30px;
+    x-offset: 10px;
+    border-radius: 50;
 }
 #horibox {
     orientation: horizontal;
     children: [ prompt, entry, listview ];
 }
-#prompt {
+#prompt { //"drun"
     padding:          @prompt-padding;
     background-color: @prompt-background;
     text-color:       @prompt-foreground;
@@ -40,13 +44,13 @@ window {
     layout: horizontal;
     lines: 100;
 }
-#entry {
-    padding: 10px;
+#entry { //text one types
+    padding: 08px;
     expand: false;
     width: 10em;
 }
 #element {
-    padding: 10px 14px;
+    padding: 08px 12px;
 }
 #element selected {
     background-color: @selected-normal-background;
