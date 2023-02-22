@@ -34,7 +34,7 @@ window {
     orientation: horizontal;
     children: [ prompt, entry, listview ];
 }
-#prompt { //"drun"
+#prompt { //"left text"
     padding:          @prompt-padding;
     background-color: @prompt-background;
     text-color:       @prompt-foreground;

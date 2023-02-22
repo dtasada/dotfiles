@@ -8,15 +8,15 @@
  */
 
 configuration {
-	font:							"JetBrainsMonoNL Nerd Font 10";
-    show-icons:                     true;
-	icon-theme: 					"Papirus";
-    display-drun: 					"";
-    drun-display-format:            "{name}";
-    disable-history:                false;
-    fullscreen:                     false;
-	hide-scrollbar: 				true;
-	sidebar-mode: 					false;
+	font:			"JetBrains Mono Nerd Font 10";
+	show-icons:		true;
+	icon-theme:		"Papirus";
+    	display-drun:		"";
+    	drun-display-format:	"{name}";
+    	disable-history:	false;
+    	fullscreen:		false;
+	hide-scrollbar:		true;
+	sidebar-mode:		false;
 }
 
 @import "colors.rasi"
@@ -88,12 +88,13 @@ listview {
 
 mainbox {
     background-color:               @al;
-	border:							0px;
+	  border:							0px;
     border-radius:                  0px;
-	border-color:					@ac;
+	  border-color:					@ac;
     children:                       [ listview ];
     spacing:                       	5px;
     padding:                        20px;
+    orientation: horizontal;
 }
 
 element {
