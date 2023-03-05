@@ -79,7 +79,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
-source /home/dt/.config/shell/.oh-my-zsh/oh-my-zsh.sh
+source $HOME/.config/shell/.oh-my-zsh/oh-my-zsh.sh
 
 # User configuration
 
@@ -157,7 +157,7 @@ alias glone='~/scripts/gitclone.sh'
 export EDITOR=vim
 pfetch
 
-export PATH=/home/dt/.emacs.d/bin:$PATH
+export PATH=$HOME/.emacs.d/bin:$PATH
 
 #For plugins:
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
