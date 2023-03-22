@@ -1,8 +1,7 @@
 --[[
 lvim is the global options object
 
-Linters should be
-filled in as strings with either
+Linters should be filled in as strings with either
 a global executable or a path to
 an executable
 ]]
@@ -11,7 +10,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
-lvim.colorscheme = "dracula"
+lvim.colorscheme = "lunar"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -19,7 +18,7 @@ lvim.colorscheme = "dracula"
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-lvim.keys.normal_mode["<C-r>"] = ":! gcc % -o % && %:p"
+lvim.keys.normal_mode["<C-r>"] = ":w ! python %<cr>"
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- unmap a default keymapping
@@ -184,6 +183,5 @@ lvim.builtin.treesitter.highlight.enable = true
 --     require("nvim-treesitter.highlight").attach(0, "bash")
 --   end,
 -- })
---
 
 lvim.transparent_window = true

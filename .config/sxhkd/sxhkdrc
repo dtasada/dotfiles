@@ -1,33 +1,66 @@
-# make sxhkd reload its configuration files
-super + shift + r
-	pkill -USR1 -x sxhkd
- 
-# quit or restart bspwm
+#
+# wm independent hotkeys
+#
+
+super + {Return,f}
+	{kitty, brave}
+
+# program launcher
+super + d
+	rofi -show drun
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd && killall sxhkd && sxhkd &
+
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
 super + shift + {q,r}
 	bspc {quit,wm -r}
- 
-# create a new terminal window or swap the current one to the biggest one in the screen 
-super + {Return,f}
-	{alacritty, brave}
- 
-# close or kill a window
+
+super + shift + e
+  ~/.config/rofi/scripts/powermenu.sh dt-dmenu.xorg.rasi
+
+# close and kill
 super + q
 	bspc node -k
- 
-# change the window state
-#super + {t,ctrl + t,l,f}
-#	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
- 
-# expand a window by moving one of its side outward
-super + ctrl + {h,j,k,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+super + {s, t}
+	bspc node -t {fullscreen, tiled}
+
+super + shift + space
+	bspc node -t floating
+##
+## set the node flags
+#super + ctrl + {m,x,y,z}
+#	bspc node -g {marked,locked,sticky,private}
+#
+#
+# focus/swap
+#
 
 super + {_,shift + }{h,j,k,l} 
   bspc node --{focus,swap} {west,south,north,east}
- 
-# focus or send a window to the given desktop
+
+# focus the node for the given path jump
+super + {p,b,comma,period}
+	bspc node -f @{parent,brother,first,second}
+
+# focus the next/previous window in the current desktop
+super + {_,shift + }c
+	bspc node -f {next,prev}.local.!hidden.window
+
+# focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
-super + d
-	rofi -show drun
+#
+# move/resize
+#
+
+# expand a window by moving one of its side outward
+super + ctrl + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}

@@ -2,7 +2,7 @@
  * ROFI Color theme
  * NAME: dt-dmenu.rasi
  * DESCRIPTION: This is a horizontal prompt similar to dmenu.
- * AUTHOR: Derek Taylor (DT)
+ * AUTHOR: Daniel Tasada 
  */
 
 * {
@@ -23,12 +23,12 @@
 window {
     anchor: north west;
     location: north west;
-    width: 099.00%;
+    width: 99.00%;
     padding: 0px;
     children: [ horibox ];
-    y-offset: -30px;
+    y-offset: 10px;
     x-offset: 10px;
-    border-radius: 50;
+    border-radius: 04;
 }
 #horibox {
     orientation: horizontal;
