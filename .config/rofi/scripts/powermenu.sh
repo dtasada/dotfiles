@@ -5,8 +5,7 @@
 ## Github  : @adi1090x
 ## Twitter : @adi1090x
 
-dir="~/.config/rofi/themes/"
-uptime=$(uptime -p | sed -e 's/up //g')
+dir="~/.config/rofi/themes/" uptime=$(uptime -p | sed -e 's/up //g')
 
 theme="$1"
 rofi_command="rofi -no-config -theme ~/.config/rofi/themes/$theme"
@@ -52,6 +51,6 @@ case $chosen in
 		systemctl suspend
         ;;
     $logout)
-		systemctl stop sddm
+    killall bspwm
         ;;
 esac

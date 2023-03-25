@@ -23,12 +23,12 @@
 window {
     anchor: north west;
     location: north west;
-    width: 99.00%;
+    width: 100.00%;
     padding: 0px;
     children: [ horibox ];
-    y-offset: 10px;
-    x-offset: 10px;
-    border-radius: 04;
+    y-offset: 00px;
+    x-offset: 00px;
+    border-radius: 00;
 }
 #horibox {
     orientation: horizontal;

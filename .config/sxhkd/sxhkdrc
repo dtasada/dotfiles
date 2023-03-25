@@ -2,37 +2,36 @@
 # wm independent hotkeys
 #
 
-super + {Return,f}
-	{kitty, brave}
+super + {Return,f, c, m}
+	{kitty, brave, kitty -e lvim, kitty -e spt}
+
+super + shift + s
+  shutter -s
 
 # program launcher
 super + d
 	rofi -show drun
-
-# make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd && killall sxhkd && sxhkd &
 
 #
 # bspwm hotkeys
 #
 
 # quit/restart bspwm
-super + shift + {q,r}
-	bspc {quit,wm -r}
+super + shift + r
+  ~/.config/bspwm/restart.sh
 
 super + shift + e
   ~/.config/rofi/scripts/powermenu.sh dt-dmenu.xorg.rasi
 
 # close and kill
 super + q
-	bspc node -k
+	bspc node -c
 
-super + {s, t}
-	bspc node -t {fullscreen, tiled}
+super + {s, t, space}
+	bspc node -t {fullscreen, tiled, floating}
+# super + s
+  # bspc node --state ~fullscreen
 
-super + shift + space
-	bspc node -t floating
 ##
 ## set the node flags
 #super + ctrl + {m,x,y,z}
@@ -64,3 +63,10 @@ super + {_,shift + }{1-9,0}
 # expand a window by moving one of its side outward
 super + ctrl + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+XF86AudioRaiseVolume
+  pamixer -i 5 #to increase 5%
+XF86AudioLowerVolume
+  pamixer -d 5 #to decrease 5%
+XF86AudioMute
+  pamixer --toggle-mute
