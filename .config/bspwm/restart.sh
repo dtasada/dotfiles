@@ -2,6 +2,6 @@
 
 pkill -USR1 -x sxhkd
 killall sxhkd
-# sxhkd &
 killall polybar
+killall shutter
 bspc wm -r

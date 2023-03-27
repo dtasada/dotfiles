@@ -10,7 +10,13 @@ super + shift + s
 
 # program launcher
 super + d
-	rofi -show drun
+	rofi -show drun #-theme ~/.config/rofi/themes/dt-dmenu.xorg.rasi
+super + shift + e
+  ~/.config/rofi/scripts/powermenu.sh dt-dmenu.xorg.rasi
+super + w
+  ~/.config/rofi/scripts/windows.sh
+super + a
+  xdg-open $(locate / | rofi -threads 0 -dmenu -i -p "locate:")
 
 #
 # bspwm hotkeys
@@ -20,37 +26,19 @@ super + d
 super + shift + r
   ~/.config/bspwm/restart.sh
 
-super + shift + e
-  ~/.config/rofi/scripts/powermenu.sh dt-dmenu.xorg.rasi
-
 # close and kill
 super + q
 	bspc node -c
 
 super + {s, t, space}
 	bspc node -t {fullscreen, tiled, floating}
-# super + s
-  # bspc node --state ~fullscreen
 
-##
-## set the node flags
-#super + ctrl + {m,x,y,z}
-#	bspc node -g {marked,locked,sticky,private}
-#
 #
 # focus/swap
 #
 
 super + {_,shift + }{h,j,k,l} 
   bspc node --{focus,swap} {west,south,north,east}
-
-# focus the node for the given path jump
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
-
-# focus the next/previous window in the current desktop
-super + {_,shift + }c
-	bspc node -f {next,prev}.local.!hidden.window
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
@@ -70,3 +58,9 @@ XF86AudioLowerVolume
   pamixer -d 5 #to decrease 5%
 XF86AudioMute
   pamixer --toggle-mute
+XF86AudioPause
+  playerctl play-pause
+XF86AudioNext
+  playerctl next
+XF86AudioPrev
+  playerctl previous
