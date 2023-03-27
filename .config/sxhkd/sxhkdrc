@@ -2,8 +2,8 @@
 # wm independent hotkeys
 #
 
-super + {Return,f, c, m}
-	{kitty, brave, kitty -e lvim, kitty -e spt}
+super + {Return,f, c}
+	{kitty, brave, kitty -e lvim}
 
 super + shift + s
   shutter -s
@@ -17,6 +17,8 @@ super + w
   ~/.config/rofi/scripts/windows.sh
 super + a
   xdg-open $(locate / | rofi -threads 0 -dmenu -i -p "locate:")
+super + m
+  ~/.config/rofi/scripts/spotify.sh
 
 #
 # bspwm hotkeys
