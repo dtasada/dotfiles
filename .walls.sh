@@ -11,6 +11,9 @@
 # sleep 30
 # done
 #
+
+rclone --vfs-cache-mode writes mount "OneDrive": ~/OneDrive
+
 while :
 do
   walldir=/home/dt/walls

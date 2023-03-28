@@ -19,6 +19,8 @@ super + a
   xdg-open $(locate / | rofi -threads 0 -dmenu -i -p "locate:")
 super + m
   ~/.config/rofi/scripts/spotify.sh
+super + shift + p
+  ~/.config/rofi/scripts/unhide.sh
 
 #
 # bspwm hotkeys
@@ -45,6 +47,9 @@ super + {_,shift + }{h,j,k,l}
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
+
+super + p
+  bspc node --flag hidden=on
 
 #
 # move/resize
