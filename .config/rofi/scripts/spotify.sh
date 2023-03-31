@@ -7,4 +7,5 @@ declare -A playlists=(
 )
 
 selection=$(printf '%s\n' "${!playlists[@]}" | rofi -dmenu)
-xdg-open ${playlists["$selection"]}
+killall spotify
+spotify --uri=${playlists["$selection"]}

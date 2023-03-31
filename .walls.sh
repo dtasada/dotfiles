@@ -17,7 +17,9 @@ rclone --vfs-cache-mode writes mount "OneDrive": ~/OneDrive
 while :
 do
   walldir=/home/dt/walls
-  wallnum=wall$(( ( RANDOM % $(ls -l $walldir | wc -l)) + 1 )).jpg
-  feh --bg-max $walldir/$wallnum
+  # wallnum=wall$(( ( RANDOM % $(ls -l $walldir | wc -l)) + 1 )).jpg
+  if wallnum=wall$(( ( RANDOM % $(ls -l $walldir | wc -l)) + 1 )).jpg; then
+	  feh --bg-max $walldir/$wallnum
+  fi
   sleep 30
 done

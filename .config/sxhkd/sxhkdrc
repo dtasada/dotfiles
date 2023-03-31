@@ -65,7 +65,7 @@ XF86AudioLowerVolume
   pamixer -d 5 #to decrease 5%
 XF86AudioMute
   pamixer --toggle-mute
-XF86AudioPause
+{XF86AudioPause, XF86AudioPlay}
   playerctl play-pause
 XF86AudioNext
   playerctl next
