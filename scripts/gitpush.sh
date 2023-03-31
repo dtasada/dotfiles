@@ -1,4 +1,3 @@
-echo -n "Enter commit message: "
-read $commitmsg
-git commit -a -m "$commitmsg"
+git add .
+git commit -a -m $1
 git push origin master
