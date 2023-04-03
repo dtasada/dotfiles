@@ -19,9 +19,10 @@ bspc rule -a Discord desktop='^6'
 sxhkd &
 # spotifyd
 polybar &
-picom -b --animations --animation-window-mass 0.5 --animation-for-open-window fly-in --animation-stiffness 350 &
+picom -b --animations --animation-window-mass 0.5 --animation-for-open-window fly-in \
+  --animation-stiffness 350 --experimental-backends &
 # picom &
 xrandr -r 144
-~/.walls.sh &
+/bin/bash $HOME/.walls.sh &
 shutter --min_at_startup
 rclone --vfs-cache-mode writes mount "OneDrive": ~/OneDrive &
