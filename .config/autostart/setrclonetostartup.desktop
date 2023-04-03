@@ -1,7 +1,0 @@
-[Desktop Entry]
-Exec=/etc/init.d/startup.sh
-Name=StartupShell
-Comment=Run startup.sh
-Type=Application
-StartupNotify=false
-X-GNOME-Autostart-enabled=true
