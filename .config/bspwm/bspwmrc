@@ -17,7 +17,7 @@ bspc rule -a Pavucontrol state=floating follow=on
 bspc rule -a Discord desktop='^6'
 
 sxhkd &
-spotifyd
+# spotifyd
 polybar &
 picom -b --animations --animation-window-mass 0.5 --animation-for-open-window fly-in --animation-stiffness 350 &
 # picom &
