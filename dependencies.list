@@ -99,11 +99,7 @@ shutter
 spotify
 spotify-tui
 spotifyd
-startw
 steam
-sway
-swaybg
-swaylock-effects
 sxhkd
 tldr
 ttf-bitstream-vera
@@ -121,8 +117,6 @@ w3m
 w3m-imgcat
 wf-recorder
 wireplumber
-wl-clipboard
-wlr-randr
 xdg-desktop-portal
 xdg-user-dirs
 xinput-gui
