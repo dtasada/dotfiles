@@ -5,10 +5,10 @@
 ## Github  : @adi1090x
 ## Twitter : @adi1090x
 
-dir="~/.config/rofi/themes/" uptime=$(uptime -p | sed -e 's/up //g')
+uptime=$(uptime -p | sed -e 's/up //g')
 
 theme="$1"
-rofi_command="rofi -no-config -theme ~/.config/rofi/themes/$theme"
+rofi_command="rofi"
 
 # Options
 shutdown="⏻ Shutdown"

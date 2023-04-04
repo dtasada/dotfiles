@@ -6,19 +6,21 @@
  */
 
 * {
+    /* ### Dracula ### */
     background-color:           #282a36;
     border-color:               #282c34;
     text-color:                 #bbc2cf;
-    height:                     35px;
+    prompt-background:          #51afef;
+    prompt-foreground:          #f8f8f2;
+    selected-normal-background: #ae3f3e;
+    selected-normal-foreground: #ffffff;
+
+    height:                     36px;
     //font:                       "SauceCodePro Nerd Font Mono 9";
     font:                       "JetBrains Mono Nerd Font Bold 10";
     prompt-font:                "JetBrains Mono Nerd Font Bold 10";
     prompt-font:                "Ubuntu Bold 9";
-    prompt-background:          #51afef;
-    prompt-foreground:          #f8f8f2;
-    prompt-padding:             09px;
-    selected-normal-background: #ae3f3e;
-    selected-normal-foreground: #ffffff;
+    prompt-padding:             10px;
 }
 window {
     anchor: north west;

@@ -37,6 +37,8 @@ super + q
 super + {s, t, space}
 	bspc node -t {fullscreen, tiled, floating}
 
+super + p
+  bspc node --flag hidden=on
 #
 # focus/swap
 #
@@ -47,9 +49,6 @@ super + {_,shift + }{h,j,k,l}
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
-
-super + p
-  bspc node --flag hidden=on
 
 #
 # move/resize
@@ -62,8 +61,7 @@ super + ctrl + {h,j,k,l}
 XF86AudioRaiseVolume
   pamixer -i 5 #to increase 5%
 XF86AudioLowerVolume
-  pamixer -d 5 #to decrease 5%
-XF86AudioMute
+  pamixer -d 5 #to decrease 5% XF86AudioMute
   pamixer --toggle-mute
 {XF86AudioPause, XF86AudioPlay}
   playerctl play-pause
