@@ -4,13 +4,16 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor -d www dev doc msg ent virt misc etc
 
-bspc config border_width        04
 bspc config window_gap          12
 bspc config top_padding         36
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+
+bspc config border_width        04
+bspc config focused_border_color "#e8a2af"
+bspc config normal_border_color "#b5e8e0" 
 
 # bspc config border_radius        24
 bspc rule -a Steam state=floating follow=on
