@@ -1272,7 +1272,7 @@
   # first match wins.
   #
   # For example, given these settings:
-  #
+  #>
   #   typeset -g POWERLEVEL9K_TERRAFORM_CLASSES=(
   #     '*prod*'  PROD
   #     '*test*'  TEST
