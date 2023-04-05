@@ -21,6 +21,8 @@ super + m
   ~/.config/rofi/scripts/spotify.sh
 super + shift + p
   ~/.config/rofi/scripts/unhide.sh
+super + g
+  ~/.config/rofi/scripts/translate.sh
 
 #
 # bspwm hotkeys
@@ -55,15 +57,22 @@ super + {_,shift + }{1-9,0}
 #
 
 # expand a window by moving one of its side outward
-super + ctrl + {h,j,k,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+super + ctrl + h
+	bspc node -z {left -20 0} || bspc node -z {right -20 0}
+super + ctrl + j
+	bspc node -z {bottom 0 20} || bspc node -z {top 0 20}
+super + ctrl + k
+	bspc node -z {bottom 0 -20} || bspc node -z {top 0 -20}
+super + ctrl + l
+	bspc node -z {left 20 0} || bspc node -z {right 20 0}
+
 
 XF86AudioRaiseVolume
   pamixer -i 5 #to increase 5%
 XF86AudioLowerVolume
   pamixer -d 5 #to decrease 5% XF86AudioMute
   pamixer --toggle-mute
-{XF86AudioPause, XF86AudioPlay}
+XF86AudioPause
   playerctl play-pause
 XF86AudioNext
   playerctl next
