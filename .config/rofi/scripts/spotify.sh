@@ -6,6 +6,6 @@ declare -A playlists=(
   ["My 2020's"]="https://open.spotify.com/playlist/0tkwUjbK8RrNMvdRX26N2w?si=7dce2faa201942a6"
 )
 
-selection=$(printf '%s\n' "${!playlists[@]}" | rofi -dmenu)
+selection=$(printf '%s\n' "${!playlists[@]}" | rofi -dmenu) || exit
 killall spotify
 spotify --uri=${playlists["$selection"]}

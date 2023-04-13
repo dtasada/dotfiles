@@ -9,7 +9,7 @@ do
   windows+=(["$winid"]=$wintitle)
 done
 
-selectedwin=$(printf '%s\n' "${windows[@]}" | rofi -dmenu -i -p "windows:")
+selectedwin=$(printf '%s\n' "${windows[@]}" | rofi -dmenu -i -p "unhide:")
 for winid in ${!windows[@]}         # Locate wintitle of selectedwinid
 do
   if [[ $selectedwin == ${windows[$winid]} ]]; then

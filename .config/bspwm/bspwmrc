@@ -20,13 +20,15 @@ bspc rule -a Steam state=floating follow=on
 bspc rule -a Pavucontrol state=floating follow=on
 bspc rule -a Discord desktop='^6'
 
+lxsession &
 # sxhkd &
 # spotifyd
-picom -b --animations --animation-window-mass 0.5 --animation-for-open-window fly-in \
-  --animation-stiffness 350 --experimental-backends &
-# picom &
+# picom -b --animations --animation-window-mass 0.5 --animation-for-open-window fly-in \
+  # --animation-stiffness 350 & # --experimental-backends &
+picom &
 xrandr -r 144
 /bin/bash $HOME/.walls.sh &
 polybar &
 shutter --min_at_startup
 rclone --vfs-cache-mode writes mount "OneDrive": ~/OneDrive &
+pamixer --set-volume 35

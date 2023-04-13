@@ -11,11 +11,13 @@ super + shift + s
 # program launcher
 super + d
 	rofi -show drun #-theme ~/.config/rofi/themes/dt-dmenu.xorg.rasi
+super + r
+	rofi -show run #-theme ~/.config/rofi/themes/dt-dmenu.xorg.rasi
 super + shift + e
-  ~/.config/rofi/scripts/powermenu.sh dt-dmenu.xorg.rasi
+  ~/.config/rofi/scripts/powermenu.sh
 super + w
   ~/.config/rofi/scripts/windows.sh
-super + a
+super + d; l
   xdg-open $(locate / | rofi -threads 0 -dmenu -i -p "locate:")
 super + m
   ~/.config/rofi/scripts/spotify.sh
@@ -24,6 +26,9 @@ super + shift + p
 super + g
   ~/.config/rofi/scripts/translate.sh
 
+# super + d; {p, w, m, h, t}
+#   ~/.config/rofi/scripts/{powermenu,windows,spotify,unhide,translate}.sh
+
 #
 # bspwm hotkeys
 #
@@ -31,16 +36,22 @@ super + g
 # quit/restart bspwm
 super + shift + r
   ~/.config/bspwm/restart.sh
+super + Escape
+	pkill -USR1 -x sxhkd
 
 # close and kill
 super + q
 	bspc node -c
 
 super + {s, t, space}
-	bspc node -t {fullscreen, tiled, floating}
+	bspc node -t \~{fullscreen,tiled,floating}
 
-super + p
-  bspc node --flag hidden=on
+super + {p, b}
+  bspc node --flag {hidden=on, sticky}
+
+super + v
+  bspc node @/ -R 90
+
 #
 # focus/swap
 #
@@ -55,7 +66,6 @@ super + {_,shift + }{1-9,0}
 #
 # move/resize
 #
-
 # expand a window by moving one of its side outward
 super + ctrl + h
 	bspc node -z {left -20 0} || bspc node -z {right -20 0}
@@ -66,11 +76,9 @@ super + ctrl + k
 super + ctrl + l
 	bspc node -z {left 20 0} || bspc node -z {right 20 0}
 
-
-XF86AudioRaiseVolume
-  pamixer -i 5 #to increase 5%
-XF86AudioLowerVolume
-  pamixer -d 5 #to decrease 5% XF86AudioMute
+{XF86AudioRaiseVolume, XF86AudioLowerVolume}
+  pamixer -{i,d} 5 && notify-send -e "Volume Control" "$(pamixer --get-volume-human)" -r 999
+XF86AudioMute
   pamixer --toggle-mute
 XF86AudioPause
   playerctl play-pause
