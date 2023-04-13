@@ -1,0 +1,6 @@
+require("core.pluginsd.barbar")
+require("core.pluginsd.dashboard-nvim")
+require("core.pluginsd.nvim-lspconfig")
+require("core.pluginsd.nvim-tree")
+require("core.pluginsd.nvim-treesitter")
+require("core.pluginsd.telescope")

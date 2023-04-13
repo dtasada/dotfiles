@@ -1,8 +1,5 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-	function command_exists
-		type "$1" &> /dev/null
-	end
 
 	# function fish_prompt
 	# 	echo ''
@@ -12,7 +9,7 @@ if status is-interactive
 
 	starship init fish | source
 	
-	if command_exists yay
+	if type -q pacman
 		alias s='yay -Syu'
 		alias ss='yay -Ss'
 		alias syu='yay -Syu'
@@ -20,14 +17,14 @@ if status is-interactive
 		alias r='yay -R'
 	end
 	
-	if command_exists nala
+	if type -q nala
 		alias s='sudo nala install'
 		alias ss='nala search'
 		alias syu='sudo nala update'
 		alias rns='sudo nala remove'
 	end
 	
-	if command_exists dnf
+	if type -q dnf
 		alias s='sudo dnf install'
 		alias ss='dnf search'
 		alias syu='sudo dnf update'
@@ -38,7 +35,6 @@ if status is-interactive
 	set browser 'brave'
 	set fileman 'pcmanfm'
 	set fish_greeting
-	set SPACESHIP_PROMPT_ADD_NEWLINE false
 	
 	alias ls='exa -l --icons --color=always --group-directories-first'
 	alias la='exa -la --icons --color=always --group-directories-first'
