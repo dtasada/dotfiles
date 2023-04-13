@@ -38,6 +38,7 @@ if status is-interactive
 	set browser 'brave'
 	set fileman 'pcmanfm'
 	set fish_greeting
+	set SPACESHIP_PROMPT_ADD_NEWLINE false
 	
 	alias ls='exa -l --icons --color=always --group-directories-first'
 	alias la='exa -la --icons --color=always --group-directories-first'
