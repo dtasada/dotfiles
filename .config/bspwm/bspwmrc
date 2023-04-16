@@ -7,7 +7,7 @@ bspc monitor -d www dev doc msg ent virt misc etc
 bspc config window_gap          12
 bspc config top_padding         36
 
-bspc config split_ratio          0.52
+bspc config split_ratio          0.50
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
@@ -27,7 +27,7 @@ lxsession &
   # --animation-stiffness 350 & # --experimental-backends &
 picom &
 xrandr -r 144
-/bin/bash $HOME/.walls.sh &
+/bin/bash $HOME/.config/bspwm/walls.sh &
 polybar &
 shutter --min_at_startup
 rclone --vfs-cache-mode writes mount "OneDrive": ~/OneDrive &

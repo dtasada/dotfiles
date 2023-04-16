@@ -1,34 +1,26 @@
--- version 0.2.3
-if vim.g.loaded_dashboard then
-  return
-end
+-- Import Dashboard-nvim
+local dashboard = require('dashboard-nvim')
 
-vim.g.loaded_dashboard = 1
+-- Set the header text
+dashboard.section.header.val = {'Welcome to my dashboard'}
 
-vim.api.nvim_create_autocmd('UIEnter', {
-  group = vim.api.nvim_create_augroup('Dashboard', { clear = true }),
-  callback = function()
-    if vim.fn.argc() == 0 and vim.fn.line2byte('$') == -1 then
-      require('dashboard'):instance()
-    end
-  end,
-})
+-- Set the footer text
+dashboard.section.footer.val = {'created by Me'}
 
-vim.api.nvim_create_user_command('Dashboard', function()
-  require('dashboard'):instance()
-end, {})
-
-config = {
-  center = {
-    {
-      icon = '',
-      icon_hl = 'group',
-      desc = 'description',
-      desc_hl = 'group',
-      key = 'shortcut key in dashboard buffer not keymap !!',
-      key_hl = 'group',
-      action = '',
-    },
-  },
-  footer = {},
+-- Add some custom text to the first section
+dashboard.custom_section.a.val = {
+  'Custom text',
+  'In the first section'
 }
+
+-- Add some custom text to the second section
+dashboard.custom_section.b.val = {
+  'Custom text',
+  'In the second section'
+}
+
+-- Set the default mode to be the dashboard
+vim.g.dashboard_default_executive = 'telescope'
+
+-- Map a key to open the dashboard
+vim.api.nvim_set_keymap('n', '<leader>db', ':Dashboard<CR>', { noremap = true, silent = true })
