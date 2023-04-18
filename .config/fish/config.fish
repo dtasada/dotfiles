@@ -31,7 +31,7 @@ if status is-interactive
 		alias rns='sudo dnf remove'
 	end
 	
-	set edit 'nvim'
+	set edit 'helix'
 	set browser 'brave'
 	set fileman 'pcmanfm'
 	set fish_greeting

@@ -23,7 +23,7 @@ if [ ${VOLUME::-1} == 100 ]
     VOLICON=${ALLICONS[2]}
   elif [ $VOLUME == "muted" ]
   then
-    VOLICON=""
+    VOLICON="🔇"
 fi
 
 case $1 in
