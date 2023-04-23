@@ -1,16 +1,10 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
 
-	# function fish_prompt
-	# 	echo ''
-	# 	set_color cyan; echo -n (pwd)
-	# 	set_color green; echo ' ❯ '
-	# end
-
 	starship init fish | source
 	
 	if type -q pacman
-		alias s='yay -Syu'
+		alias s='yay -S'
 		alias ss='yay -Ss'
 		alias syu='yay -Syu'
 		alias rns='yay -Rns'
@@ -39,25 +33,26 @@ if status is-interactive
 	alias ls='exa -l --icons --color=always --group-directories-first'
 	alias la='exa -la --icons --color=always --group-directories-first'
 	alias ld='exa -D --icons --color=always --group-directories-first'
-	alias lg='exa -G --icons --color=always --group-directories-first'
+	alias lg='exa --icons --color=always --group-directories-first'
 	alias lt='exa -T --icons --color=always --group-directories-first'
 	
 	alias fs='flatpak install'
 	alias fss='flatpak search'
-	alias cpa='cp'
 	alias v='$edit'
 	alias sv='sudo $edit'
 	alias dw='cd ~/Downloads'
 	alias od='cd ~/OneDrive && ls'
 	alias ..='cd ..'
-	alias cfgi3='$edit ~/.config/i3/config'
-	alias cfgwm='$edit ~/.config/hypr/hyprland.conf'
-	alias cfgsh='$edit ~/.zshrc'
+	alias cfgwm='$edit ~/.config/bspwm/bspwmrc'
+	alias cfgsh='$edit ~/.config/fish/config.fish'
 	alias cl='clear'
 	alias push='~/scripts/gitpush.sh'
 	alias glone='~/scripts/gitclone.sh'
 	alias untar='tar -xvf'
-	export EDITOR=vim
+
+	alias crun='cd build && cmake .. && make && cd target && ./main && cd ../..'
+	
+	export EDITOR=helix
 	if [ $COLUMNS -ge 90 ]
 	  colorscript -r
 	else
@@ -66,6 +61,7 @@ if status is-interactive
 	
 	fish_add_path $HOME/.emacs.d/bin
 	fish_add_path $HOME/.local/bin
+	fish_add_path $HOME/.cargo/bin
 
 end
 
