@@ -25,6 +25,8 @@ super + shift + p
   ~/.config/rofi/scripts/unhide.sh
 super + g
   ~/.config/rofi/scripts/translate.sh
+super + c
+  grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:-
 
 # super + d; {p, w, m, h, t}
 #   ~/.config/rofi/scripts/{powermenu,windows,spotify,unhide,translate}.sh

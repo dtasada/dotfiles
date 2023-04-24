@@ -2,7 +2,18 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d www dev doc msg ent virt misc etc
+declare -a monitors
+for monitor in $(xrandr | grep connected | awk '{print $1}' | tr ' ' '\n')
+do
+  monitors+="$monitor"
+  bspc monitor $monitor -d www dev doc msg ent virt misc etc
+done
+
+for bar in $(cat ~/.config/polybar/config.ini | grep -F '[bar' | awk -F / '{print $2}' | awk -F ] '{print $1}')
+do
+  polybar $bar &
+done
+
 
 bspc config window_gap          12
 bspc config top_padding         36

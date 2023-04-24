@@ -374,22 +374,3 @@ bindsym $mod+t exec rofi -show window	-config ~/.config/rofi/themes/dt-center.xo
 ## rofi bindings to manage clipboard (install rofi-greenclip from the AUR)
 
 #Autostart
-exec_always --no-startup-id rclone --vfs-cache-mode writes mount "OneDrive": ~/OneDrive
-exec_always spotifyd
-exec_always nm-applet
-exec_always blueman-applet
-exec_always ~/.config/i3/current-workspace.sh
-exec_always /usr/bin/emacs --daemon
-exec_always polybar
-exec_always picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350 &
-exec sudo pacman -S Syyu
-exec nitrogen --restore
-exec --no-startup-id ~/scripts/startup.sh
-exec mount.cifs //192.168.0.100/Public ~/WDMyCloud/ -o credentials=/home/dt/.credentials
-bindsym $mod+Shift+s exec shutter -s
-bindsym $mod+m exec $terminal -e spt
-bindsym $mod+w workspace $ws3; exec $fileman
-bindsym $mod+Shift+w exec $fileman
-bindsym $mod+n exec xfce4-terminal -e nmtui
-bindsym $mod+c workspace $ws2; exec emacsclient -c -a 'emacs'
-bindsym $mod+Shift+c exec emacsclient -c -a 'emacs'
