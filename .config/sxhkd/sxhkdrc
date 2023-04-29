@@ -31,6 +31,9 @@ super + c
 # super + d; {p, w, m, h, t}
 #   ~/.config/rofi/scripts/{powermenu,windows,spotify,unhide,translate}.sh
 
+super + shift + m
+  mangohud $(bspc query -N -n)
+
 #
 # bspwm hotkeys
 #
@@ -58,8 +61,12 @@ super + v
 # focus/swap
 #
 
-super + {_,shift + }{h,j,k,l} 
-  bspc node --{focus,swap} {west,south,north,east}
+super + {h,j,k,l}
+  bspc node --focus {west,south,north,east}
+
+super + shift + {h,j,k,l}
+	bspc node --swap {west,south,north,east} --follow \
+	|| bspc node -m {west,south,north,east} --follow
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
