@@ -28,6 +28,6 @@
 # #### CATPPUCCIN
 while :
 do
-  feh --bg-fill --randomize $HOME/walls/catppuccin/
+  feh --bg-fill --randomize $HOME/walls/mywalls/
   sleep 30
 done

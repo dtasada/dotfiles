@@ -3,7 +3,7 @@
 #
 
 super + {Return,f, c}
-	{alacritty, brave, alacritty -e helix}
+	{kitty, brave-browser, kitty -e hx}
 
 super + shift + s
   shutter -s

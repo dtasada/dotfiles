@@ -14,9 +14,11 @@ do
   polybar $bar &
 done
 
-
-bspc config window_gap          12
-bspc config top_padding         36
+bspc config window_gap          0
+bspc config top_padding         12
+bspc config bottom_padding      12
+bspc config right_padding       12
+bspc config left_padding        12
 
 bspc config split_ratio          0.50
 bspc config borderless_monocle   true
@@ -31,7 +33,7 @@ bspc rule -a Steam state=floating follow=on
 bspc rule -a Pavucontrol state=floating follow=on
 bspc rule -a Discord desktop='^6'
 
-lxsession &
+# lxsession &
 # sxhkd &
 # spotifyd
 # picom -b --animations --animation-window-mass 0.5 --animation-for-open-window fly-in \
@@ -39,7 +41,8 @@ lxsession &
 picom &
 xrandr -r 144
 /bin/bash $HOME/.config/bspwm/walls.sh &
-polybar &
 shutter --min_at_startup
 rclone --vfs-cache-mode writes mount "OneDrive": ~/OneDrive &
 pamixer --set-volume 35
+blueman-applet &
+nm-applet &

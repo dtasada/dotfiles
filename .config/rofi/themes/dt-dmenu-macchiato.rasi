@@ -25,11 +25,11 @@
 window {
     anchor: north west;
     location: north west;
-    width: 100.00%;
+    width: 98.8%;
     padding: 0px;
     children: [ horibox ];
-    y-offset: 00px;
-    x-offset: 00px;
+    y-offset: 12px;
+    x-offset: 12px;
     border-radius: 00;
 }
 #horibox {
