@@ -1,28 +1,11 @@
 # .bashrc
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
-
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 export PATH
-
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-
-# User specific aliases and functions
-if [ -d ~/.bashrc.d ]; then
-	for rc in ~/.bashrc.d/*; do
-		if [ -f "$rc" ]; then
-			. "$rc"
-		fi
-	done
-fi
 
 unset rc
 
@@ -53,11 +36,21 @@ if command_exists dnf ; then
 	alias rns='sudo dnf remove'
 fi
 
+if command_exists xbps-install ; then
+	alias s='sudo xbps-install'
+	alias ss='xbps-query -Rs'
+	alias syu='sudo xbps-install -Su'
+	alias rns='sudo xbps-remove -R'
+	alias qrs='sudo xbps-query -Rs'
+	alias qi='sudo xbps-query -R'
+fi
+
 edit='hx'
 browser='firefox'
 fileman='pcmanfm'
 
 alias ls='exa -l --icons --color=always --group-directories-first'
+alias ll='exa -l --icons --color=always --group-directories-first'
 alias la='exa -la --icons --color=always --group-directories-first'
 alias ld='exa -D --icons --color=always --group-directories-first'
 alias lg='exa --icons --color=always --group-directories-first'
@@ -76,8 +69,6 @@ alias cl='clear'
 alias push='~/scripts/gitpush.sh'
 alias glone='~/scripts/gitclone.sh'
 alias untar='tar -xvf'
-
-alias crun='cd build && cmake .. && make && cd target && ./main && cd ../..'
 
 export EDITOR=helix
 
