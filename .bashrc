@@ -80,3 +80,7 @@ else
 fi
 
 export PATH=$PATH:/home/dt/.nix-profile/bin
+
+if [[ "$(tty)" = "/dev/tty1" ]]; then
+  startx
+fi
