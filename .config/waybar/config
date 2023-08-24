@@ -2,31 +2,23 @@
     "height": 36, // Waybar height (to be removed for auto height)
     "margin-top": 4,
     "margin-left": 10,
-    "margin-bottom": -4,
+    "margin-bottom": -2,
     "margin-right": 12,
     "spacing": 4, // Gaps between modules (4px)
-    "modules-left": [ "cpu", "memory","battery","tray","wlr/workspaces"],
+    "modules-left": [ "cpu", "memory", "battery","tray" ,"wlr/workspaces"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["pulseaudio", "network", "bluetooth", "clock"],
+
     "wlr/workspaces": {
-      "format": "{icon}",
-      "on-click": "activate",
-      "format-icons": {
-        "1": " www ",
-        "2": " dev ",
-        "3": " doc ",
-        "4": " msg ",
-        "5": " ent ",
-        "6": " misc ",
-        "7": " virt ",
-        "urgent": "",
-        // "active": "",
-        // "default": ""
-      }
+        "format": "{icon}",
+        "format-active": " {icon} ",
+        "on-click": "activate"
     },
+
     "hyprland/window": {
         "format": "{}"
     },
+
     "tray": {
         "spacing": 10
     },
@@ -41,7 +33,8 @@
       "format": " {usage}%",
       "max-length": 100,
       "on-click": "",
-    },
+   },
+
     "memory": {
         "interval": 30,
         // "format": " {}%",
@@ -102,4 +95,3 @@
       "format-icons": [" ", " ", " ", " ", " "],
     },
 }
-
