@@ -1,7 +1,12 @@
 #!/bin/bash
 
+# KILL EXISTING PROCESSES
+killall swaybg
+killall gBar
+
 # STARTUP PROCESSES
 swaybg -i ~/walls/dreamy/$(\ls ~/walls/dreamy | shuf -n 1) &
+gBar bar 0
 # rclone --vfs-cache-mode writes mount "OneDrive": ~/OneDrive &
 
 riverctl spawn "dbus-update-activation-environment SEATD_SOCK DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
@@ -54,15 +59,10 @@ riverctl map normal Super+Control L resize horizontal 100 &
 riverctl map-pointer normal Super BTN_LEFT move-view &
 riverctl map-pointer normal Super BTN_RIGHT resize-view &
 
-riverctl map normal Super 1 set-focused tags 0 &
-riverctl map normal Super 2 set-focused tags 1 &
-riverctl map normal Super 3 set-focused tags 2 &
-riverctl map normal Super 4 set-focused tags 3 &
-riverctl map normal Super 5 set-focused tags 4 &
-riverctl map normal Super 6 set-focused tags 5 &
-riverctl map normal Super 7 set-focused tags 6 &
-riverctl map normal Super 8 set-focused tags 7 &
-riverctl map normal Super 9 set-focused tags 8 &
+for i in $(seq 1 9); do
+	tags=$((1 << ($i -1)))
+	riverctl map normal Super $i set-focused-tags $tags &
+done
 
 riverctl map normal Super Space toggle-float
 riverctl map normal Super S toggle-fullscreen
