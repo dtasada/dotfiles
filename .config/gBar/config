@@ -20,7 +20,7 @@ LockCommand: ~/.config/scripts/sys.sh lock
 ExitCommand: killall river
 
 # The folder, where the battery sensors reside
-BatteryFolder: /sys/class/power_supply/BAT1
+BatteryFolder: /sys/class/power_supply/BAT0
 
 # Overrides the icon of the nth (in this case the first) workspace
 # WorkspaceSymbol-1: 

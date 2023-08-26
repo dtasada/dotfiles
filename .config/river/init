@@ -6,10 +6,10 @@ killall gBar
 
 # STARTUP PROCESSES
 swaybg -i ~/walls/dreamy/$(\ls ~/walls/dreamy | shuf -n 1) &
-gBar bar 0
+gBar bar 0 &
 # rclone --vfs-cache-mode writes mount "OneDrive": ~/OneDrive &
 
-riverctl spawn "dbus-update-activation-environment SEATD_SOCK DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
+riverctl spawn "dbus-update-activation-environment SEATD_SOCK DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river" &
 
 # VARIABLE DEFINITIONS
 APPDEF_FILEMAN=nautilus
@@ -64,8 +64,8 @@ for i in $(seq 1 9); do
 	riverctl map normal Super $i set-focused-tags $tags &
 done
 
-riverctl map normal Super Space toggle-float
-riverctl map normal Super S toggle-fullscreen
+riverctl map normal Super Space toggle-float &
+riverctl map normal Super S toggle-fullscreen &
 riverctl map normal Super+Shift R spawn "~/.config/river/init"
 
 riverctl set-repeat 50 300
