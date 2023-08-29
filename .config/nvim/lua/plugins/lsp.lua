@@ -35,8 +35,7 @@ return {
 			["<C-d>"] = cmp.mapping.scroll_docs(4),
 			["<C-e>"] = cmp.mapping.abort(),
 
-			["<C-Space>"] = cmp.mapping.complete({}),
-			["<Tab>"] = cmp.mapping.confirm({ select = true, }),
+			["<Tab>"] = cmp.mapping.confirm(),
 			["<CR>"] = cmp.mapping.confirm({ select = true, }),
 		})
 
