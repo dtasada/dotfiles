@@ -13,8 +13,6 @@ eval "$(starship init bash)"
 
 export EDITOR=nvim
 
-alias nixmk='nix-channel --update && sudo nixos-rebuild switch'
-
 alias ls='exa -l --icons --color=always --group-directories-first'
 alias ll='exa -l --icons --color=always --group-directories-first'
 alias la='exa -la --icons --color=always --group-directories-first'
