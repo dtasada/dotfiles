@@ -37,6 +37,7 @@ in */
     gcc
     gnumake
     nodejs_18
+    nodePackages.nodemon
     pixelorama
     python3Full
   ];
