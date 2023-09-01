@@ -9,7 +9,8 @@
     grey: #6e738d;
 
     width: 460;
-    font: "MesloLGS NF Bold 10";
+    // font: "MesloLGS NF Bold 10";
+    font: "JetBrainsMono NF Bold 10";
 }
 
 element-text, element-icon , mode-switcher {
