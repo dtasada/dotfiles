@@ -12,10 +12,10 @@ rofi_command="rofi"
 
 # Options
 shutdown="⏻  Shutdown"
-reboot=" Restart"
+reboot="↺ Restart"
 lock=" Lock"
 suspend="   Sleep"
-logout=" Logout"
+logout="  Logout"
 # Confirmation
 confirm_exit() {
 	rofi -dmenu\
@@ -51,6 +51,6 @@ case $chosen in
 		systemctl suspend
         ;;
     $logout)
-    killall bspwm
+    killall river || killall Hyprland || killall bspwm || killall dwm
         ;;
 esac
