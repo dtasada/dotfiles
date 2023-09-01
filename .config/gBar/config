@@ -10,11 +10,8 @@
 # The CPU sensor to use
 CPUThermalZone: /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input
 
-# The command to execute on suspend
-SuspendCommand: ~/.config/scripts/sys.sh suspend
-
 # The command to execute on lock
-LockCommand: ~/.config/scripts/sys.sh lock
+LockCommand: swaylock
 
 # The command to execute on exit
 ExitCommand: killall river
