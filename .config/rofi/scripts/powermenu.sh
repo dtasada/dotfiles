@@ -11,10 +11,10 @@ theme="$1"
 rofi_command="rofi"
 
 # Options
-shutdown="⏻ Shutdown"
+shutdown="⏻  Shutdown"
 reboot=" Restart"
 lock=" Lock"
-suspend=" Sleep"
+suspend="   Sleep"
 logout=" Logout"
 # Confirmation
 confirm_exit() {
