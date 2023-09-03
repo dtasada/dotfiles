@@ -71,8 +71,8 @@ riverctl map normal Super Space toggle-float &
 riverctl map normal Super S toggle-fullscreen &
 riverctl map normal Super+Shift R spawn "~/.config/river/init"
 
-riverctl map normal None XF86MonBrightnessUp   spawn 'brightnessctl -d intel_backlight +5%'
-riverctl map normal None XF86MonBrightnessDown spawn 'brightnessctl -d intel_backlight -5%'
+riverctl map normal None XF86MonBrightnessUp   spawn 'brightnessctl -d intel_backlight s +5%'
+riverctl map normal None XF86MonBrightnessDown spawn 'brightnessctl -d intel_backlight s 5%-'
 
 riverctl set-repeat 35 300
 
@@ -80,4 +80,4 @@ riverctl border-color-focused   0xf5c2e7
 riverctl border-color-unfocused 0x45475a
 
 riverctl default-layout rivertile
-rivertile -view-padding 4 -outer-padding 4 -main-ratio 0.50 &
+rivertile -view-padding 2 -outer-padding 2 -main-ratio 0.50 &

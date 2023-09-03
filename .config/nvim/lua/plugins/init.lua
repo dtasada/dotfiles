@@ -1,4 +1,5 @@
 return {
+    "christoomey/vim-tmux-navigator",
 	"folke/neodev.nvim",
 	"michaelb/sniprun",
 	"mbbill/undotree", -- Indent line

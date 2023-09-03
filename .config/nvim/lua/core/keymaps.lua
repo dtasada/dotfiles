@@ -10,17 +10,6 @@ vim.keymap.set("x", "<leader>p", [["_dP]]) -- greatest remap ever
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
--- Colemak
--- vim.keymap.set("n", "n", "h") 
--- vim.keymap.set("n", "e", "j") 
--- vim.keymap.set("n", "i", "k") 
--- vim.keymap.set("n", "o", "l") 
---
--- vim.keymap.set("n", "h", "n") 
--- vim.keymap.set("n", "e", "j") 
--- vim.keymap.set("n", "i", "k") -- Map `i` (insert) to `k` (swap)
--- vim.keymap.set("n", "l", "o") -- Map `o` (newline) to `l`
---
 vim.api.nvim_set_keymap("n", "<leader>w", "<C-w>", { desc = "Windows" })
 
 -- -- BarBar

@@ -16,28 +16,30 @@ return {
 	config = function()
 		local lsp = require('lsp-zero').preset('recommended')
 
-		lsp.ensure_installed({
-			'pylsp',
-			'cssls',
-			'custom_elements_ls',
-			'clangd',
-            'lua_ls',
-			-- 'sumneko_lua',
-			'rust_analyzer',
-		})
+		-- lsp.ensure_installed({
+		-- 	'pylsp',
+		-- 	'cssls',
+		-- 	'custom_elements_ls',
+		-- 	'clangd',
+  --           'lua_ls',
+		-- 	-- 'sumneko_lua',
+		-- 	'rust_analyzer',
+		-- })
 
 		local cmp = require('cmp')
 		local cmp_select = {behavior = cmp.SelectBehavior.Select}
-		local cmp_mappings = lsp.defaults.cmp_mappings({
-			["<C-n>"] = cmp.mapping.select_next_item(select_opts),
-			["<C-p>"] = cmp.mapping.select_prev_item(select_opts),
-			["<C-u>"] = cmp.mapping.scroll_docs(-4),
-			["<C-d>"] = cmp.mapping.scroll_docs(4),
-			["<C-e>"] = cmp.mapping.abort(),
+		-- local cmp_mappings = 
+        lsp.setup_nvim_cmp({ mapping = lsp.defaults.cmp_mappings({
+            ["<C-n>"] = cmp.mapping.select_next_item(select_opts),
+            ["<C-p>"] = cmp.mapping.select_prev_item(select_opts),
+            ["<C-u>"] = cmp.mapping.scroll_docs(-4),
+            ["<C-d>"] = cmp.mapping.scroll_docs(4),
+            ["<C-e>"] = cmp.mapping.abort(),
 
-			["<Tab>"] = cmp.mapping.confirm(),
-			["<CR>"] = cmp.mapping.confirm({ select = true, }),
-		})
+            ["<Tab>"] = cmp.mapping.confirm({ select = true, }),
+            ["<cr>"] = cmp.mapping.confirm({ select = true, }),
+            })
+        })
 
 		-- lsp.set_preferences({
 		-- 	suggest_lsp_servers = false,
