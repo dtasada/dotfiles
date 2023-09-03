@@ -13,8 +13,8 @@ riverctl spawn "dbus-update-activation-environment SEATD_SOCK DISPLAY WAYLAND_DI
 
 # VARIABLE DEFINITIONS
 APPDEF_FILEMAN=nautilus
-APPDEF_TERM=kitty
-APPDEF_EDIT="$APPDEF_TERM -e nvim"
+APPDEF_TERM="kitty -e"
+# APPDEF_EDIT="$APPDEF_TERM -e nvim"
 APPDEF_BROWSER=brave
 
 # KEYBINDINGS
