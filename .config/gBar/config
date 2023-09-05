@@ -14,7 +14,7 @@ CPUThermalZone: /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input
 LockCommand: swaylock
 
 # The command to execute on exit
-ExitCommand: killall river
+ExitCommand: killall river || killall Hyprland
 
 # The folder, where the battery sensors reside
 BatteryFolder: /sys/class/power_supply/BAT0
@@ -34,7 +34,7 @@ WorkspaceScrollInvert: false
 # Use Hyprland IPC instead of the ext_workspace protocol for workspace polling.
 # Hyprland IPC is *slightly* less performant (+0.1% one core), but way less bug prone,
 # since the protocol is not as feature complete as Hyprland IPC.
-UseHyprlandIPC: false
+UseHyprlandIPC: true
 
 # The location of the bar
 # Needs to be capitalized!!
