@@ -1,6 +1,6 @@
 * {
   all: unset;
-  font-family: "MesloLGS Nerd Font";
+  font-family: "JetBrainsMono NF";
 }
 
 .cpu-box {
@@ -12,35 +12,50 @@
 }
 
 .bar, tooltip {
-  background-color: #282a36;
+  background-color: #24273a;
 }
 
+/*
+.right {
+}
+
+.time-text {
+    // font-size: $textsize;
+}
+*/
 .reboot-button {
-  color: #6272a4;
+  color: #8aadf4;
 }
 
 .sleep-button {
-  color: #6272a4;
+  color: #8aadf4;
 }
 
 .exit-button {
-  color: #6272a4;
+  color: #8aadf4;
 }
 
 .power-button {
   font-size: 24px;
-  color: #ff5555;
+  color: #ed8796;
 }
 
+/*
+.power-box {
+}
+
+.power-box-expand {
+}
+*/
 .system-confirm {
-  color: #50fa7b;
+  color: #a6da95;
 }
 
 trough {
   border-radius: 3px;
   border-width: 1px;
   border-style: none;
-  background-color: #44475a;
+  background-color: #6e738d;
   min-width: 4px;
   min-height: 4px;
 }
@@ -64,42 +79,42 @@ highlight {
 }
 
 .audio-icon {
-  color: #ffb86c;
+  color: #f5a97f;
 }
 
 .audio-volume {
-  color: #ffb86c;
+  color: #f5a97f;
 }
 .audio-volume trough {
-  background-color: #44475a;
+  background-color: #6e738d;
 }
 .audio-volume slider {
   background-color: transparent;
 }
 .audio-volume highlight {
-  background-color: #ffb86c;
+  background-color: #f5a97f;
 }
 
 .mic-icon {
-  color: #bd93f9;
+  color: #c6a0f6;
 }
 
 .mic-volume {
-  color: #bd93f9;
+  color: #c6a0f6;
 }
 .mic-volume trough {
-  background-color: #44475a;
+  background-color: #6e738d;
 }
 .mic-volume slider {
   background-color: transparent;
 }
 .mic-volume highlight {
-  background-color: #bd93f9;
+  background-color: #c6a0f6;
 }
 
 .package-outofdate {
   margin: -5px -5px -5px -5px;
-  color: #ff5555;
+  color: #ed8796;
 }
 
 .bt-num {
@@ -119,129 +134,129 @@ highlight {
 }
 
 .disk-util-progress {
-  color: #bd93f9;
-  background-color: #44475a;
+  color: #c6a0f6;
+  background-color: #6e738d;
 }
 
 .disk-data-text {
-  color: #bd93f9;
+  color: #c6a0f6;
 }
 
 .vram-util-progress {
-  color: #ffb86c;
-  background-color: #44475a;
+  color: #f5a97f;
+  background-color: #6e738d;
 }
 
 .vram-data-text {
-  color: #ffb86c;
+  color: #f5a97f;
 }
 
 .ram-util-progress {
-  color: #f1fa8c;
-  background-color: #44475a;
+  color: #eed49f;
+  background-color: #6e738d;
 }
 
 .ram-data-text {
-  color: #f1fa8c;
+  color: #eed49f;
 }
 
 .gpu-util-progress {
-  color: #8be9fd;
-  background-color: #44475a;
+  color: #91d7e3;
+  background-color: #6e738d;
 }
 
 .gpu-data-text {
-  color: #8be9fd;
+  color: #91d7e3;
 }
 
 .cpu-util-progress {
-  color: #50fa7b;
-  background-color: #44475a;
+  color: #a6da95;
+  background-color: #6e738d;
 }
 
 .cpu-data-text {
-  color: #50fa7b;
+  color: #a6da95;
 }
 
 .battery-util-progress {
-  color: #ff79c6;
-  background-color: #44475a;
+  color: #f5bde6;
+  background-color: #6e738d;
 }
 
 .battery-data-text {
-  color: #ff79c6;
+  color: #f5bde6;
 }
 
 .network-data-text {
-  color: #50fa7b;
+  color: #a6da95;
 }
 
 .network-up-under {
-  color: #44475a;
+  color: #6e738d;
 }
 
 .network-up-low {
-  color: #50fa7b;
+  color: #a6da95;
 }
 
 .network-up-mid-low {
-  color: #f1fa8c;
+  color: #eed49f;
 }
 
 .network-up-mid-high {
-  color: #ffb86c;
+  color: #f5a97f;
 }
 
 .network-up-high {
-  color: #bd93f9;
+  color: #c6a0f6;
 }
 
 .network-up-over {
-  color: #ff5555;
+  color: #ed8796;
 }
 
 .network-down-under {
-  color: #44475a;
+  color: #6e738d;
 }
 
 .network-down-low {
-  color: #50fa7b;
+  color: #a6da95;
 }
 
 .network-down-mid-low {
-  color: #f1fa8c;
+  color: #eed49f;
 }
 
 .network-down-mid-high {
-  color: #ffb86c;
+  color: #f5a97f;
 }
 
 .network-down-high {
-  color: #bd93f9;
+  color: #c6a0f6;
 }
 
 .network-down-over {
-  color: #ff5555;
+  color: #ed8796;
 }
 
 .ws-dead {
-  color: #44475a;
+  color: #6e738d;
 }
 
 .ws-inactive {
-  color: #6272a4;
+  color: #8aadf4;
 }
 
 .ws-visible {
-  color: #8be9fd;
+  color: #91d7e3;
 }
 
 .ws-current {
-  color: #f1fa8c;
+  color: #eed49f;
 }
 
 .ws-active {
-  color: #50fa7b;
+  color: #a6da95;
 }
 
 @keyframes connectanim {
@@ -262,22 +277,22 @@ highlight {
 }
 @keyframes scanonanim {
   from {
-    color: #f1fa8c;
+    color: #eed49f;
   }
   to {
-    color: #50fa7b;
+    color: #a6da95;
   }
 }
 @keyframes scanoffanim {
   from {
-    color: #50fa7b;
+    color: #a6da95;
   }
   to {
-    color: #f1fa8c;
+    color: #eed49f;
   }
 }
 .bt-bg {
-  background-color: #282a36;
+  background-color: #24273a;
   border-radius: 16px;
 }
 
@@ -315,20 +330,20 @@ highlight {
   animation-fill-mode: forwards;
 }
 .bt-button.failed {
-  color: #ff5555;
+  color: #ed8796;
 }
 
 .bt-close {
-  color: #ff5555;
-  background-color: #44475a;
+  color: #ed8796;
+  background-color: #6e738d;
   border-radius: 16px;
   padding: 0px 8px 0px 7px;
   margin: 0px 0px 0px 8px;
 }
 
 .bt-scan {
-  color: #f1fa8c;
-  background-color: #44475a;
+  color: #eed49f;
+  background-color: #6e738d;
   border-radius: 16px;
   padding: 2px 11px 0px 7px;
   margin: 0px 0px 0px 10px;
@@ -345,5 +360,3 @@ highlight {
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
-
-/*# sourceMappingURL=style.css.map */

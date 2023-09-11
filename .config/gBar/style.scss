@@ -1,16 +1,14 @@
-// colorscheme(dracula)
-// See https://github.com/dracula/dracula-theme/blob/master/LICENSE or dracula/LICENSE for the license
-$bg: #282a36;
-$fg: #f8f8f2;
-$inactive: #44475a;
-$darkblue: #6272a4;
-$cyan: #8be9fd;
-$green: #50fa7b;
-$orange: #ffb86c;
-$pink: #ff79c6;
-$purple: #bd93f9;
-$red: #ff5555;
-$yellow: #f1fa8c;
+$bg: #24273a;
+$fg: #cad3f5;
+$inactive: #6e738d;
+$darkblue: #8aadf4;
+$cyan: #91d7e3;
+$green: #a6da95;
+$orange: #f5a97f;
+$pink: #f5bde6;
+$purple: #c6a0f6;
+$red: #ed8796;
+$yellow: #eed49f;
 
 
 $btblue: #1793D1;
@@ -37,12 +35,14 @@ $textsize: 12px;
     background-color: $bg;
 }
 
+/*
 .right {
 }
 
 .time-text {
     // font-size: $textsize;
 }
+*/
 
 .reboot-button {
     // font-size: 28px;
@@ -66,11 +66,13 @@ $textsize: 12px;
     color: $red;
 }
 
+/*
 .power-box {
 }
 
 .power-box-expand {
 }
+*/
 
 .system-confirm {
     color: $green;
