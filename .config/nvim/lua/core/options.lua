@@ -21,6 +21,7 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+vim.opt.smartcase = true
 
 vim.opt.updatetime = 50
 

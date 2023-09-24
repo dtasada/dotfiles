@@ -71,12 +71,6 @@ if which_key_status then
       W = { "<cmd>Neotree collapse<cr>", "File Explorer: Collapse" },
 		},
 
-		u = {
-			name = "UndoTree",
-      u = { "<cmd>UndotreeToggle<cr>",  "UndoTree: Toggle" },
-      c = { "<cmd>UndotreeHide<cr>",    "UndoTree: Hide" },
-		},
-
 		f = {
 			name = "Telescope",
 			f = { "<cmd>Telescope find_files<cr>",  "Telescope: Find file" },
