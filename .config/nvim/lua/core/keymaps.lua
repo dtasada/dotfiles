@@ -55,6 +55,7 @@ if which_key_status then
 		b = {
 			name = "Buffers",
 			c = { "<cmd>BufferClose<cr>",            "Buffer: Close" },
+			C = { "<cmd>BufferClose!<cr>",            "Buffer: Force close" },
 			s = {
 				name = "Sort",
 				d = { "<cmd>BufferOrderByDirectory<CR>", "Buffer: Sort by directory" },
