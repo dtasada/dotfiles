@@ -16,15 +16,15 @@ return {
 	config = function()
 		local lsp = require('lsp-zero').preset('recommended')
 
-		-- lsp.ensure_installed({
-		-- 	'pylsp',
-		-- 	'cssls',
-		-- 	'custom_elements_ls',
-		-- 	'clangd',
-  --           'lua_ls',
-		-- 	-- 'sumneko_lua',
-		-- 	'rust_analyzer',
-		-- })
+		lsp.ensure_installed({
+			'bashls',
+			'cssls',
+			'kotlin_language_server',
+			'lua_ls',
+			'pylsp',
+			'rust_analyzer',
+			'tsserver'
+		})
 
 		local cmp = require('cmp')
 		local cmp_select = {behavior = cmp.SelectBehavior.Select}
