@@ -1,6 +1,7 @@
 -- Generic
 vim.keymap.set("n", "<leader>e", "<cmd>wqa<CR>", { desc = "Save all and exit" })
 vim.keymap.set("n", "<leader>s", "<cmd>wa<CR>", { desc = "Save all" })
+vim.keymap.set("n", "<leader>q", "<cmd>qa!", { desc = "Exit all without saving" })
 
 vim.keymap.set("n", "J", "mzJ`z") 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
