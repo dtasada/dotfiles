@@ -1,5 +1,4 @@
 #!/bin/bash
-#
 
 mousesens=0.6
 
