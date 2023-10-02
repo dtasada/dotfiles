@@ -2,7 +2,8 @@
 
 while true; do
 	killall swaybg || killall feh
+	DIR=~/walls/dreamy
 	# feh --bg-fill --randomize ~/walls/catppuccin/ &
-	swaybg -i ~/walls/sunfire/$(\ls ~/walls/sunfire | shuf -n 1) &
+	swaybg -i $DIR/$(\ls $DIR | shuf -n 1) &
 	sleep 90
 done
