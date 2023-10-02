@@ -19,6 +19,7 @@ return {
 		lsp.ensure_installed({
 			'bashls',
 			'cssls',
+			'html',
 			'kotlin_language_server',
 			'lua_ls',
 			'pylsp',
