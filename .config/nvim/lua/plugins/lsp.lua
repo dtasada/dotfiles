@@ -24,7 +24,7 @@ return {
 			'lua_ls',
 			'pylsp',
 			'rust_analyzer',
-			'tsserver'
+			'tsserver',
 		})
 
 		local cmp = require('cmp')
