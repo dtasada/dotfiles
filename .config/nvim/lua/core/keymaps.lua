@@ -15,10 +15,10 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.api.nvim_set_keymap("n", "<leader>w", "<C-w>", { desc = "Windows" })
 
 -- LSP
-vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, { desc = "LSP: Rename variable" })
-vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = "LSP: Code Action" })
-vim.keymap.set('n', '<leader>cd', vim.lsp.buf.definition, { desc = "LSP: Go to definition" })
-vim.keymap.set('n', '<leader>ci', vim.lsp.buf.implementation, { desc = "LSP: Go to implementation" })
+vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { desc = "LSP: Rename variable" })
+vim.keymap.set('n', '<leader>ga', vim.lsp.buf.code_action, { desc = "LSP: Code Action" })
+vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, { desc = "LSP: Go to definition" })
+vim.keymap.set('n', '<leader>gi', vim.lsp.buf.implementation, { desc = "LSP: Go to implementation" })
 vim.keymap.set('n', '<leader>cr', require('telescope.builtin').lsp_references, { desc = "LSP: Telescope references" })
 vim.keymap.set('n', '<leader>K', vim.lsp.buf.hover, { desc = "LSP: Show definition" })
 
