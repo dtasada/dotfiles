@@ -33,10 +33,11 @@ if which_key_status then
 		H = { "<cmd>BufferMovePrevious<cr>", "Buffer: Swap with previous" },
 
 		g = {
-			s = { "<cmd>Git<cr>", "Git: Status" },
-			a = { "<cmd>! git add . <cr>", "Git: Add all" },
+			s = { function() neogit.open({ "status" }) end, "Git: Status" },
+			a = { function() neogit.open({ "add"    }) end, "Git: Add all" },
 			c = { function() neogit.open({ "commit" }) end, "Git: Commit" },
-			p = { function() neogit.open({ "push" }) end, "Git: Push" },
+			p = { function() neogit.open({ "pull"   }) end, "Git: Pull" },
+			P = { function() neogit.open({ "push"   }) end, "Git: Push" },
 		},
 
 		b = {
