@@ -23,6 +23,7 @@ vim.keymap.set('n', '<leader>cr', require('telescope.builtin').lsp_references, {
 vim.keymap.set('n', '<leader>K', vim.lsp.buf.hover, { desc = "LSP: Show definition" })
 
 -- WhichKey LDR Keys
+local neogit = require("neogit")
 local which_key_status, which_key = pcall(require, "which-key")
 if which_key_status then
 	which_key.register({
@@ -31,7 +32,12 @@ if which_key_status then
 		L = { "<cmd>BufferMoveNext<cr>",     "Buffer: Swap with next" },
 		H = { "<cmd>BufferMovePrevious<cr>", "Buffer: Swap with previous" },
 
-		gs = { "<cmd>Git<cr>", "Git: Status" },
+		g = {
+			s = { "<cmd>Git<cr>", "Git: Status" },
+			a = { "<cmd>! git add . <cr>", "Git: Add all" },
+			c = { function() neogit.open({ "commit" }) end, "Git: Commit" },
+			p = { function() neogit.open({ "push" }) end, "Git: Push" },
+		},
 
 		b = {
 			name = "Buffers",
