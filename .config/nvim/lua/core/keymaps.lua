@@ -4,9 +4,14 @@ vim.keymap.set("n", "<leader>s", "<cmd>wa<cr>", { desc = "Save all" })
 vim.keymap.set("n", "<leader>q", "<cmd>qa!<cr>", { desc = "Exit all without saving" })
 vim.keymap.set("n", "<leader>rt", "<cmd>term<cr>", { desc = "Open terminal window" })
 
+vim.keymap.set('n', '<C-l>', "<cmd>BufferNext<cr>", { desc = "Buffer: Cycle to next" })
+vim.keymap.set('n', '<C-h>', "<cmd>BufferPrevious<cr>", { desc = "Buffer: Cycle to previous" })
+vim.keymap.set('n', '<C-S-l>', "<cmd>BufferMoveNext<cr>", { desc = "Buffer: Swap with next" })
+vim.keymap.set('n', '<C-S-h>', "<cmd>BufferMovePrevious<cr>", { desc = "Buffer: Swap with previous" })
+
 vim.keymap.set("n", "J", "mzJ`z") 
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<cr>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv")
 
 vim.keymap.set("x", "<leader>p", [["_dP]]) -- greatest remap ever
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
@@ -23,22 +28,10 @@ vim.keymap.set('n', '<leader>cr', require('telescope.builtin').lsp_references, {
 vim.keymap.set('n', '<leader>K', vim.lsp.buf.hover, { desc = "LSP: Show definition" })
 
 -- WhichKey LDR Keys
-local neogit = require("neogit")
 local which_key_status, which_key = pcall(require, "which-key")
 if which_key_status then
 	which_key.register({
-		l = { "<cmd>BufferNext<cr>",         "Buffer: Cycle to next" },
-		h = { "<cmd>BufferPrevious<cr>",     "Buffer: Cycle to previous" },
-		L = { "<cmd>BufferMoveNext<cr>",     "Buffer: Swap with next" },
-		H = { "<cmd>BufferMovePrevious<cr>", "Buffer: Swap with previous" },
-
-		g = {
-			s = { function() neogit.open({ "status" }) end, "Git: Status" },
-			a = { function() neogit.open({ "add"    }) end, "Git: Add all" },
-			c = { function() neogit.open({ "commit" }) end, "Git: Commit" },
-			p = { function() neogit.open({ "pull"   }) end, "Git: Pull" },
-			P = { function() neogit.open({ "push"   }) end, "Git: Push" },
-		},
+		gl = { "<cmd>LazyGit<cr>", "Launch LazyGit" },
 
 		b = {
 			name = "Buffers",
@@ -46,23 +39,15 @@ if which_key_status then
 			C = { "<cmd>BufferClose!<cr>",            "Buffer: Force close" },
 			s = {
 				name = "Sort",
-				d = { "<cmd>BufferOrderByDirectory<CR>", "Buffer: Sort by directory" },
-				l = { "<cmd>BufferOrderByLanguage<CR>",  "Buffer: Sort by language" },
+				d = { "<cmd>BufferOrderByDirectory<cr>", "Buffer: Sort by directory" },
+				l = { "<cmd>BufferOrderByLanguage<cr>", "Buffer: Sort by language" },
 			},
-		},
-
-		t = {
-			name = "File Explorer",
-			t = { "<cmd>Neotree focus<cr>",    "File Explorer: Focus" },
-			c = { "<cmd>Neotree close<cr>",    "File Explorer: Close" },
-			r = { "<cmd>Neotree refresh<cr>",  "File Explorer: Refresh" },
-			W = { "<cmd>Neotree collapse<cr>", "File Explorer: Collapse" },
 		},
 
 		f = {
 			name = "Telescope",
 			f = { "<cmd>Telescope find_files<cr>",  "Telescope: Find file" },
-			g = { "<cmd>Telescope git_files<cr>",  "Telescope: Find git files" },
+			g = { "<cmd>Telescope git_files<cr>",   "Telescope: Find git files" },
 			t = { "<cmd>Telescope live_grep<cr>",   "Telescope: Find text" },
 			r = { "<cmd>Telescope oldfiles<cr>",    "Telescope: Recent files" },
 			l = { "<cmd>Telescope resume<cr>",      "Telescope: Resume last search" },
