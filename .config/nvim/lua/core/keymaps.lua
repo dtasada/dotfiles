@@ -1,8 +1,13 @@
+local Terminal  = require('toggleterm.terminal').Terminal
+local lazygit = Terminal:new({ cmd = "lazygit", direction = "float", count = 2})
+function ToggleLg() lazygit:toggle() end
+
 -- Generic
-vim.keymap.set("n", "<leader>e", "<cmd>wqa<cr>", { desc = "Save all and exit" })
+vim.keymap.set("n", "<leader>e", "<cmd>wa | qa!<cr>", { desc = "Save all and exit" })
 vim.keymap.set("n", "<leader>s", "<cmd>wa<cr>", { desc = "Save all" })
 vim.keymap.set("n", "<leader>q", "<cmd>qa!<cr>", { desc = "Exit all without saving" })
-vim.keymap.set("n", "<leader>rt", "<cmd>term<cr>", { desc = "Open terminal window" })
+vim.keymap.set("n", "<leader>rt", "<cmd>1ToggleTerm direction=float name=Run<cr>", { desc = "Open terminal window" })
+vim.keymap.set("t", "<esc>", [[<C-\><C-n>]])
 
 vim.keymap.set('n', '<C-l>', "<cmd>BufferNext<cr>", { desc = "Buffer: Cycle to next" })
 vim.keymap.set('n', '<C-h>', "<cmd>BufferPrevious<cr>", { desc = "Buffer: Cycle to previous" })
@@ -31,7 +36,7 @@ vim.keymap.set('n', '<leader>K', vim.lsp.buf.hover, { desc = "LSP: Show definiti
 local which_key_status, which_key = pcall(require, "which-key")
 if which_key_status then
 	which_key.register({
-		gl = { "<cmd>LazyGit<cr>", "Launch LazyGit" },
+		gl = { "<cmd>lua ToggleLg()<cr>", "Launch LazyGit" },
 
 		b = {
 			name = "Buffers",

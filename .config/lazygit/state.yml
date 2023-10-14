@@ -1,8 +1,9 @@
 lastupdatecheck: 0
 recentrepos:
+- /home/dt/git/caeborg-web
 - /home/dt/git/Ohio-Trail
 - /home/dt/git/dotfiles
 startuppopupversion: 5
 customcommandshistory: []
 hidecommandlog: false
-ignorewhitespaceindiffview: true
+ignorewhitespaceindiffview: false
