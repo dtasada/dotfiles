@@ -42,3 +42,5 @@ export PATH=$BUN_INSTALL/bin:$PATH
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# sudo pacman -S zsh-syntax-highlighting zsh-autosuggestions
