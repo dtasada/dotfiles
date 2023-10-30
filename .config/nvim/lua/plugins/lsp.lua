@@ -20,8 +20,10 @@ return {
 
 		lsp.ensure_installed({
 			'bashls',
+			'clangd',
 			'cssls',
 			'html',
+			'jedi_language_server',
 			'kotlin_language_server',
 			'lua_ls',
 			'rust_analyzer',
@@ -29,7 +31,6 @@ return {
 		})
 
 		lsp.setup_nvim_cmp({
-		-- cmp.setup({
 			mapping = lsp.defaults.cmp_mappings({
 				["<C-n>"] = cmp.mapping.select_next_item(select_opts),
 				["<C-p>"] = cmp.mapping.select_prev_item(select_opts),
@@ -44,7 +45,7 @@ return {
 			sources = {
 				{ name = "nvim_lsp" },
 				{ name = 'nvim_lsp_signature_help' }
-			}
+			},
 		})
 
 		lsp.on_attach(function(client, bufnr)
