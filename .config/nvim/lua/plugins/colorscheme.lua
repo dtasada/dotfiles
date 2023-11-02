@@ -1,5 +1,6 @@
 return {
 	"catppuccin/nvim", name = "catppuccin",
+	-- "rebelot/kanagawa.nvim", name = "kanagawa",
 	-- "i3d/vim-jimbothemes", name = "jimbo",
 	-- "folke/tokyonight.nvim", name = "tokyonight",
 	-- "rose-pine/neovim", name = 'rose-pine',
@@ -11,11 +12,11 @@ return {
 
 		vim.cmd("colorscheme catppuccin-macchiato")
 
+		-- vim.cmd("colorscheme kanagawa-wave")
 		-- vim.cmd("colorscheme breakingbad")
 		-- vim.cmd("colorscheme rose-pine-moon")
 		-- vim.cmd("colorscheme tokyonight")
 		vim.api.nvim_set_hl(0, "Normal",      { bg = "none" })
 		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 	end
-
 }
