@@ -1,7 +1,7 @@
 return {
-	-- "catppuccin/nvim", name = "catppuccin",
+	"catppuccin/nvim", name = "catppuccin",
 
-	"Evalir/dosbox-vim-colorscheme", name = "dosbox",
+	-- "Evalir/dosbox-vim-colorscheme", name = "dosbox",
 	-- "ellisonleao/gruvbox.nvim", name = "gruvbox",
 	-- "folke/tokyonight.nvim", name = "tokyonight",
 	-- "i3d/vim-jimbothemes", name = "jimbo",
