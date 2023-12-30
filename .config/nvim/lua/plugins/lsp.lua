@@ -19,15 +19,18 @@ return {
 		local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
 		lsp.ensure_installed({
-			'bashls',
-			'clangd',
-			'cssls',
-			'html',
-			'jedi_language_server',
-			'kotlin_language_server',
-			'lua_ls',
-			'rust_analyzer',
-			'tsserver',
+			"bashls",
+			"clangd",
+			"cssls",
+			"emmet_language_server",
+			"gopls",
+			"html",
+			"jedi_language_server",
+			"kotlin_language_server",
+			"lua_ls",
+			"rust_analyzer",
+			"svelte",
+			"tsserver"
 		})
 
 		lsp.setup_nvim_cmp({
