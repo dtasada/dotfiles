@@ -14,12 +14,12 @@ eval "$(starship init zsh)"
 export EDITOR=nvim
 export VISUAL='kitty -e nvim'
 
-alias ls='exa -l --icons --color=always --group-directories-first'
-alias ll='exa -l --icons --color=always --group-directories-first'
-alias la='exa -la --icons --color=always --group-directories-first'
-alias ld='exa -D --icons --color=always --group-directories-first'
-alias lg='exa --icons --color=always --group-directories-first'
-alias lt='exa -T --icons --color=always --group-directories-first'
+alias ls='exa --icons --color=always --group-directories-first --git -l'
+alias ll='exa --icons --color=always --group-directories-first --git -l'
+alias la='exa --icons --color=always --group-directories-first --git -la'
+alias ld='exa --icons --color=always --group-directories-first --git -D'
+alias lt='exa --icons --color=always --group-directories-first --git -T'
+alias lg='exa --icons --color=always --group-directories-first --git'
 
 alias v='$EDITOR'
 alias sv='sudo $EDITOR'
