@@ -1,11 +1,15 @@
-# Created by newuser for 5.9
-
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
   PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
+PATH="$HOME/.cargo/bin:$PATH"
 export PATH
+
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+setopt appendhistory
 
 unset rc
 
@@ -30,17 +34,17 @@ alias cl='clear'
 alias push='~/scripts/gitpush.sh'
 alias glone='~/scripts/gitclone.sh'
 
-neofetch
-
-if [[ "$(tty)" = "/dev/tty1" ]]; then
-	exec Hyprland
-fi
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+export TERM=xterm-256color
+
+bindkey -v
+bindkey -s "^P" 'kill -9 $(ps aux | fzf | awk "{print $2}\")^M'
+bindkey -s "^F" '$EDITOR $(find ~/git -maxdepth 1 -type d | fzf)^M'
+neofetch
 
 # sudo pacman -S zsh-syntax-highlighting zsh-autosuggestions
