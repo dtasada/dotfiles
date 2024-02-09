@@ -43,7 +43,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 export TERM=xterm-256color
 
 bindkey -v
-bindkey -s "^P" 'kill -9 $(ps aux | fzf | awk "{print $2}\")^M'
+bindkey -s "^P" 'kill -9 $(ps aux | fzf | awk "{print \\$2}")^M'
 bindkey -s "^F" '$EDITOR $(find ~/git -maxdepth 1 -type d | fzf)^M'
 neofetch
 
