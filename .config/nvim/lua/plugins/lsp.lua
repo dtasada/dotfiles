@@ -1,22 +1,31 @@
 return {
-	'VonHeikemen/lsp-zero.nvim',
-	branch = 'v2.x',
+	"VonHeikemen/lsp-zero.nvim",
+	branch = "v2.x",
 	dependencies = {
 		-- LSP Support
-		{ 'neovim/nvim-lspconfig' },             -- Required
-		{ 'williamboman/mason.nvim' },           -- Optional
-		{ 'williamboman/mason-lspconfig.nvim' }, -- Optional
+		{ "neovim/nvim-lspconfig" },               -- Required
+		{ "williamboman/mason.nvim" },             -- Optional
+		{ "williamboman/mason-lspconfig.nvim" },   -- Optional
+		{ "WhoIsSethDaniel/mason-tool-installer.nvim" }, -- Optional
 
 		-- Autocompletion
-		{ 'hrsh7th/nvim-cmp' },     -- Required
-		{ 'hrsh7th/cmp-nvim-lsp' }, -- Required
-		{ 'L3MON4D3/LuaSnip' },     -- Required
+		{ "hrsh7th/nvim-cmp" }, -- Required
+		{ "hrsh7th/cmp-nvim-lsp" }, -- Required
+		{ "L3MON4D3/LuaSnip" }, -- Required
 	},
 
 	config = function()
-		local lsp = require('lsp-zero').preset('recommended')
-		local cmp = require('cmp')
+		local lsp = require("lsp-zero").preset("recommended")
+		local cmp = require("cmp")
 		local cmp_select = { behavior = cmp.SelectBehavior.Select }
+
+		require("mason-tool-installer").setup({
+			ensure_installed = {
+				"stylua",
+				"black",
+				"clang-format",
+			},
+		})
 
 		lsp.ensure_installed({
 			"bashls",
@@ -30,7 +39,7 @@ return {
 			"lua_ls",
 			"rust_analyzer",
 			"svelte",
-			"tsserver"
+			"tsserver",
 		})
 
 		lsp.setup_nvim_cmp({
@@ -41,13 +50,13 @@ return {
 				["<C-d>"] = cmp.mapping.scroll_docs(4),
 				["<C-e>"] = cmp.mapping.abort(),
 
-				["<Tab>"] = cmp.mapping.confirm({ select = true, }),
-				["<cr>"] = cmp.mapping.confirm({ select = true, }),
+				["<Tab>"] = cmp.mapping.confirm({ select = true }),
+				["<cr>"] = cmp.mapping.confirm({ select = true }),
 			}),
 
 			sources = {
 				{ name = "nvim_lsp" },
-				{ name = 'nvim_lsp_signature_help' }
+				{ name = "nvim_lsp_signature_help" },
 			},
 		})
 
@@ -67,9 +76,8 @@ return {
 			-- vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
 			-- vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
 			-- vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
-
 		end)
 
 		lsp.setup()
-	end
+	end,
 }
