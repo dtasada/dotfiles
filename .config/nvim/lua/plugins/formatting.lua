@@ -11,6 +11,11 @@ return {
 				async = false,
 				timeout_ms = 500,
 			},
+
+			formatters_by_ft = {
+				python = { "black" },
+				lua = { "stylua" }
+			}
 		})
 
 		vim.keymap.set({ "n", "v" }, "<leader>mp", function()

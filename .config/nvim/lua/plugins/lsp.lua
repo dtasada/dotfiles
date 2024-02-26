@@ -21,9 +21,8 @@ return {
 
 		require("mason-tool-installer").setup({
 			ensure_installed = {
-				"stylua",
 				"black",
-				"clang-format",
+				"stylua",
 			},
 		})
 
@@ -34,11 +33,10 @@ return {
 			"emmet_language_server",
 			"gopls",
 			"html",
-			"jedi_language_server",
+			"pyright",
 			"kotlin_language_server",
 			"lua_ls",
 			"rust_analyzer",
-			"svelte",
 			"tsserver",
 		})
 
