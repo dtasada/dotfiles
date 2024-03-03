@@ -12,7 +12,7 @@ while true; do
 	# mv ~/walls/WidescreenWallpaper ~/walls/wides
 	DIR=~/walls/sunfire
 
-	# feh --bg-fill --randomize ~/walls/catppuccin/ &
+	feh --bg-fill --randomize ~/walls/catppuccin/ &
 	swaybg -i $DIR/$(\ls $DIR | shuf -n 1) &
 
 	sleep 90

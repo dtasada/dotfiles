@@ -3,9 +3,9 @@ return {
 	branch = "v2.x",
 	dependencies = {
 		-- LSP Support
-		{ "neovim/nvim-lspconfig" },               -- Required
-		{ "williamboman/mason.nvim" },             -- Optional
-		{ "williamboman/mason-lspconfig.nvim" },   -- Optional
+		{ "neovim/nvim-lspconfig" }, -- Required
+		{ "williamboman/mason.nvim" }, -- Optional
+		{ "williamboman/mason-lspconfig.nvim" }, -- Optional
 		{ "WhoIsSethDaniel/mason-tool-installer.nvim" }, -- Optional
 
 		-- Autocompletion
@@ -33,7 +33,6 @@ return {
 			"emmet_language_server",
 			"gopls",
 			"html",
-			"pyright",
 			"kotlin_language_server",
 			"lua_ls",
 			"rust_analyzer",
