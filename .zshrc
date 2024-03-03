@@ -44,7 +44,9 @@ export TERM=xterm-256color
 
 bindkey -v
 bindkey -s "^P" 'kill -9 $(ps aux | fzf | awk "{print \\$2}")^M'
-bindkey -s "^F" '$EDITOR $(find ~/git -maxdepth 1 -type d | fzf)^M'
+bindkey -s "^F" '~/scripts/dev-tmux.sh $(find ~/git -maxdepth 1 -type d | fzf)^M'
 neofetch
 
 # sudo pacman -S zsh-syntax-highlighting zsh-autosuggestions
+
+export PATH=$PATH:~/.modular/pkg/packages.modular.com_mojo/bin/
