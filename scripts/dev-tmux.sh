@@ -17,4 +17,4 @@ tmux send-keys -t $name:2 "exec lazygit" C-m
 tmux new-window -t $name:3 -n "shell" -c $1
 
 # Attach to the tmux session
-tmux attach -t $name
+tmux attach -t $name:1
