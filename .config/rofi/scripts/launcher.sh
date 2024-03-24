@@ -1,13 +1,21 @@
 #!/usr/bin/env bash
 
-FILE="$HOME/.config/rofi/scripts/rofi/colors.rasi"
+## Author : Aditya Shakya (adi1090x)
+## Github : @adi1090x
+#
+## Rofi   : Launcher (Modi Drun, Run, File Browser, Window)
+#
+## Available Styles
+#
+## style-1     style-2     style-3     style-4     style-5
+## style-6     style-7     style-8     style-9     style-10
+## style-11    style-12    style-13    style-14    style-15
 
-## random accent color
-#COLORS=('#EC7875' '#EC6798' '#BE78D1' '#75A4CD' '#00C7DF' '#00B19F' '#61C766' \
-#		'#B9C244' '#EBD369' '#EDB83F' '#E57C46' '#AC8476' '#6C77BB' '#6D8895')
-#AC="${COLORS[$(( $RANDOM % 14 ))]}"
-#SE="${COLORS[$(( $RANDOM % 14 ))]}"
-#sed -i -e "s/ac: .*/ac:   ${AC}FF;/g" $FILE
-#sed -i -e "s/se: .*/se:   ${SE}FF;/g" $FILE
+type=8
+dir="$HOME/.config/rofi/launchers/type-2"
+theme="style-7"
 
-rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/themes/dt-dmenu.rasi
+## Run
+rofi \
+    -show drun \
+    -theme ${dir}/${theme}.rasi

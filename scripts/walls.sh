@@ -10,10 +10,10 @@ while true; do
 	# gert -m '3440' -l 1 -o ~/walls -H -s WidescreenWallpaper -f top -p all
 	# rm -rf ~/walls/wides/
 	# mv ~/walls/WidescreenWallpaper ~/walls/wides
-	DIR=~/walls/sunfire
+	DIR=~/walls/gruvbox
 
-	feh --bg-fill --randomize ~/walls/catppuccin/ &
-	swaybg -i $DIR/$(\ls $DIR | shuf -n 1) &
+	# feh --bg-fill --randomize ~/walls/catppuccin/ &
+	swaybg -i $DIR/$(\ls $DIR | shuf -n 1) --mode fill &
 
 	sleep 90
 done

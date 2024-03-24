@@ -14,8 +14,10 @@ return {
 
 			formatters_by_ft = {
 				python = { "black" },
-				lua = { "stylua" }
-			}
+				lua = { "stylua" },
+				c = { "clang-format" },
+				cpp = { "clang-format" },
+			},
 		})
 
 		vim.keymap.set({ "n", "v" }, "<leader>mp", function()
