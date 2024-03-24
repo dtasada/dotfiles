@@ -1,0 +1,25 @@
+/* gruvbox, made by dt */
+
+@define-color crust  #1d2021;
+@define-color mantle #282828;
+@define-color base   #3c3836;
+
+@define-color text     #fbf1c7;
+@define-color subtext0 #ebdbb2;
+@define-color subtext1 #d6c4a1;
+
+@define-color surface0 #363a4f;
+@define-color surface1 #494d64;
+@define-color surface2 #5b6078;
+
+@define-color overlay0 #6e738d;
+@define-color overlay1 #8087a2;
+@define-color overlay2 #939ab7;
+
+@define-color red       #cc241d;
+@define-color green     #98971a;
+@define-color yellow    #d79921;
+@define-color blue      #458588;
+@define-color purple	#b16286;
+@define-color aqua   	#689d6a;
+@define-color orange   	#fe8019;
