@@ -13,6 +13,7 @@ while true; do
 	DIR=~/walls/gruvbox
 
 	# feh --bg-fill --randomize ~/walls/catppuccin/ &
+	killall swaybg
 	swaybg -i $DIR/$(\ls $DIR | shuf -n 1) --mode fill &
 
 	sleep 90
