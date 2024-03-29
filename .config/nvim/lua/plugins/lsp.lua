@@ -39,7 +39,7 @@ return {
 			"tsserver",
 		})
 
-		lsp.setup_nvim_cmp({
+		cmp.setup({
 			mapping = lsp.defaults.cmp_mappings({
 				["<C-n>"] = cmp.mapping.select_next_item(select_opts),
 				["<C-p>"] = cmp.mapping.select_prev_item(select_opts),
@@ -54,6 +54,11 @@ return {
 			sources = {
 				{ name = "nvim_lsp" },
 				{ name = "nvim_lsp_signature_help" },
+			},
+
+			window = {
+				completion = cmp.config.window.bordered(),
+				documentation = cmp.config.window.bordered(),
 			},
 		})
 

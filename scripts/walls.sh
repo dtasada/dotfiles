@@ -18,6 +18,3 @@ while true; do
 
 	sleep 90
 done
-#
-# swaybg -i ~/walls/leapoffaith.jpg &
-
