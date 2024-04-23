@@ -342,8 +342,8 @@ $env.config = {
 alias v = nvim
 alias sv = kitty -e nvim
 alias cl = clear
-alias ll = ls -l | reject inode target readonly num_links
-alias la = ls -la | reject inode target readonly num_links
+def ll [] { ls -l | reject inode target readonly num_links }
+def la [] { ls -la | reject inode target readonly num_links }
 
 use ~/.cache/starship/init.nu
 

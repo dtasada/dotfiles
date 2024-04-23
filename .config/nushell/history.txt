@@ -306,3 +306,15 @@ ll | reject inode target readonly num_links
 v ~/.config/nushell/config.nu
 cd dotfiles/
 ll
+cp -r ~/.config/nushell/ .config/
+git add .\
+git add .
+git commit -am "added nushell"
+git push
+v ~/.config/nushell/config.nu
+ll
+la
+clear
+nvim ~/.config/nushell/config.nu
+cd git/dotfiles/
+ll
