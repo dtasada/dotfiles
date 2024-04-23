@@ -29,5 +29,5 @@ DIR=~/walls/gruvbox
 
 while true; do
 	swww img "$DIR/$(\ls $DIR | shuf -n 1)"
-	sleep 5
+	sleep 90
 done

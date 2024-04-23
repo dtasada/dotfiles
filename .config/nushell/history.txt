@@ -1,0 +1,252 @@
+ll
+ls
+cd git/PANDEMONIUM/
+ll
+clear
+ls
+ls -l
+ls -la
+la
+http
+http get reddit.com
+http get https://reddit.com
+http get https://reddit.com | get license
+get
+clear
+man
+man nu
+tldr nu
+cal
+clear
+ls
+ls | compact
+clear
+date
+date humanize
+config
+clear
+config env
+clear
+config nu
+decode
+clear
+cat README.md
+cat README.md | decode
+cat README.md | encode
+cat README.md | describe
+clear
+dfrd
+dfr
+into sqlite
+into sqlite ./client/assets/weapon_data.json
+cat ./client/assets/weapon_data.json | into sqlite
+into sqlite ./client/assets/weapon_data.json
+cat ./client/assets/weapon_data.json | into sqlite sql.db
+which ls
+which cat
+which nu
+math log
+math log 3
+echo 3 | math log
+sqrt
+math sqrt
+math sqrt 3
+math sqrt(3)
+math sqrt | 3
+clear
+3 | math isn
+3 | math sin
+[1, 2, 3] | math sum
+[1, 2, 3] | math variance
+[1, 2, 3] | math merge
+[1, 2, 3] | reverse
+[1, 2, 3] | reverse | into string
+[1, 2, 3] | reverse | to json
+[1, 2, 3] | reverse | to text
+[1, 2, 3] | reverse | to toml
+[1, 2, 3] | reverse | to csv
+[1, 2, 3] | reverse | to yaml
+ls | where type == "dir"
+ls | where type == "file"
+ls | where size == "833"
+ls | where size == "833 B"
+ls | where size == 833
+ls | where name == "*dem*"
+ls | where "dem" in type
+open ./client/assets/weapon_data.json
+open ./client/assets/weapon_data.json | into yaml
+open ./client/assets/weapon_data.json | to yaml
+open ./client/assets/weapon_data.json | to toml
+open ./client/assets/weapon_data.json | to csv
+open ./client/assets/weapon_data.json | to toml
+cat ./client/assets/weapon_data.json | to toml
+open ./client/assets/weapon_data.json | to toml
+open ./client/assets/weapon_data.json | get 4
+open ./client/assets/weapon_data.json | get "4"
+$nu.config-path
+nvim $nu.config-path
+mkdir ~/.cache/starship<\n>starship init nu | save -f ~/.cache/starship/init.nu
+clear
+exit
+v
+clear
+$nu
+nvim $nu.config-path
+nvim $nu.config
+$env.config
+clear
+$env.config
+clear
+nvim $nu.config
+nvim $nu.config-path
+ll
+clear
+ls
+nvim $nu.config-path
+exit
+clear
+ll
+la
+$nu.
+$nu.config
+$pid
+$nu.pid
+$nu.env
+$nu.config
+clear
+open $nu.config
+asdhjklfasdhjklfdas
+clear
+$nu.ke
+$nu.keybinds
+$nu
+$env
+$env.keybinds
+$env.keybindings
+clear
+$env
+$env | where emacs
+clear
+$env | emacs
+clear
+$env | nvim
+clear
+url parse "http://caeborg.dev"
+url parse http://caeborg.dev
+cat http://caeborg.dev | url parse
+cat git/PANDEMONIUM/ | url parse
+echo http://caeborg.dev | url parse
+(echo http://caeborg.dev | url parse).scheme
+echo http://caeborg.dev | url parse | get scheme
+echo http://caeborg.dev | url parse | get params
+echo http://caeborg.dev | url parse  | sort
+man sort-by
+sort-by
+cd git/dotfiles/
+clear
+ll
+git status
+..
+cd dotfiles/
+exit
+do
+clear
+exit
+clear
+ll
+clear
+ll
+asdf
+clear
+ll
+exit
+clear
+http get https://reddit.com
+clear
+url parse http://caeborg.dev
+url parse "http://caeborg.dev"
+history | get parse
+history | where parse
+clear
+ls
+ls | where name == "Downloads"
+cleqar
+clear
+cd git/PANDEMONIUM/
+clear
+open ./client/assets/weapon_data.json 
+clear
+open ./client/assets/weapon_data.json | get "4"
+open ./client/assets/weapon_data.json | to toml
+clear
+open ./client/assets/weapon_data.json
+open ./client/assets/weapon_data.json | get
+open ./client/assets/weapon_data.json | get "4"
+"1" | into int
+url parse "http://caeborg.dev"
+url parse "http://www.caeborg.dev"
+clear
+url parse http://www.caeborg.dev
+echo http://caeborg.dev | url parse
+echo http://caeborg.dev | url parse | get params
+echo http://caeborg.dev/?arg=1 | url parse | get params
+1 | math sin
+1 | math ln
+1 + 1 | math sin
+1 + 1
+123 + 3
+clear
+678 * 3 | math tanh
+"    asdfasdf " | str trim
+clear
+open ./client/assets/weapon_data.json | to yaml
+clear
+v main.nu
+clear
+open ./client/assets/weapon_data.json
+open "./client/assets/weapon_data.json"
+open ./client/assets/weapon_data.json | get
+open ./client/assets/weapon_data.json | get al
+open ./client/assets/weapon_data.json | get all
+clear
+open ./client/assets/weapon_data.json
+open ./client/assets/weapon_data.json | where name == "Pistol"
+clear
+open ./client/assets/weapon_data.json
+open client/assets/weapon_data.json
+client/assets/weapon_data.json
+catclient/assets/weapon_data.json
+cat client/assets/weapon_data.json
+cat client/assets/weapon_data.json | to json
+clear
+cat client/assets/weapon_data.json | into json
+cat client/assets/weapon_data.json | into string 
+cat client/assets/weapon_data.json | into string | json
+cat client/assets/weapon_data.json | into string | jq
+clear
+echo http://caeborg.dev/?arg=1 | url parse
+echo http://caeborg.dev/?arg=1 | url parse | get host
+(echo http://caeborg.dev/?arg=1 | url parse).host
+ls
+clear
+ls
+ls | to csv
+ls | to json
+clear
+ls | into json
+clear
+open ls
+open $(ls)
+open (do ls)
+open ls
+clear
+ls
+help commands
+help commands | where category == "core"
+lear
+cl
+ll
+cd
+ll
+cd git/dotfiles/
+git status
