@@ -250,3 +250,59 @@ cd
 ll
 cd git/dotfiles/
 git status
+cp -r ~/.config/nushell/ .config/
+git add .
+git commit -am "added nushell"
+git push
+git pull
+git status
+git add .
+git commit -am "added nushell"
+git push
+cp .config/waybar/ ~/.config/waybar/
+cp .config/waybar/ ~/.config/waybar/ -r
+clear
+killall waybar
+waybar
+sudo mv Downloads/50-numworks-calculator.rules /etc/udev/rules.d
+lsblk
+cd git/PANDEMONIUM/
+open ./client/assets/weapon_data.json
+clear
+open ./client/assets/weapon_data.json
+clear
+open ./client/assets/weapon_data.json | table
+open ./client/assets/weapon_data.json | table -e
+clear
+sys
+sys.host
+(sys).host
+clear
+(sys).host
+(sys).host | table
+(sys).host
+clear
+(sys).host | table
+griddycode
+yay -Ss griddycode
+cd git/
+ll
+git clone https://github.com/face-hh/griddycode
+cd git/
+ll
+ls -h
+ls
+ll
+ll | get type
+ll | filter
+filter
+filter --help
+clear
+ls
+ll
+ll | select name type mode user group size created
+ll | reject inode target readonly
+ll | reject inode target readonly num_links
+v ~/.config/nushell/config.nu
+cd dotfiles/
+ll
