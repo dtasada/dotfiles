@@ -317,7 +317,7 @@ $env.config = {
 			event: [
 				{
 					edit: insertstring,
-					value: 'kill -9 $(ps aux | fzf | awk "{print \\$2}")'
+					value: 'bash -c `kill -9 $(ps aux | fzf | awk "{print \$2}")`'
 				}
 				{ send: enter }
 			]
@@ -330,7 +330,7 @@ $env.config = {
 			event: [
 				{
 					edit: insertstring,
-					value: "~/scripts/dev-tmux.sh $(find ~/git -maxdepth 1 -type d | fzf)"
+					value: "bash ~/scripts/dev-tmux.sh"
 				}
 				{ send: enter }
 			]

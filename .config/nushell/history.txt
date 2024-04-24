@@ -318,3 +318,65 @@ clear
 nvim ~/.config/nushell/config.nu
 cd git/dotfiles/
 ll
+cp -r ~/.config/nushell/ .config/
+git add .
+git commit -am "added nushell"
+git push
+clear
+~/scripts/dev-tmux.sh $(find ~/git -maxdepth 1 -type d | fzf)
+v ~/scripts/dev-tmux.sh
+v ~/.config/nushell/config.nu
+clear
+bash ~/scripts/dev-tmux.sh $(find ~/git -maxdepth 1 -type d | fzf)
+clear
+v ~/.config/nushell/config.nu
+~/scripts/dev-tmux.sh (find ~/git -maxdepth 1 -type d | fzf)
+bash eval `~/scripts/dev-tmux.sh $(find ~/git -maxdepth 1 -type d | fzf)`
+~/scripts/dev-tmux.sh (find ~/git -maxdepth 1 -type d | fzf)
+find --help
+find --help  | grep maxhealth
+find --help  | grep maxdepth
+clear
+find ~/git -type d | fzf
+find ~/git | fzf
+find --help
+ls ~/git | fzf
+ls --raw ~/git | fzf
+ls ~/git
+ls ~/git | get name
+ls ~/git | get name | fzf
+ls ~/git | get name --raw | fzf
+\ls ~/git | get name | fzf
+~/scripts/dev-tmux.sh (bash find ~/git -maxdepth 1 -type d | fzf)
+kill -9 (ps aux | fzf | awk "{print \\$2}")
+v scripts/dev-tmux.sh
+bash eval `kill -9 $(ps aux | fzf | awk "{print \\$2}")`
+clear
+bash `kill -9 $(ps aux | fzf | awk "{print \\$2}")`
+clear
+bash --help
+bash -c 'echo a'
+bash -c `kill -9 $(ps aux | fzf | awk "{print \\$2}")`
+y
+watch echo 'a'
+watch echo a
+bash -c `kill -9 $(ps aux | fzf | awk "{print \$2}")`
+./pandemonium -s
+clear
+./pandemonium.py -f
+./pandemonium.py -s
+clear
+clea
+clear
+v scripts/dev-tmux.sh
+v ~/.config/nushell/config.nu
+cl
+cd git/dotfiles/
+ll
+git status
+rm -rf .config/nushell/
+cp -alr ~/.config/nushell/ .config/
+cp -lr ~/.config/nushell/ .config/
+bash -c 'cp -alr ~/.config/nushell/ .config/'
+git status
+git add .
