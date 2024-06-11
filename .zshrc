@@ -1,11 +1,3 @@
-# User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
-then
-  PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-fi
-PATH="$HOME/.cargo/bin:$PATH"
-export PATH
-
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
@@ -14,9 +6,6 @@ setopt appendhistory
 unset rc
 
 eval "$(starship init zsh)"
-
-export EDITOR=nvim
-export VISUAL='kitty -e nvim'
 
 alias ls='exa --icons --color=always --group-directories-first --git -l'
 alias ll='exa --icons --color=always --group-directories-first --git -l'
@@ -27,16 +16,8 @@ alias lg='exa --icons --color=always --group-directories-first --git'
 
 alias v='$EDITOR'
 alias sv='sudo $EDITOR'
-alias dw='cd ~/Downloads'
-alias od='cd ~/OneDrive && ls'
 alias ..='cd ..'
 alias cl='clear'
-alias push='~/scripts/gitpush.sh'
-alias glone='~/scripts/gitclone.sh'
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH=$BUN_INSTALL/bin:$PATH
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -50,7 +31,6 @@ neofetch
 # sudo pacman -S zsh-syntax-highlighting zsh-autosuggestions
 
 export PATH=$PATH:/home/dt/.cargo/bin
-export ODIN_ROOT=/nix/store/7vqd40c5mm00q7zf7lg2rhyzhdm0wwfb-odin-dev-2024-04a/share
 
 export EDITOR=nvim
 export VISUAL=nvim
@@ -135,7 +115,8 @@ ex=:\
 *.rpm=:\
 *.jar=:\
 *.war=:\
-*.ear=:\ *.sar=:\
+*.ear=:\
+*.sar=:\
 *.rar=:\
 *.alz=:\
 *.ace=:\
