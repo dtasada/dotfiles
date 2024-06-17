@@ -1,7 +1,6 @@
 return {
 	"christoomey/vim-tmux-navigator",
 	"folke/neodev.nvim",
-	"michaelb/sniprun",
 	{ "folke/trouble.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
 	{ "akinsho/toggleterm.nvim", config = true },
 	{
