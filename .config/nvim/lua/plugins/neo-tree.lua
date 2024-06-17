@@ -1,22 +1,18 @@
 return {
-  "nvim-neo-tree/neo-tree.nvim",
-  branch = "v3.x",
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-    "MunifTanjim/nui.nvim",
-  },
+	"nvim-neo-tree/neo-tree.nvim",
+	branch = "v3.x",
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+		"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+		"MunifTanjim/nui.nvim",
+	},
 
 	config = function()
 		-- If you want icons for diagnostic errors, you'll need to define them somewhere:
-		vim.fn.sign_define("DiagnosticSignError",
-			{text = " ", texthl = "DiagnosticSignError"})
-		vim.fn.sign_define("DiagnosticSignWarn",
-			{text = " ", texthl = "DiagnosticSignWarn"})
-		vim.fn.sign_define("DiagnosticSignInfo",
-			{text = " ", texthl = "DiagnosticSignInfo"})
-		vim.fn.sign_define("DiagnosticSignHint",
-			{text = "󰌵", texthl = "DiagnosticSignHint"})
+		vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
+		vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
+		vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
+		vim.fn.sign_define("DiagnosticSignHint", { text = "󰌵", texthl = "DiagnosticSignHint" })
 
 		require("neo-tree").setup({
 			close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
@@ -25,7 +21,7 @@ return {
 			enable_diagnostics = true,
 			open_files_do_not_replace_types = { "terminal", "trouble", "qf" }, -- when opening files, do not use windows containing these filetypes or buftypes
 			sort_case_insensitive = true, -- used when sorting files and directories in the tree
-			sort_function = nil , -- use a custom function for sorting files and directories in the tree 
+			sort_function = nil, -- use a custom function for sorting files and directories in the tree
 			-- sort_function = function (a,b)
 			--       if a.type == b.type then
 			--           return a.path > b.path
@@ -35,7 +31,7 @@ return {
 			--   end , -- this sorts files and directories descendantly
 			default_component_configs = {
 				container = {
-					enable_character_fade = true
+					enable_character_fade = true,
 				},
 				indent = {
 					indent_size = 2,
@@ -58,7 +54,7 @@ return {
 					-- The next two settings are only a fallback, if you use nvim-web-devicons and configure default icons there
 					-- then these will never be used.
 					default = "*",
-					highlight = "NeoTreeFileIcon"
+					highlight = "NeoTreeFileIcon",
 				},
 				modified = {
 					symbol = "[✚] ",
@@ -73,17 +69,17 @@ return {
 				git_status = {
 					symbols = {
 						-- Change type
-						added     = "", -- or "✚", but this is redundant info if you use git_status_colors on the name
-						modified  = "", -- or "", but this is redundant info if you use git_status_colors on the name
-						deleted   = "✖",-- this can only be used in the git_status source
-						renamed   = "󰁕",-- this can only be used in the git_status source
+						added = "", -- or "✚", but this is redundant info if you use git_status_colors on the name
+						modified = "", -- or "", but this is redundant info if you use git_status_colors on the name
+						deleted = "✖", -- this can only be used in the git_status source
+						renamed = "󰁕", -- this can only be used in the git_status source
 						-- Status type
 						untracked = "",
-						ignored   = "",
-						unstaged  = "󰄱",
-						staged    = "",
-						conflict  = "",
-					}
+						ignored = "",
+						unstaged = "󰄱",
+						staged = "",
+						conflict = "",
+					},
 				},
 			},
 			-- A list of functions, each representing a global custom command
@@ -108,7 +104,7 @@ return {
 					["ov"] = "open_vsplit",
 					["ot"] = "open_tabnew",
 					["c"] = "close_node",
-					['C'] = 'close_all_subnodes',
+					["C"] = "close_all_subnodes",
 					["z"] = "close_all_nodes",
 					["Z"] = "expand_all_nodes",
 					["a"] = "add",
@@ -124,7 +120,7 @@ return {
 					["?"] = "show_help",
 					["<"] = "prev_source",
 					[">"] = "next_source",
-				}
+				},
 			},
 			nesting_rules = {},
 			filesystem = {
@@ -160,12 +156,12 @@ return {
 				},
 				group_empty_dirs = false, -- when true, empty folders will be grouped together
 				hijack_netrw_behavior = "open_default", -- netrw disabled, opening a directory opens neo-tree
-																								-- in whatever position is specified in window.position
-															-- "open_current",  -- netrw disabled, opening a directory opens within the
-																								-- window like netrw would, regardless of window.position
-															-- "disabled",    -- netrw left alone, neo-tree does not handle opening dirs
+				-- in whatever position is specified in window.position
+				-- "open_current",  -- netrw disabled, opening a directory opens within the
+				-- window like netrw would, regardless of window.position
+				-- "disabled",    -- netrw left alone, neo-tree does not handle opening dirs
 				use_libuv_file_watcher = false, -- This will use the OS level file watchers to detect changes
-																				-- instead of relying on nvim autocmd events.
+				-- instead of relying on nvim autocmd events.
 				window = {
 					mappings = {
 						["<bs>"] = "navigate_up",
@@ -187,7 +183,7 @@ return {
 					},
 				},
 
-				commands = {} -- Add a custom command or override a global one using the same function name
+				commands = {}, -- Add a custom command or override a global one using the same function name
 			},
 			buffers = {
 				follow_current_file = {
@@ -203,25 +199,25 @@ return {
 						["<bs>"] = "navigate_up",
 						["."] = "set_root",
 						["."] = "<cmd>cd<cr>",
-					}
+					},
 				},
 			},
 			git_status = {
 				window = {
 					position = "float",
 					mappings = {
-						["A"]  = "git_add_all",
+						["A"] = "git_add_all",
 						["gu"] = "git_unstage_file",
 						["ga"] = "git_add_file",
 						["gr"] = "git_revert_file",
 						["gc"] = "git_commit",
 						["gp"] = "git_push",
 						["gg"] = "git_commit_and_push",
-					}
-				}
-			}
+					},
+				},
+			},
 		})
 
 		vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
-	end
+	end,
 }
