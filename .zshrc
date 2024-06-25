@@ -19,8 +19,8 @@ alias sv='sudo $EDITOR'
 alias ..='cd ..'
 alias cl='clear'
 
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export TERM=xterm-256color
 
 bindkey -v
