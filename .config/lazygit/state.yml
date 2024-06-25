@@ -1,10 +1,16 @@
 lastupdatecheck: 0
 recentrepos:
-- /home/dt/git/caeborg-web
-- /home/dt/git/gloomsgate
-- /home/dt/git/Ohio-Trail
-- /home/dt/git/dotfiles
+    - /home/dt/git/paper
+    - /home/dt/git/p2
+    - /home/dt/git/freight
+    - /home/dt/git/dotfiles
 startuppopupversion: 5
+lastversion: 0.42.0
 customcommandshistory: []
 hidecommandlog: false
 ignorewhitespaceindiffview: false
+diffcontextsize: 3
+localbranchsortorder: recency
+remotebranchsortorder: alphabetical
+gitlogorder: topo-order
+gitlogshowgraph: always

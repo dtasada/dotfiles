@@ -431,19 +431,34 @@
 # vim: ft=cfg
 
 ### Catppuccin Theme ###
-[global]
-frame_color = "#8AADF4"
-separator_color= frame
+# [global]
+# frame_color = "#8AADF4"
+# separator_color= frame
+#
+# [urgency_low]
+# background = "#24273A"
+# foreground = "#CAD3F5"
+#
+# [urgency_normal]
+# background = "#24273A"
+# foreground = "#CAD3F5"
+#
+# [urgency_critical]
+# background = "#24273A"
+# foreground = "#CAD3F5"
+# frame_color = "#F5A97F"
 
 [urgency_low]
-background = "#24273A"
-foreground = "#CAD3F5"
+    background = "#282828"
+    foreground = "#ebdbb2"
+    timeout = 5
 
 [urgency_normal]
-background = "#24273A"
-foreground = "#CAD3F5"
+    background = "#282828"
+    foreground = "#ebdbb2"
+    timeout = 20
 
 [urgency_critical]
-background = "#24273A"
-foreground = "#CAD3F5"
-frame_color = "#F5A97F"
+    background = "#282828"
+    foreground = "#ebdbb2"
+    timeout = 0
