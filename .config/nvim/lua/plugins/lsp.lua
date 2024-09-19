@@ -2,33 +2,76 @@ return {
 	"VonHeikemen/lsp-zero.nvim",
 	branch = "v2.x",
 	dependencies = {
-		"L3MON4D3/LuaSnip",
-		"folke/neodev.nvim",
-		"hrsh7th/cmp-buffer",
-		"hrsh7th/cmp-cmdline",
-		"hrsh7th/cmp-nvim-lsp",
-		"hrsh7th/cmp-nvim-lua",
-		"hrsh7th/cmp-path",
-		"hrsh7th/nvim-cmp",
-		"hrsh7th/vim-vsnip",
-		"neovim/nvim-lspconfig",
-		"saadparwaiz1/cmp_luasnip",
-		"williamboman/mason-lspconfig.nvim",
-		"williamboman/mason.nvim",
+		-- LSP Support
+		{ "neovim/nvim-lspconfig" }, -- Required
+		{ "williamboman/mason.nvim" }, -- Optional
+		{ "williamboman/mason-lspconfig.nvim" }, -- Optional
+		{ "WhoIsSethDaniel/mason-tool-installer.nvim" }, -- Optional
+
+		-- Autocompletion
+		{ "hrsh7th/nvim-cmp" }, -- Required
+		{ "hrsh7th/cmp-nvim-lsp" }, -- Required
+		{ "L3MON4D3/LuaSnip" }, -- Required
 	},
 
 	config = function()
 		local lsp = require("lsp-zero").preset("recommended")
 		local cmp = require("cmp")
-		local luasnip = require("luasnip")
-		luasnip.setup({})
+		local cmp_select = { behavior = cmp.SelectBehavior.Select }
+		local capabilities = vim.tbl_deep_extend(
+			"force",
+			{},
+			vim.lsp.protocol.make_client_capabilities(),
+			require("cmp_nvim_lsp").default_capabilities()
+		)
 
-		cmp.setup({
-			snippet = {
-				expand = function(args)
-					luasnip.lsp_expand(args.body)
+		require("mason-tool-installer").setup({
+			ensure_installed = {
+				"black",
+				"stylua",
+			},
+		})
+
+		lsp.ensure_installed({
+			"bashls",
+			"clangd",
+			"cssls",
+			"emmet_language_server",
+			"gopls",
+			"html",
+			"kotlin_language_server",
+			"lua_ls",
+			"rust_analyzer",
+			"tsserver",
+		})
+
+		require("mason-lspconfig").setup({
+			handlers = {
+				function(server_name)
+					require("lspconfig")[server_name].setup({
+						capabilities = capabilities,
+					})
+				end,
+
+				zls = function()
+					local lspconfig = require("lspconfig")
+					lspconfig.zls.setup({
+						root_dir = lspconfig.util.root_pattern("build.zig"),
+						settings = {
+							zls = {
+								enable_inlay_hints = true,
+								enable_snippets = true,
+								warn_style = true,
+							},
+						},
+					})
+					vim.g.zig_fmt_parse_errors = 1
+					vim.g.zig_fmt_autosave = 1
 				end,
 			},
+		})
+
+		cmp.setup({
 			mapping = lsp.defaults.cmp_mappings({
 				["<C-n>"] = cmp.mapping.select_next_item(select_opts),
 				["<C-p>"] = cmp.mapping.select_prev_item(select_opts),
@@ -42,10 +85,8 @@ return {
 
 			sources = {
 				{ name = "nvim_lsp" },
-				{ name = "buffer" },
-				{ name = "path" },
-				{ name = "luasnip" },
-				-- { name = "nvim_lua" },
+				{ name = "copilot" },
+				{ name = "nvim_lsp_signature_help" },
 			},
 
 			window = {
@@ -59,8 +100,19 @@ return {
 				buffer = bufnr,
 				remap = false,
 			}
+
+			-- vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+			-- vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
+			-- vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
+			-- vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
+			-- vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
+			-- vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
+			-- vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
+			-- vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
+			-- vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
+			-- vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 		end)
 
-		lsp.setup({})
+		lsp.setup()
 	end,
 }
