@@ -1,0 +1,13 @@
+import =  [
+	"/home/dt/.config/alacritty/themes/gruvbox.toml",
+]
+
+[window]
+padding = { x = 12, y = 12 }
+
+[font]
+size = 14.0
+
+[font.normal]
+family = "CaskaydiaCove NF"
+
