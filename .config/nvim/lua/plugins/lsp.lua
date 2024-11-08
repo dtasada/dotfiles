@@ -42,7 +42,7 @@ return {
 			"kotlin_language_server",
 			"lua_ls",
 			"rust_analyzer",
-			"tsserver",
+			"ts_ls",
 		})
 
 		require("mason-lspconfig").setup({
@@ -50,6 +50,15 @@ return {
 				function(server_name)
 					require("lspconfig")[server_name].setup({
 						capabilities = capabilities,
+					})
+				end,
+
+				omnisharp = function()
+					local lspconfig = require("lspconfig")
+					lspconfig.omnisharp.setup({
+						capabilities = capabilities,
+						cmd = { "omnisharp", "--languageserver" },
+						root_dir = lspconfig.util.root_pattern("*.sln"),
 					})
 				end,
 
