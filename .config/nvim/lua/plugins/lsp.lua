@@ -77,6 +77,15 @@ return {
 					vim.g.zig_fmt_parse_errors = 1
 					vim.g.zig_fmt_autosave = 1
 				end,
+
+				clangd = function()
+					require("lspconfig").clangd.setup({
+						init_options = {
+							fallbackFlags = { "--std=c++23" },
+						},
+					})
+				end,
+
 			},
 		})
 
