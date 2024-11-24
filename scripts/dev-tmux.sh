@@ -1,6 +1,6 @@
 #!/bin/bash
 
-arg=$(find ~/git -maxdepth 1 -type d | fzf)
+arg=$(find ~/coding -mindepth 2 -maxdepth 2 -type d | fzf)
 if [[ -z $arg ]]; then exit; fi
 
 name=$(basename $arg)
@@ -13,7 +13,7 @@ else
 	echo "Creating new session"
 	tmux new-session -d -s $name -c $arg 
 
-	tmux send-keys -t $name:1 "exec nvim" C-m
+	tmux send-keys -t $name:1 "nvim" C-m
 
 	tmux new-window -t $name:2 -n "lazygit" -c $arg
 	tmux send-keys -t $name:2 "exec lazygit" C-m
