@@ -20,14 +20,16 @@ swww-daemon &
 # 	sleep 90
 # done
 
-export SWWW_TRANSITION_FPS=60
-export SWWW_TRANSITION_STEP=2
-export SWWW_TRANSITION=wipe
+# export SWWW_TRANSITION_FPS=60
+# export SWWW_TRANSITION_STEP=2
+# export SWWW_TRANSITION=wipe
+#
+# # This controls (in seconds) when to switch to the next image
+#
+# while true; do
+# 	swww img "$DIR/$(\ls $DIR | shuf -n 1)"
+# 	sleep 90
+# done
 
-# This controls (in seconds) when to switch to the next image
 DIR=~/walls/gruvbox
-
-while true; do
-	swww img "$DIR/$(\ls $DIR | shuf -n 1)"
-	sleep 90
-done
+swww img "$DIR/$(\ls $DIR | shuf -n 1)"
