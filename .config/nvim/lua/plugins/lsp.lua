@@ -68,6 +68,14 @@ return {
 					vim.g.zig_fmt_parse_errors = 1
 					vim.g.zig_fmt_autosave = 1
 				end,
+
+				clangd = function()
+					require("lspconfig").clangd.setup({
+						init_options = {
+							fallbackFlags = { "--std=c++23" },
+						},
+					})
+				end,
 			},
 		})
 
@@ -101,6 +109,7 @@ return {
 				remap = false,
 			}
 
+			-- vim.keymap.set("n", "<leader>s", function() end, opts)
 			-- vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
 			-- vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
 			-- vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
