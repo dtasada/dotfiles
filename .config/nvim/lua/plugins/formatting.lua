@@ -19,6 +19,12 @@ return {
 				cpp = { "clang-format" },
 				java = { "clang-format" },
 			},
+
+			formatters = {
+				["clang-format"] = {
+					args = "-style='{IndentWidth: 4}'",
+				},
+			},
 		})
 
 		vim.keymap.set({ "n", "v" }, "<leader>mp", function()
