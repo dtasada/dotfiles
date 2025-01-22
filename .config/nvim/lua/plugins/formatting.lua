@@ -22,7 +22,7 @@ return {
 
 			formatters = {
 				["clang-format"] = {
-					args = "-style='{IndentWidth: 4}'",
+					args = "-style=file:$HOME/.clang-format",
 				},
 			},
 		})

@@ -1,0 +1,164 @@
+AlignAfterOpenBracket: BlockIndent
+AlignArrayOfStructures: Right
+AlignConsecutiveAssignments:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: true
+
+AlignConsecutiveBitFields:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: true
+
+AlignConsecutiveDeclarations:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: true
+
+AlignConsecutiveMacros:
+  Enabled: true
+  AcrossComments: true
+  AcrossEmptyLines: false
+
+AlignConsecutiveShortCaseStatements:
+  Enabled: true
+  AcrossEmptyLines: true
+  AcrossComments: true
+  AlignCaseArrows: true
+  AlignCaseColons: false
+
+AlignEscapedNewlines: LeftWithLastLine
+AlignOperands: AlignAfterOperator
+AlignTrailingComments:
+  Kind: Always
+  OverEmptyLines: 2
+
+AllowAllArgumentsOnNextLine:                false
+AllowAllParametersOfDeclarationOnNextLine:  false
+AllowShortBlocksOnASingleLine:              Always
+AllowShortCaseExpressionOnASingleLine:      true
+AllowShortCaseLabelsOnASingleLine:          true
+AllowShortCompoundRequirementOnASingleLine: true
+AllowShortEnumsOnASingleLine:               true
+AllowShortFunctionsOnASingleLine:           All
+AllowShortIfStatementsOnASingleLine:        AllIfsAndElse
+AllowShortLambdasOnASingleLine:             All
+AllowShortLoopsOnASingleLine:               true
+# AllowShortNamespacesOnASingleLine:          true # clang-format 20
+AlwaysBreakBeforeMultilineStrings:          false
+
+BinPackArguments: false
+#? BinPackParameters: OnePerLine
+BinPackParameters: false
+
+BreakAdjacentStringLiterals:                false
+BreakAfterAttributes:                       Always
+BreakAfterJavaFieldAnnotations:             true
+BreakAfterReturnType:                       Automatic
+BreakBeforeBinaryOperators:                 All
+BreakBeforeBraces:                          Attach
+BreakBeforeConceptDeclarations:             Allowed
+BreakBeforeInlineASMColon:                  OnlyMultiline
+BreakBeforeTernaryOperators:                true
+# BreakBinaryOperators:                       OnePerLine # clang-format 20
+BreakConstructorInitializers:               AfterColon
+BreakFunctionDefinitionParameters:          false
+BreakInheritanceList:                       AfterColon
+BreakStringLiterals:                        true
+BreakTemplateDeclarations:                  MultiLine
+
+ColumnLimit: 99
+CompactNamespaces: false
+
+ConstructorInitializerIndentWidth: 4
+ContinuationIndentWidth: 4
+Cpp11BracedListStyle: true
+DerivePointerAlignment: false
+DisableFormat: false
+
+EmptyLineAfterAccessModifier: Never
+EmptyLineBeforeAccessModifier: LogicalBlock
+
+FixNamespaceComments: false
+IncludeBlocks: Regroup
+
+AccessModifierOffset: -2
+IndentCaseBlocks: false
+IndentCaseLabels: true
+# IndentExportBlock: true # clang-format 20
+IndentExternBlock: Indent
+IndentGotoLabels: true
+IndentPPDirectives: AfterHash
+IndentRequiresClause: false
+IndentWidth: 4
+IndentWrappedFunctionNames: true
+
+InsertBraces: false
+InsertNewlineAtEOF: false
+InsertTrailingCommas: Wrapped
+
+JavaScriptQuotes: Double
+JavaScriptWrapImports: true
+KeepEmptyLines:
+  AtEndOfFile: false
+  AtStartOfBlock: false
+  AtStartOfFile: false
+
+LambdaBodyIndentation: Signature
+
+LineEnding: DeriveLF
+
+MaxEmptyLinesToKeep: 2
+NamespaceIndentation: All
+
+PPIndentWidth: 4
+PackConstructorInitializers: CurrentLine
+
+PointerAlignment: Right
+QualifierAlignment: Left
+ReferenceAlignment: Right
+#? ReflowComments: Always
+ReflowComments: true
+
+RemoveBracesLLVM: false
+# RemoveEmptyLinesInUnwrappedLines: true # clang-format 20
+RemoveParentheses: Leave
+RemoveSemicolon: true
+
+RequiresClausePosition: SingleLine
+RequiresExpressionIndentation: OuterScope
+
+SeparateDefinitionBlocks: Always
+
+SortIncludes: CaseInsensitive
+SortJavaStaticImport: After
+SortUsingDeclarations: LexicographicNumeric
+
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: false
+SpaceAroundPointerQualifiers: Both
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeJsonColon: false
+SpaceBeforeParens: ControlStatementsExceptControlMacros
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock: false
+
+SpacesBeforeTrailingComments: 2
+SpacesInAngles: Never
+SpacesInContainerLiterals: false
+SpacesInLineCommentPrefix:
+  Minimum: 1
+  Maximum: -1
+
+SpacesInParens: Never
+SpacesInSquareBrackets: false
+Standard: Latest
+TabWidth: 4
+UseTab: Never
+# WrapNamespaceBodyWithEmptyLines: Never # clang-format 20
