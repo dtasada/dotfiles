@@ -1,215 +1,70 @@
-HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=1000
-setopt appendhistory
-
-unset rc
-
-eval "$(starship init zsh)"
-
-alias ls='exa --icons --color=always --group-directories-first --git -l'
-alias ll='exa --icons --color=always --group-directories-first --git -l'
-alias la='exa --icons --color=always --group-directories-first --git -la'
-alias ld='exa --icons --color=always --group-directories-first --git -D'
-alias lt='exa --icons --color=always --group-directories-first --git -T'
-alias lg='exa --icons --color=always --group-directories-first --git'
-
-alias v='$EDITOR'
-alias sv='sudo $EDITOR'
-alias ..='cd ..'
-alias cl='clear'
-
-alias rm='trash'
-
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-export TERM=xterm-256color
-
-bindkey -v
-bindkey -s "^P" 'kill -9 $(ps aux | fzf | awk "{print \\$2}")^M'
-bindkey -s "^K" 'tmux kill-session -t $(tmux ls | awk -F: "{print \\$1}" | fzf)^M'
-bindkey -s "^F" '~/scripts/dev-tmux.sh^M'
-neofetch
-
-# sudo pacman -S zsh-syntax-highlighting zsh-autosuggestions
-
-export PATH="$PATH:$HOME/.rvm/bin"
-export PATH="$PATH:/home/dt/.local/bin"
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 export EDITOR=nvim
 export VISUAL=nvim
 
-export LF_ICONS="\
-tw=:\
-st=:\
-ow=:\
-dt=:\
-di=:\
-fi=:\
-ln=:\
-or=:\
-ex=:\
-*.c=:\
-*.cc=:\
-*.clj=:\
-*.coffee=:\
-*.cpp=:\
-*.css=:\
-*.d=:\
-*.dart=:\
-*.erl=:\
-*.exs=:\
-*.fs=:\
-*.go=:\
-*.h=:\
-*.hh=:\
-*.hpp=:\
-*.hs=:\
-*.html=:\
-*.java=:\
-*.jl=:\
-*.js=:\
-*.json=:\
-*.lua=:\
-*.md=:\
-*.php=:\
-*.pl=:\
-*.pro=:\
-*.py=:\
-*.rb=:\
-*.rs=:\
-*.scala=:\
-*.ts=:\
-*.vim=:\
-*.cmd=:\
-*.ps1=:\
-*.sh=:\
-*.bash=:\
-*.zsh=:\
-*.fish=:\
-*.tar=:\
-*.tgz=:\
-*.arc=:\
-*.arj=:\
-*.taz=:\
-*.lha=:\
-*.lz4=:\
-*.lzh=:\
-*.lzma=:\
-*.tlz=:\
-*.txz=:\
-*.tzo=:\
-*.t7z=:\
-*.zip=:\
-*.z=:\
-*.dz=:\
-*.gz=:\
-*.lrz=:\
-*.lz=:\
-*.lzo=:\
-*.xz=:\
-*.zst=:\
-*.tzst=:\
-*.bz2=:\
-*.bz=:\
-*.tbz=:\
-*.tbz2=:\
-*.tz=:\
-*.deb=:\
-*.rpm=:\
-*.jar=:\
-*.war=:\
-*.ear=:\
-*.sar=:\
-*.rar=:\
-*.alz=:\
-*.ace=:\
-*.zoo=:\
-*.cpio=:\
-*.7z=:\
-*.rz=:\
-*.cab=:\
-*.wim=:\
-*.swm=:\
-*.dwm=:\
-*.esd=:\
-*.jpg=:\
-*.jpeg=:\
-*.mjpg=:\
-*.mjpeg=:\
-*.gif=:\
-*.bmp=:\
-*.pbm=:\
-*.pgm=:\
-*.ppm=:\
-*.tga=:\
-*.xbm=:\
-*.xpm=:\
-*.tif=:\
-*.tiff=:\
-*.png=:\
-*.svg=:\
-*.svgz=:\
-*.mng=:\
-*.pcx=:\
-*.mov=:\
-*.mpg=:\
-*.mpeg=:\
-*.m2v=:\
-*.mkv=:\
-*.webm=:\
-*.ogm=:\
-*.mp4=:\
-*.m4v=:\
-*.mp4v=:\
-*.vob=:\
-*.qt=:\
-*.nuv=:\
-*.wmv=:\
-*.asf=:\
-*.rm=:\
-*.rmvb=:\
-*.flc=:\
-*.avi=:\
-*.fli=:\
-*.flv=:\
-*.gl=:\
-*.dl=:\
-*.xcf=:\
-*.xwd=:\
-*.yuv=:\
-*.cgm=:\
-*.emf=:\
-*.ogv=:\
-*.ogx=:\
-*.aac=:\
-*.au=:\
-*.flac=:\
-*.m4a=:\
-*.mid=:\
-*.midi=:\
-*.mka=:\
-*.mp3=:\
-*.mpc=:\
-*.ogg=:\
-*.ra=:\
-*.wav=:\
-*.oga=:\
-*.opus=:\
-*.spx=:\
-*.xspf=:\
-*.pdf=:\
-*.nix=:\
-"
-export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/lib
+export TERM=xterm-256color
+export DISPLAY=172.19.32.1:0.0
+export HOMEBREW_NO_INSTALL_FROM_API=1
 
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
 
-# BEGIN opam configuration
-# This is useful if you're using opam as it adds:
-#   - the correct directories to the PATH
-#   - auto-completion for the opam binary
-# This section can be safely removed at any time if needed.
-[[ ! -r '/home/dt/.opam/opam-init/init.zsh' ]] || source '/home/dt/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
-# END opam configuration
+# Aliases & bindings
+alias ls='exa --icons --color=always --group-directories-first --git -l'
+alias ll='ls -l'
+alias la='ls -la'
+alias ld='ls -D'
+alias lt='ls -T'
+alias lg='ls --git'
+
+alias v='$EDITOR'
+alias sv='sudo $EDITOR'
+alias cl='clear'
+alias rm='trash'
+alias ..='cd ..'
+
+bindkey -v
+bindkey "^k" history-search-backward
+bindkey "^j" history-search-forward
+bindkey -s "^P" 'kill -9 $(ps aux | fzf | awk "{print \\$2}")^M'
+bindkey -s "^F" '~/scripts/dev-tmux.sh^M'
+bindkey -s "^K" 'tmux kill-session -t $(tmux ls | awk -F: "{print \\$1}" | fzf)^M'
+
+# Sources
+if [[ -f "/opt/homebrew/bin/brew" ]] then
+	eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+
+if [ ! -d "$ZINIT_HOME" ]; then
+	mkdir -p "$(dirname $ZINIT_HOME)"
+	git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+fi
+
+source "${ZINIT_HOME}/zinit.zsh"
+
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light Aloxaf/fzf-tab
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls $realpath'
+
+autoload -Uz compinit && compinit
+
+zinit cdreplay -q
+
+eval "$(starship init zsh)"
+eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
