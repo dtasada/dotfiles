@@ -10,11 +10,11 @@ return {
 		end,
 	},
 	{
-		"windwp/nvim-ts-autotag",
+		"windwp/nvim-ts-autotag", -- Close HTML tags
 		config = function()
 			require("nvim-ts-autotag").setup()
 		end,
-	}, -- Close HTML tags
+	},
 	{
 		"lewis6991/gitsigns.nvim",
 		config = function()
@@ -35,4 +35,37 @@ return {
 	}, -- Indent line
 	{ "windwp/nvim-autopairs", event = "InsertEnter", opts = {} }, -- Close bracket and quote pairs
 	{ "nvim-treesitter/nvim-treesitter", dependencies = { { "nushell/tree-sitter-nu" } }, build = ":TSUpdate" },
+	{
+		"MeanderingProgrammer/markdown.nvim",
+		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("render-markdown").setup({})
+		end,
+	},
+	{
+		"romgrk/barbar.nvim",
+		dependencies = { "lewis6991/gitsigns.nvim", "nvim-tree/nvim-web-devicons" },
+		init = function()
+			vim.g.barbar_auto_setup = false
+		end,
+		opts = {},
+	},
+	{ -- see lsp as you type
+		"ray-x/lsp_signature.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("lsp_signature").setup({
+				hint_enable = false,
+			})
+		end,
+	},
+	{
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+		init = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+		end,
+		opts = {},
+	},
 }

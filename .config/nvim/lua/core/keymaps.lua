@@ -9,6 +9,7 @@ vim.keymap.set("n", "<leader>e", "<cmd>wa | qa!<cr>", { desc = "Save all and exi
 vim.keymap.set("n", "<leader>s", "<cmd>wa<cr>", { desc = "Save all" })
 vim.keymap.set("n", "<leader>q", "<cmd>qa!<cr>", { desc = "Exit all without saving" })
 vim.keymap.set("n", "<leader>rt", "<cmd>1ToggleTerm direction=float name=Run<cr>", { desc = "Open terminal window" })
+vim.keymap.set("n", "<Bslash>", "<cmd>Oil<cr>", { desc = "Open Oil" })
 vim.keymap.set("t", "<esc>", [[<C-\><C-n>]])
 
 vim.keymap.set("n", "<C-l>", "<cmd>BufferNext<cr>", { desc = "Buffer: Cycle to next" })

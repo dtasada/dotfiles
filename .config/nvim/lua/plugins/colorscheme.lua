@@ -2,27 +2,27 @@ return {
 	-- "catppuccin/nvim", name = "catppuccin",
 
 	-- "Evalir/dosbox-vim-colorscheme", name = "dosbox",
-	"ellisonleao/gruvbox.nvim",
-	name = "gruvbox",
+	-- "ellisonleao/gruvbox.nvim", name = "gruvbox",
 	-- "folke/tokyonight.nvim", name = "tokyonight",
 	-- "i3d/vim-jimbothemes", name = "jimbo",
 	-- "rebelot/kanagawa.nvim", name = "kanagawa",
-	-- "rose-pine/neovim", name = 'rose-pine',
+	"rose-pine/neovim",
+	name = "rose-pine",
 	priority = 1000,
 
 	config = function()
 		vim.opt.background = "dark"
 		vim.opt.termguicolors = true
 
-		require("gruvbox").setup({ contrast = "" })
+		-- require("gruvbox").setup({ contrast = "" })
 
 		-- vim.cmd("colorscheme catppuccin-macchiato")
 
 		-- vim.cmd("colorscheme breakingbad")
 		-- vim.cmd("colorscheme dosbox")
-		vim.cmd("colorscheme gruvbox")
+		-- vim.cmd("colorscheme gruvbox")
 		-- vim.cmd("colorscheme kanagawa-wave")
-		-- vim.cmd("colorscheme rose-pine-moon")
+		vim.cmd("colorscheme rose-pine-moon")
 		-- vim.cmd("colorscheme tokyonight")
 
 		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
