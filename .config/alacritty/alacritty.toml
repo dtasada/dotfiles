@@ -1,5 +1,6 @@
+[general]
 import =  [
-	"/home/dt/.config/alacritty/themes/gruvbox.toml",
+	"/home/dt/.config/alacritty/themes/rose-pine-moon.toml",
 ]
 
 [window]
