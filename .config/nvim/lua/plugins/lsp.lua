@@ -45,16 +45,27 @@ return {
 			"ts_ls",
 		})
 
+		local lspconfig = require("lspconfig")
+
+		-- require("lspconfig.configs").sourcekit_lsp = {
+		-- 	default_config = {
+		-- 		cmd = { "sourcekit-lsp" },
+		-- 		filetypes = { "swift" },
+		-- 		root_dir = require("lspconfig.util").root_pattern({ "Package.swift", "Sources/" }),
+		-- 	},
+		-- }
+		-- lspconfig.sourcekit_lsp.setup({})
+
 		require("mason-lspconfig").setup({
 			handlers = {
 				function(server_name)
-					require("lspconfig")[server_name].setup({
+					lspconfig[server_name].setup({
 						capabilities = capabilities,
 					})
 				end,
 
 				omnisharp = function()
-					local lspconfig = require("lspconfig")
+					local lspconfig = lspconfig
 					lspconfig.omnisharp.setup({
 						capabilities = capabilities,
 						cmd = { "omnisharp", "--languageserver" },
@@ -63,7 +74,7 @@ return {
 				end,
 
 				zls = function()
-					local lspconfig = require("lspconfig")
+					local lspconfig = lspconfig
 					lspconfig.zls.setup({
 						root_dir = lspconfig.util.root_pattern("build.zig"),
 						settings = {
@@ -79,7 +90,7 @@ return {
 				end,
 
 				clangd = function()
-					require("lspconfig").clangd.setup({
+					lspconfig.clangd.setup({
 						init_options = {
 							fallbackFlags = { "--std=c++23" },
 						},
