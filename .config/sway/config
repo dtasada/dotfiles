@@ -1,0 +1,74 @@
+set $mod Mod4
+
+bar {
+	# status_command swaybar
+	status_command while ~/.config/sway/status.sh; do sleep 1; done
+	font CaskaydiaCove NF
+}
+
+input type:touchpad {
+	tap enabled
+	natural_scroll enabled
+}
+
+
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+bindsym $mod+Shift+r reload
+bindsym $mod+Return exec alacritty
+bindsym $mod+f exec firefox
+bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
+
+# ROFI BINDS #
+bindsym $mod+d exec rofi -show drun -normal-window
+bindsym $mod+a exec rofi -show filebrowser -normal-window
+bindsym $mod+Ctrl+s exec rofi -show ssh -normal-window
+bindsym $mod+c exec cliphist list | rofi -dmenu -normal-window | cliphist decode | wl-copy
+bindsym $mod+e exec rofi -show emoji -normal-window
+bindsym $mod+Shift+e exec, ~/.config/rofi/scripts/powermenu
+
+
+# WM BINDS #
+bindsym $mod+space floating toggle
+bindsym $mod+q kill
+bindsym $mod+s fullscreen
+bindsym $mod+Shift+c exec hyprpicker -a
+
+# Example volume button that allows press and hold
+bindsym XF86AudioRaiseVolume exec pamixer -i 5 && notify-send -e "Volume Control" "$(pamixer --get-volume-human)" -r 999
+bindsym XF86AudioLowerVolume exec pamixer -d 5 && notify-send -e "Volume Control" "$(pamixer --get-volume-human)" -r 999
+bindsym XF86AudioMute exec pamixer --toggle-mute && notify-send -e "Volume Control" "$(pamixer --get-volume-human)" -r 999
+bindsym XF86AudioPause exec pamixer play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86MonBrightnessUp exec brightnessctl set +5% && notify-send -e "Brightness Control" "$(brightnessctl i | grep -oP '\(\K[^\)]+')" -r 999
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%- && notify-send -e "Brightness Control" "$(brightnessctl i | grep -oP '\(\K[^\)]+')" -r 999
+bindsym Lock exec notify-send -e "Toggled CAPS LOCK" -r 998
+
+
+# switch to workspace
+bindsym $mod+1    workspace  "1"
+bindsym $mod+2    workspace  "2"
+bindsym $mod+3    workspace  "3"
+bindsym $mod+4    workspace  "4"
+bindsym $mod+5    workspace  "5"
+bindsym $mod+6    workspace  "6"
+bindsym $mod+7    workspace  "7"
+bindsym $mod+8    workspace  "8"
+bindsym $mod+9    workspace  "9"
+bindsym $mod+0    workspace  "10"
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace "1"
+bindsym $mod+Shift+2 move container to workspace "2"
+bindsym $mod+Shift+3 move container to workspace "3"
+bindsym $mod+Shift+4 move container to workspace "4"
+bindsym $mod+Shift+5 move container to workspace "5"
+bindsym $mod+Shift+6 move container to workspace "6"
+bindsym $mod+Shift+7 move container to workspace "7"
+bindsym $mod+Shift+8 move container to workspace "8"
+bindsym $mod+Shift+9 move container to workspace "9"
+bindsym $mod+Shift+0 move container to workspace "10"
