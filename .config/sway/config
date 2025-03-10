@@ -11,6 +11,9 @@ input type:touchpad {
 	natural_scroll enabled
 }
 
+exec 'bash ~/scripts/walls.sh'
+
+font CaskaydiaCove NF 10
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -22,13 +25,13 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+f exec firefox
 bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
 
-# ROFI BINDS #
-bindsym $mod+d exec rofi -show drun -normal-window
-bindsym $mod+a exec rofi -show filebrowser -normal-window
-bindsym $mod+Ctrl+s exec rofi -show ssh -normal-window
-bindsym $mod+c exec cliphist list | rofi -dmenu -normal-window | cliphist decode | wl-copy
-bindsym $mod+e exec rofi -show emoji -normal-window
-bindsym $mod+Shift+e exec, ~/.config/rofi/scripts/powermenu
+# wofi BINDS #
+bindsym $mod+d exec wofi --show drun -normal-window
+bindsym $mod+a exec wofi --show filebrowser -normal-window
+bindsym $mod+Ctrl+s exec wofi --show ssh -normal-window
+bindsym $mod+c exec cliphist list | wofi -dmenu -normal-window | cliphist decode | wl-copy
+bindsym $mod+e exec wofi --show emoji -normal-window
+bindsym $mod+Shift+e exec, ~/.config/wofi/scripts/powermenu
 
 
 # WM BINDS #

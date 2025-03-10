@@ -85,6 +85,12 @@ return {
 						},
 					})
 				end,
+
+				denols = function()
+					require("lspconfig").denols.setup({
+						root_dir = require("lspconfig").util.root_pattern("server/main.ts"),
+					})
+				end,
 			},
 		})
 

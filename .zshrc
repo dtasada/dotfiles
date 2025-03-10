@@ -5,6 +5,8 @@ export TERM=xterm-256color
 export DISPLAY=172.19.32.1:0.0
 export HOMEBREW_NO_INSTALL_FROM_API=1
 
+export PATH="$PATH:$HOME/.local/bin"
+
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
