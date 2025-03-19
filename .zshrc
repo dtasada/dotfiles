@@ -19,7 +19,7 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Aliases & bindings
-alias ls='exa --icons --color=always --group-directories-first --git -l'
+alias ls='eza --icons --color=always --group-directories-first --git -l'
 alias ll='ls -l'
 alias la='ls -la'
 alias ld='ls -D'
