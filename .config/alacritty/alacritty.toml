@@ -5,10 +5,10 @@ import =  [
 
 [window]
 padding = { x = 12, y = 12 }
+option_as_alt = "Both"
 
 [font]
 size = 20.0
 
 [font.normal]
 family = "CaskaydiaCove NF"
-

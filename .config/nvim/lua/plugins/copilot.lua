@@ -9,7 +9,7 @@ return {
 				enabled = true,
 				auto_trigger = true,
 			},
-			panel = { enabled = false },
+			panel = { enabled = true },
 		})
 
 		require("copilot_cmp").setup({})
