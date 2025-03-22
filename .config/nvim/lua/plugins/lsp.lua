@@ -47,14 +47,14 @@ return {
 
 		local lspconfig = require("lspconfig")
 
-		-- require("lspconfig.configs").sourcekit_lsp = {
-		-- 	default_config = {
-		-- 		cmd = { "sourcekit-lsp" },
-		-- 		filetypes = { "swift" },
-		-- 		root_dir = require("lspconfig.util").root_pattern({ "Package.swift", "Sources/" }),
-		-- 	},
-		-- }
-		-- lspconfig.sourcekit_lsp.setup({})
+		require("lspconfig.configs").sourcekit_lsp = {
+			default_config = {
+				cmd = { "sourcekit-lsp" },
+				filetypes = { "swift" },
+				root_dir = require("lspconfig.util").root_pattern({ "Package.swift", "Sources/" }),
+			},
+		}
+		lspconfig.sourcekit_lsp.setup({})
 
 		require("mason-lspconfig").setup({
 			handlers = {
