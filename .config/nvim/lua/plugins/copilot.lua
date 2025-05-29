@@ -1,4 +1,4 @@
-return {
+--[[ return {
 	"zbirenbaum/copilot.lua",
 	dependencies = { "zbirenbaum/copilot-cmp" },
 	cmd = "Copilot",
@@ -14,4 +14,6 @@ return {
 
 		require("copilot_cmp").setup({})
 	end,
-}
+} ]]
+
+return {}

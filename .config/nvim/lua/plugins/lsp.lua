@@ -47,11 +47,26 @@ return {
 
 		local lspconfig = require("lspconfig")
 
+		require("lspconfig.configs").gdshader_lsp = {
+			default_config = {
+				name = "gdshader_lsp",
+				cmd = { "gdshader-lsp" },
+				filetypes = { "gdshader" },
+				root_dir = require("lspconfig.util").root_pattern({ "project.godot" }),
+			},
+		}
+
+		lspconfig.gdshader_lsp.setup({})
+
 		require("lspconfig.configs").sourcekit_lsp = {
 			default_config = {
 				cmd = { "sourcekit-lsp" },
 				filetypes = { "swift" },
-				root_dir = require("lspconfig.util").root_pattern({ "Package.swift", "Sources/" }),
+				root_dir = require("lspconfig.util").root_pattern({
+					"Package.swift",
+					"Sources/",
+					".*.xcodeproj/",
+				}),
 			},
 		}
 		lspconfig.sourcekit_lsp.setup({})
