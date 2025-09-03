@@ -15,6 +15,8 @@ return {
 	},
 
 	config = function()
+		vim.diagnostic.config({ virtual_text = true })
+
 		local lsp = require("lsp-zero").preset("recommended")
 		local cmp = require("cmp")
 		local cmp_select = { behavior = cmp.SelectBehavior.Select }
@@ -24,26 +26,6 @@ return {
 			vim.lsp.protocol.make_client_capabilities(),
 			require("cmp_nvim_lsp").default_capabilities()
 		)
-
-		require("mason-tool-installer").setup({
-			ensure_installed = {
-				"black",
-				"stylua",
-			},
-		})
-
-		lsp.ensure_installed({
-			"bashls",
-			"clangd",
-			"cssls",
-			"emmet_language_server",
-			"gopls",
-			"html",
-			"kotlin_language_server",
-			"lua_ls",
-			"rust_analyzer",
-			"ts_ls",
-		})
 
 		local lspconfig = require("lspconfig")
 
@@ -80,7 +62,6 @@ return {
 				end,
 
 				omnisharp = function()
-					local lspconfig = lspconfig
 					lspconfig.omnisharp.setup({
 						capabilities = capabilities,
 						cmd = { "omnisharp", "--languageserver" },
@@ -89,7 +70,6 @@ return {
 				end,
 
 				zls = function()
-					local lspconfig = lspconfig
 					lspconfig.zls.setup({
 						root_dir = lspconfig.util.root_pattern("build.zig"),
 						settings = {
@@ -102,15 +82,17 @@ return {
 					})
 					vim.g.zig_fmt_parse_errors = 1
 					vim.g.zig_fmt_autosave = 1
+					-- vim.g.zig_enable_build_on_save = 1
+					-- vim.g.zig_build_on_save_step = "check"
 				end,
 
-				clangd = function()
+				--[[ clangd = function()
 					lspconfig.clangd.setup({
 						init_options = {
 							fallbackFlags = { "--std=c++23" },
 						},
 					})
-				end,
+				end, ]]
 
 				denols = function()
 					require("lspconfig").denols.setup({

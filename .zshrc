@@ -5,7 +5,17 @@ export TERM=xterm-256color
 export DISPLAY=172.19.32.1:0.0
 export HOMEBREW_NO_INSTALL_FROM_API=1
 
+export RUSTFLAGS="-C link-arg=-mmacosx-version-min=15.0"
+
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/go/bin"
+
+export VCPKG_ROOT="$HOME/coding/git/vcpkg"
+export PATH="$PATH:$VCPKG_ROOT"
+
+export DOCKER_HOST=unix:///$HOME/.colima/docker.sock
+
+export CMAKE_EXPORT_COMPILE_COMMANDS=1
 
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
@@ -31,6 +41,9 @@ alias sv='sudo $EDITOR'
 alias cl='clear'
 alias rm='trash'
 alias ..='cd ..'
+
+alias run-alpine="cd $HOME/vm && qemu-system-x86_64 -m 2048 -hda alpine.img -cpu qemu64 -nographic"
+alias jbuild="java -jar --enable-preview $HOME/.m2/repository/com/athaydes/jbuild/jbuild/0.12.0/jbuild-0.12.0.jar"
 
 bindkey -v
 bindkey "^k" history-search-backward
