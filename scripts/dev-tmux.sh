@@ -16,7 +16,7 @@ else
 	tmux send-keys -t $name:1 "nvim" C-m
 
 	tmux new-window -t $name:2 -n "lazygit" -c $arg
-	tmux send-keys -t $name:2 "lazygit" C-m
+	# tmux send-keys -t $name:2 "lazygit" C-m
 
 	tmux new-window -t $name:3 -n "shell" -c $arg
 

@@ -3,9 +3,9 @@ return {
 	branch = "v2.x",
 	dependencies = {
 		-- LSP Support
-		{ "neovim/nvim-lspconfig" }, -- Required
-		{ "williamboman/mason.nvim" }, -- Optional
-		{ "williamboman/mason-lspconfig.nvim" }, -- Optional
+		{ "neovim/nvim-lspconfig" },               -- Required
+		{ "williamboman/mason.nvim" },             -- Optional
+		{ "williamboman/mason-lspconfig.nvim" },   -- Optional
 		{ "WhoIsSethDaniel/mason-tool-installer.nvim" }, -- Optional
 
 		-- Autocompletion
@@ -20,6 +20,7 @@ return {
 		local lsp = require("lsp-zero").preset("recommended")
 		local cmp = require("cmp")
 		local cmp_select = { behavior = cmp.SelectBehavior.Select }
+
 		local capabilities = vim.tbl_deep_extend(
 			"force",
 			{},
@@ -28,8 +29,11 @@ return {
 		)
 
 		local lspconfig = require("lspconfig")
+		local configs = require("lspconfig.configs");
 
-		require("lspconfig.configs").gdshader_lsp = {
+		lspconfig.gleam.setup({})
+
+		configs.gdshader_lsp = {
 			default_config = {
 				name = "gdshader_lsp",
 				cmd = { "gdshader-lsp" },
@@ -40,7 +44,7 @@ return {
 
 		lspconfig.gdshader_lsp.setup({})
 
-		require("lspconfig.configs").sourcekit_lsp = {
+		configs.sourcekit_lsp = {
 			default_config = {
 				cmd = { "sourcekit-lsp" },
 				filetypes = { "swift" },
@@ -51,6 +55,7 @@ return {
 				}),
 			},
 		}
+
 		lspconfig.sourcekit_lsp.setup({})
 
 		require("mason-lspconfig").setup({
@@ -63,7 +68,6 @@ return {
 
 				omnisharp = function()
 					lspconfig.omnisharp.setup({
-						capabilities = capabilities,
 						cmd = { "omnisharp", "--languageserver" },
 						root_dir = lspconfig.util.root_pattern("*.sln"),
 					})
@@ -93,6 +97,12 @@ return {
 						},
 					})
 				end, ]]
+
+				jdtls = function()
+					require("lspconfig").jdtls.setup({
+						root_dir = require("lspconfig").util.root_pattern("src/**/*.java"),
+					})
+				end,
 
 				denols = function()
 					require("lspconfig").denols.setup({

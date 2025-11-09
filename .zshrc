@@ -42,7 +42,16 @@ alias cl='clear'
 alias rm='trash'
 alias ..='cd ..'
 
-alias run-alpine="cd $HOME/vm && qemu-system-x86_64 -m 2048 -hda alpine.img -cpu qemu64 -nographic"
+alias boot-alpine="cd $HOME/vm && qemu-system-x86_64 \
+	-virtfs local,path=shared,mount_tag=shared,security_model=mapped-xattr \
+	-m 2048 \
+	-hda alpine.img \
+	-cpu qemu64 \
+	-net nic \
+	-net user,hostfwd=tcp::2222-:22 \
+	-nographic > qemu.log 2>&1"
+alias alpine-login="ssh -p 2222 localhost"
+
 alias jbuild="java -jar --enable-preview $HOME/.m2/repository/com/athaydes/jbuild/jbuild/0.12.0/jbuild-0.12.0.jar"
 
 bindkey -v
@@ -50,6 +59,7 @@ bindkey "^k" history-search-backward
 bindkey "^j" history-search-forward
 bindkey -s "^P" 'kill -9 $(ps aux | fzf | awk "{print \\$2}")^M'
 bindkey -s "^F" '~/scripts/dev-tmux.sh^M'
+bindkey -s "^G" '~/scripts/open-tmux.sh^M'
 bindkey -s "^K" 'tmux kill-session -t $(tmux ls | awk -F: "{print \\$1}" | fzf)^M'
 
 # Sources
@@ -83,3 +93,4 @@ zinit cdreplay -q
 eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"

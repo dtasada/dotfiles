@@ -35,30 +35,34 @@ vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, { desc = "LSP: Go 
 vim.keymap.set("n", "<leader>cr", require("telescope.builtin").lsp_references, { desc = "LSP: Telescope references" })
 vim.keymap.set("n", "<leader>K", vim.lsp.buf.hover, { desc = "LSP: Show definition" })
 
+vim.keymap.set("n", "<leader>l", function()
+	vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled(), { bufnr })
+end, { desc = "LSP: enable inlay hints" })
+
 -- WhichKey LDR Keys
 local which_key_status, which_key = pcall(require, "which-key")
 if which_key_status then
 	which_key.add({
-		{ "<leader>gl", "<cmd>lua ToggleLg()<cr>", desc = "Launch LazyGit" },
+		{ "<leader>gl",  "<cmd>lua ToggleLg()<cr>",         desc = "Launch LazyGit" },
 
-		{ "<leader>b", group = "Buffers" },
-		{ "<leader>bc", "<cmd>BufferClose<cr>", desc = "Buffer: Close" },
-		{ "<leader>bC", "<cmd>BufferClose!<cr>", desc = "Buffer: Force close" },
-		{ "<leader>bs", group = "Sort" },
+		{ "<leader>b",   group = "Buffers" },
+		{ "<leader>bc",  "<cmd>BufferClose<cr>",            desc = "Buffer: Close" },
+		{ "<leader>bC",  "<cmd>BufferClose!<cr>",           desc = "Buffer: Force close" },
+		{ "<leader>bs",  group = "Sort" },
 		{ "<leader>bsd", "<cmd>BufferOrderByDirectory<cr>", desc = "Buffer: Sort by directory" },
-		{ "<leader>bsl", "<cmd>BufferOrderByLanguage<cr>", desc = "Buffer: Sort by language" },
+		{ "<leader>bsl", "<cmd>BufferOrderByLanguage<cr>",  desc = "Buffer: Sort by language" },
 
-		{ "<leader>f", group = "Telescope" },
-		{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Telescope: Find file" },
-		{ "<leader>fg", "<cmd>Telescope git_files<cr>", desc = "Telescope: Find git files" },
-		{ "<leader>ft", "<cmd>Telescope live_grep<cr>", desc = "Telescope: Find text" },
-		{ "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Telescope: Recent files" },
-		{ "<leader>fl", "<cmd>Telescope resume<cr>", desc = "Telescope: Resume last search" },
-		{ "<leader>fc", "<cmd>Telescope colorscheme<cr>", desc = "Telescope: Pick colorscheme" },
-		{ "<leader>fp", "<cmd>Telescope projects<cr>", desc = "Telescope: Projects" },
+		{ "<leader>f",   group = "Telescope" },
+		{ "<leader>ff",  "<cmd>Telescope find_files<cr>",   desc = "Telescope: Find file" },
+		{ "<leader>fg",  "<cmd>Telescope git_files<cr>",    desc = "Telescope: Find git files" },
+		{ "<leader>ft",  "<cmd>Telescope live_grep<cr>",    desc = "Telescope: Find text" },
+		{ "<leader>fr",  "<cmd>Telescope oldfiles<cr>",     desc = "Telescope: Recent files" },
+		{ "<leader>fl",  "<cmd>Telescope resume<cr>",       desc = "Telescope: Resume last search" },
+		{ "<leader>fc",  "<cmd>Telescope colorscheme<cr>",  desc = "Telescope: Pick colorscheme" },
+		{ "<leader>fp",  "<cmd>Telescope projects<cr>",     desc = "Telescope: Projects" },
 
-		{ "<leader>P", group = "Plugins" },
-		{ "<leader>Pl", "<cmd>Lazy<cr>", desc = "Lazy" },
-		{ "<leader>Pm", "<cmd>Mason<cr>", desc = "Mason" },
+		{ "<leader>P",   group = "Plugins" },
+		{ "<leader>Pl",  "<cmd>Lazy<cr>",                   desc = "Lazy" },
+		{ "<leader>Pm",  "<cmd>Mason<cr>",                  desc = "Mason" },
 	})
 end

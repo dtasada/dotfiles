@@ -1,9 +1,7 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
-	dependencies = {
-		"nvim-treesitter/nvim-treesitter-context",
-	},
+	dependencies = {},
 	config = function()
 		vim.filetype.add({
 			extension = { mcc = "mcc" },
@@ -19,17 +17,19 @@ return {
 			indent = { enable = true },
 		})
 
+		require("nvim-treesitter.parsers").get_parser_configs().gleam = {
+			indent_size = 2,
+		}
+
 		require("nvim-treesitter.parsers").get_parser_configs().mcc = {
 			install_info = {
-				url = "$HOME/coding/git/mcc/tree-sitter-mcc", -- local path or git URL
-				files = { "src/parser.c", "src/scanner.c" }, -- or files needed for build
-				-- optional build commands if needed
-				generate_requires_npm = false, -- if you don't need npm
+				url = "$HOME/coding/git/mcc/tree-sitter-mcc",
+				files = { "src/parser.c", "src/scanner.c" },
+				generate_requires_npm = false,
 				requires_generate_from_grammar = true,
-				-- you can add 'branch' or 'revision' if it's a git URL
 			},
-			filetype = "mcc", -- the filetype you want to associate
+			filetype = "mcc",
 		}
-		vim.treesitter.language.register("mcc", "mcc") -- the someft filetype will use the python parser and queries.
+		vim.treesitter.language.register("mcc", "mcc")
 	end,
 }
