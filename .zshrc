@@ -10,6 +10,8 @@ export RUSTFLAGS="-C link-arg=-mmacosx-version-min=15.0"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/go/bin"
 
+export PATH="$PATH:/Applications/IntelliJ IDEA CE.app/Contents/MacOS"
+
 export VCPKG_ROOT="$HOME/coding/git/vcpkg"
 export PATH="$PATH:$VCPKG_ROOT"
 
@@ -52,11 +54,7 @@ alias boot-alpine="cd $HOME/vm && qemu-system-x86_64 \
 	-nographic > qemu.log 2>&1"
 alias alpine-login="ssh -p 2222 localhost"
 
-alias jbuild="java -jar --enable-preview $HOME/.m2/repository/com/athaydes/jbuild/jbuild/0.12.0/jbuild-0.12.0.jar"
-
 bindkey -v
-bindkey "^k" history-search-backward
-bindkey "^j" history-search-forward
 bindkey -s "^P" 'kill -9 $(ps aux | fzf | awk "{print \\$2}")^M'
 bindkey -s "^F" '~/scripts/dev-tmux.sh^M'
 bindkey -s "^G" '~/scripts/open-tmux.sh^M'

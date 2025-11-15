@@ -1,16 +1,8 @@
-local Terminal = require("toggleterm.terminal").Terminal
-local lazygit = Terminal:new({ cmd = "lazygit", direction = "float", count = 2 })
-function ToggleLg()
-	lazygit:toggle()
-end
-
 -- Generic
 vim.keymap.set("n", "<leader>e", "<cmd>wa | qa!<cr>", { desc = "Save all and exit" })
 vim.keymap.set("n", "<leader>s", "<cmd>wa<cr>", { desc = "Save all" })
 vim.keymap.set("n", "<leader>q", "<cmd>qa!<cr>", { desc = "Exit all without saving" })
-vim.keymap.set("n", "<leader>rt", "<cmd>1ToggleTerm direction=float name=Run<cr>", { desc = "Open terminal window" })
 vim.keymap.set("n", "<Bslash>", "<cmd>Oil<cr>", { desc = "Open Oil" })
-vim.keymap.set("t", "<esc>", [[<C-\><C-n>]])
 
 vim.keymap.set("n", "<C-l>", "<cmd>BufferNext<cr>", { desc = "Buffer: Cycle to next" })
 vim.keymap.set("n", "<C-h>", "<cmd>BufferPrevious<cr>", { desc = "Buffer: Cycle to previous" })
@@ -43,8 +35,6 @@ end, { desc = "LSP: enable inlay hints" })
 local which_key_status, which_key = pcall(require, "which-key")
 if which_key_status then
 	which_key.add({
-		{ "<leader>gl",  "<cmd>lua ToggleLg()<cr>",         desc = "Launch LazyGit" },
-
 		{ "<leader>b",   group = "Buffers" },
 		{ "<leader>bc",  "<cmd>BufferClose<cr>",            desc = "Buffer: Close" },
 		{ "<leader>bC",  "<cmd>BufferClose!<cr>",           desc = "Buffer: Force close" },
@@ -58,11 +48,5 @@ if which_key_status then
 		{ "<leader>ft",  "<cmd>Telescope live_grep<cr>",    desc = "Telescope: Find text" },
 		{ "<leader>fr",  "<cmd>Telescope oldfiles<cr>",     desc = "Telescope: Recent files" },
 		{ "<leader>fl",  "<cmd>Telescope resume<cr>",       desc = "Telescope: Resume last search" },
-		{ "<leader>fc",  "<cmd>Telescope colorscheme<cr>",  desc = "Telescope: Pick colorscheme" },
-		{ "<leader>fp",  "<cmd>Telescope projects<cr>",     desc = "Telescope: Projects" },
-
-		{ "<leader>P",   group = "Plugins" },
-		{ "<leader>Pl",  "<cmd>Lazy<cr>",                   desc = "Lazy" },
-		{ "<leader>Pm",  "<cmd>Mason<cr>",                  desc = "Mason" },
 	})
 end

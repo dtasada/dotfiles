@@ -1,2 +1,0 @@
--- if vim.fn.argc() > 0 then vim.api.nvim_create_autocmd("VimEnter", { command = "Neotree" }) end
--- vim.api.nvim_create_autocmd("VimEnter", { command = "TSInstall python c html css javascript" })

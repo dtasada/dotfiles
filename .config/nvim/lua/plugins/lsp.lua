@@ -28,54 +28,24 @@ return {
 			require("cmp_nvim_lsp").default_capabilities()
 		)
 
-		local lspconfig = require("lspconfig")
-		local configs = require("lspconfig.configs");
-
-		lspconfig.gleam.setup({})
-
-		configs.gdshader_lsp = {
-			default_config = {
-				name = "gdshader_lsp",
-				cmd = { "gdshader-lsp" },
-				filetypes = { "gdshader" },
-				root_dir = require("lspconfig.util").root_pattern({ "project.godot" }),
-			},
-		}
-
-		lspconfig.gdshader_lsp.setup({})
-
-		configs.sourcekit_lsp = {
-			default_config = {
-				cmd = { "sourcekit-lsp" },
-				filetypes = { "swift" },
-				root_dir = require("lspconfig.util").root_pattern({
-					"Package.swift",
-					"Sources/",
-					".*.xcodeproj/",
-				}),
-			},
-		}
-
-		lspconfig.sourcekit_lsp.setup({})
-
 		require("mason-lspconfig").setup({
 			handlers = {
 				function(server_name)
-					lspconfig[server_name].setup({
+					vim.lsp.config[server_name].setup({
 						capabilities = capabilities,
 					})
 				end,
 
 				omnisharp = function()
-					lspconfig.omnisharp.setup({
+					vim.lsp.config.omnisharp.setup({
 						cmd = { "omnisharp", "--languageserver" },
-						root_dir = lspconfig.util.root_pattern("*.sln"),
+						root_dir = vim.lsp.config.util.root_pattern("*.sln"),
 					})
 				end,
 
 				zls = function()
-					lspconfig.zls.setup({
-						root_dir = lspconfig.util.root_pattern("build.zig"),
+					vim.lsp.config.zls.setup({
+						root_dir = vim.lsp.config.util.root_pattern("build.zig"),
 						settings = {
 							zls = {
 								enable_inlay_hints = true,
@@ -91,7 +61,7 @@ return {
 				end,
 
 				--[[ clangd = function()
-					lspconfig.clangd.setup({
+					vim.lsp.config.clangd.setup({
 						init_options = {
 							fallbackFlags = { "--std=c++23" },
 						},
@@ -99,14 +69,41 @@ return {
 				end, ]]
 
 				jdtls = function()
-					require("lspconfig").jdtls.setup({
-						root_dir = require("lspconfig").util.root_pattern("src/**/*.java"),
+					vim.lsp.config.jdtls.setup({
+						root_dir = vim.lsp.config.util.root_pattern("src/**/*.java"),
 					})
 				end,
 
 				denols = function()
-					require("lspconfig").denols.setup({
-						root_dir = require("lspconfig").util.root_pattern("server/main.ts"),
+					vim.lsp.config.denols.setup({
+						root_dir = vim.lsp.config.util.root_pattern("server/main.ts"),
+					})
+				end,
+
+				gleam = function()
+					vim.lsp.config.gleam.setup({})
+				end,
+
+				gdshader_lsp = function() 
+					vim.lsp.config.gd_shader_lsp.setup({
+						name = "gdshader_lsp",
+						cmd = { "gdshader-lsp" },
+						filetypes = { "gdshader" },
+						root_dir = vim.lsp.config.util.root_pattern({ "project.godot" }),
+						-- root_dir = require("lspconfig.util").root_pattern({ "project.godot" }),
+					})
+				end,
+
+				sourcekit_lsp = function() 
+					vim.lsp.config.sourcekit_lsp.setup({
+						cmd = { "sourcekit-lsp" },
+						filetypes = { "swift" },
+						-- root_dir = require("lspconfig.util").root_pattern({
+						root_dir = vim.lsp.config.util.root_pattern({
+							"Package.swift",
+							"Sources/",
+							".*.xcodeproj/",
+						}),
 					})
 				end,
 			},
