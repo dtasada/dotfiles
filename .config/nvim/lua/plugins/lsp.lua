@@ -1,40 +1,21 @@
 return {
-	"VonHeikemen/lsp-zero.nvim",
-	branch = "v2.x",
-	dependencies = {
-		-- LSP Support
-		{ "neovim/nvim-lspconfig" },               -- Required
-		{ "williamboman/mason.nvim" },             -- Optional
-		{ "williamboman/mason-lspconfig.nvim" },   -- Optional
-		{ "WhoIsSethDaniel/mason-tool-installer.nvim" }, -- Optional
+	"neovim/nvim-lspconfig",
 
-		-- Autocompletion
-		{ "hrsh7th/nvim-cmp" }, -- Required
-		{ "hrsh7th/cmp-nvim-lsp" }, -- Required
-		{ "L3MON4D3/LuaSnip" }, -- Required
+	dependencies = {
+		{ "mason-org/mason.nvim" },
+		{ "mason-org/mason-lspconfig.nvim" },
+
+		{ "hrsh7th/nvim-cmp" },
+		{ "hrsh7th/cmp-nvim-lsp" },
 	},
 
 	config = function()
 		vim.diagnostic.config({ virtual_text = true })
 
-		local lsp = require("lsp-zero").preset("recommended")
-		local cmp = require("cmp")
-		local cmp_select = { behavior = cmp.SelectBehavior.Select }
-
-		local capabilities = vim.tbl_deep_extend(
-			"force",
-			{},
-			vim.lsp.protocol.make_client_capabilities(),
-			require("cmp_nvim_lsp").default_capabilities()
-		)
-
+		require("mason").setup({})
 		require("mason-lspconfig").setup({
 			handlers = {
-				function(server_name)
-					vim.lsp.config[server_name].setup({
-						capabilities = capabilities,
-					})
-				end,
+				function(server_name) vim.lsp.config[server_name].setup({}) end,
 
 				omnisharp = function()
 					vim.lsp.config.omnisharp.setup({
@@ -67,12 +48,6 @@ return {
 						},
 					})
 				end, ]]
-
-				jdtls = function()
-					vim.lsp.config.jdtls.setup({
-						root_dir = vim.lsp.config.util.root_pattern("src/**/*.java"),
-					})
-				end,
 
 				denols = function()
 					vim.lsp.config.denols.setup({
@@ -109,8 +84,9 @@ return {
 			},
 		})
 
+		local cmp = require("cmp")
 		cmp.setup({
-			mapping = lsp.defaults.cmp_mappings({
+			mapping = {
 				["<C-n>"] = cmp.mapping.select_next_item(select_opts),
 				["<C-p>"] = cmp.mapping.select_prev_item(select_opts),
 				["<C-u>"] = cmp.mapping.scroll_docs(-4),
@@ -119,39 +95,14 @@ return {
 
 				["<Tab>"] = cmp.mapping.confirm({ select = true }),
 				["<cr>"] = cmp.mapping.confirm({ select = true }),
-			}),
-
-			sources = {
-				{ name = "nvim_lsp" },
-				{ name = "copilot" },
-				{ name = "nvim_lsp_signature_help" },
 			},
 
 			window = {
 				completion = cmp.config.window.bordered(),
 				documentation = cmp.config.window.bordered(),
 			},
+
+			sources = { { name = "nvim_lsp" } },
 		})
-
-		lsp.on_attach(function(client, bufnr)
-			local opts = {
-				buffer = bufnr,
-				remap = false,
-			}
-
-			-- vim.keymap.set("n", "<leader>s", function() end, opts)
-			-- vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
-			-- vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
-			-- vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
-			-- vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
-			-- vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
-			-- vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
-			-- vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
-			-- vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
-			-- vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
-			-- vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
-		end)
-
-		lsp.setup()
 	end,
 }

@@ -16,7 +16,7 @@ vim.opt.smartindent = true
 vim.opt.expandtab = false
 
 vim.opt.wrap = false
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "99"
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 
@@ -30,6 +30,8 @@ vim.opt.updatetime = 50
 vim.opt.termguicolors = true
 
 vim.opt.mouse = "a"
+
+vim.opt.winborder = 'rounded'
 
 vim.api.nvim_create_autocmd("TextYankPost", {
 	group = vim.api.nvim_create_augroup("highlight_yank", {}),

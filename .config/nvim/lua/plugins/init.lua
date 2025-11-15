@@ -9,7 +9,7 @@ return {
 	{ "norcalli/nvim-colorizer.lua", config = function() require("colorizer").setup() end, },
 	{ "lukas-reineke/indent-blankline.nvim", config = function() require("ibl").setup({ scope = { highlight = "Whitespace" } }) end, }, -- Indent line
 	{ "windwp/nvim-autopairs", event = "InsertEnter", opts = {} }, -- Close bracket and quote pairs
-	{ "nvim-treesitter/nvim-treesitter", dependencies = { { "nushell/tree-sitter-nu" } }, build = ":TSUpdate" },
+	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 	{ "folke/trouble.nvim", opts = {}, cmd = "Trouble", },
 	{ "MeanderingProgrammer/markdown.nvim", config = function() require("render-markdown").setup({}) end, },
 	{ "romgrk/barbar.nvim", init = function() vim.g.barbar_auto_setup = false end, opts = {}, },
