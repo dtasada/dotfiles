@@ -13,7 +13,7 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
-vim.opt.expandtab = false
+vim.opt.expandtab = true
 
 vim.opt.wrap = false
 vim.opt.colorcolumn = "99"
@@ -56,4 +56,11 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.bo.tabstop     = 2
 		vim.bo.softtabstop = 2
 	end,
+})
+
+vim.api.nvim_create_autocmd({"FileType"}, {
+    pattern = "java",
+    callback = function ()
+        vim.g.autoformat = false
+    end
 })

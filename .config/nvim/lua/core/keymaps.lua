@@ -16,7 +16,7 @@ vim.keymap.set("x", "<leader>p", [["_dP]]) -- greatest remap ever
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.api.nvim_set_keymap("n", "<leader>w", "<C-w>", { desc = "Windows" })
+vim.keymap.set("n", "<leader>w", "<C-w>", { desc = "Windows" })
 
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP: Rename variable" })
 vim.keymap.set("n", "ga", vim.lsp.buf.code_action, { desc = "LSP: Code Action" })
@@ -35,6 +35,8 @@ vim.keymap.set("n", "<leader>fg",  "<cmd>Telescope git_files<cr>",    { desc = "
 vim.keymap.set("n", "<leader>ft",  "<cmd>Telescope live_grep<cr>",    { desc = "Telescope: Find text" })
 vim.keymap.set("n", "<leader>fr",  "<cmd>Telescope oldfiles<cr>",     { desc = "Telescope: Recent files" })
 vim.keymap.set("n", "<leader>fl",  "<cmd>Telescope resume<cr>",       { desc = "Telescope: Resume last search" })
+
+vim.keymap.set("n", "<leader>ow", function() vim.opt.wrap = not vim.opt.wrap end, { desc = "Toggle text wrapping" })
 
 vim.keymap.set("n", "<leader>l", function()
 		vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled(), { bufnr })

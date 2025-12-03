@@ -1,3 +1,10 @@
+$env.PATH ++= [
+	"$env.HOME/.local/bin",
+	"$env.HOME/go/bin",
+	"/opt/homebrew/opt/llvm/bin",
+	"/opt/homebrew/bin",
+]
+
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 
@@ -48,9 +55,3 @@ alias ll = ls -l
 alias la = ls -la
 alias lt = ls **/*
 alias cl = clear
-
-$env.PATH ++= [
-	"$env.HOME/.local/bin",
-	"$env.HOME/go/bin",
-	"/opt/homebrew/opt/llvm/bin",
-]
