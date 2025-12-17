@@ -58,9 +58,27 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
-vim.api.nvim_create_autocmd({"FileType"}, {
-    pattern = "java",
-    callback = function ()
-        vim.g.autoformat = false
-    end
+vim.api.nvim_create_autocmd("BufWritePre", {
+    group = vim.api.nvim_create_augroup("LspFormatOnSave", { clear = true }),
+
+    callback = function(args)
+        if vim.bo[args.buf].filetype == "java" then
+            return
+        end
+
+        local clients = vim.lsp.get_active_clients({ bufnr = args.buf })
+        if #clients > 0 then
+            vim.lsp.buf.format({
+                bufnr = args.buf,
+                timeout_ms = 2000,
+            })
+        end
+    end,
+})
+
+vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+vim.api.nvim_create_autocmd("FileType", {
+    callback = function()
+        pcall(function () vim.treesitter.start() end)
+    end,
 })

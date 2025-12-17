@@ -104,5 +104,23 @@ return {
 
 			sources = { { name = "nvim_lsp" } },
 		})
+
+        vim.lsp.config.zls = {
+            cmd = {"/Users/dt/coding/git/zls/zig-out/bin/zls"},
+            root_markers = {"build.zig"},
+            filetypes = {"zig"},
+            settings = {
+                zls = {
+                    enable_inlay_hints = true,
+                    enable_snippets = true,
+                    warn_style = true,
+                },
+            },
+        }
+        vim.g.zig_fmt_parse_errors = 1
+        vim.g.zig_fmt_autosave = 1
+        vim.g.zig_enable_build_on_save = 1
+        vim.g.zig_build_on_save_step = "check"
+        vim.lsp.enable("zls")
 	end,
 }
