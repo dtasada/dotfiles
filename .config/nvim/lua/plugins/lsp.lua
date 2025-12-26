@@ -49,26 +49,6 @@ return {
 					})
 				end, ]]
 
-				denols = function()
-					vim.lsp.config.denols.setup({
-						root_dir = vim.lsp.config.util.root_pattern("server/main.ts"),
-					})
-				end,
-
-				gleam = function()
-					vim.lsp.config.gleam.setup({})
-				end,
-
-				gdshader_lsp = function() 
-					vim.lsp.config.gd_shader_lsp.setup({
-						name = "gdshader_lsp",
-						cmd = { "gdshader-lsp" },
-						filetypes = { "gdshader" },
-						root_dir = vim.lsp.config.util.root_pattern({ "project.godot" }),
-						-- root_dir = require("lspconfig.util").root_pattern({ "project.godot" }),
-					})
-				end,
-
 				sourcekit_lsp = function() 
 					vim.lsp.config.sourcekit_lsp.setup({
 						cmd = { "sourcekit-lsp" },

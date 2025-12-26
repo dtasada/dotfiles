@@ -3156,3 +3156,2310 @@ cd ~/coding/git/dotfiles/
 clear
 git status
 git add .
+git commit -am 'lsp formatting unless java file'
+clear
+git push
+clear
+git status
+exit
+make install
+clear
+clear
+cmake ..
+make instal
+clear
+cd ../GnomeMansLand/
+git log
+clear
+cd ../misc
+ls
+cd cool-war-game/
+ls
+cargo run
+nvim .
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+clear
+nvim .
+clear
+cd ..
+ls
+cd doodle
+ls
+nvim .
+clear
+ls
+..
+ls
+cd ../GnomeMansLand/
+cd ..
+clear
+gh repo clone GnomeMansLand g2
+cd g2
+git reset --hard 9c5cb3d7faeced59106072d1a6b4e3cf31a50ad6
+make install
+nvim src/main.zig
+nvim ../src/main.zig
+clear
+clear
+ls
+cmake -B build
+bat README.md
+cmake --build build
+clear
+./build/bin/client
+cd ../g2
+./build/bin/client
+./build/bin/server
+clea
+clear
+exit
+nvim .
+zig init -m
+make install
+nvim .
+clear
+zig build
+lcear
+clear
+nvim CMakeLists.txt
+nvim build.zig
+clear
+zig build
+nvim build.zig.zon
+zig build
+nvim ../src/main.zig
+clear
+make install
+nvim Makefile
+clear
+zig build
+ping https://github.com/libsdl-org/SDL/archive/refs/tags/release-2.30.11.tar.gz
+ping www.github.com/libsdl-org/SDL/archive/refs/tags/release-2.30.11.tar.gz
+clear
+zig build
+nvim .
+clear
+..
+rm -r g2
+clear
+make install
+nvim ../src/main.zig
+clear
+mvn -pl client -am javafx:run
+cl
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+make install
+clear
+zig-master version
+mkdir basic
+cd basic
+zig-master init -b
+nvim .
+clear
+zig-master build run
+nvim src/main.zig
+clear
+ls
+cd ..
+nvim lib/init/basic/
+clear
+cd build
+cmake ..
+make install
+nvim .
+..
+rm -r basic
+mkdir basic
+cd basic
+zig-master init -b
+lt
+ls **/*
+nvim .
+clear
+zig build
+zig build run
+clear
+..
+git add .
+git commit -am 'added "basic" init option to `zig init`'
+ls **/* | find ".DS_Store"
+ls **/* | find .DS_Store
+ls **/.* | find .DS_Store
+rm .DS_Store
+rm build/.DS_Store
+rm build/stage3/.DS_Store
+rm build/stage3/lib/.DS_Store
+rm build/stage3/lib/zig/.DS_Store
+rm build/stage3/lib/zig/libc/.DS_Store
+rm build/stage3/lib/zig/libc/include/.DS_Store
+rm lib/.DS_Store
+rm lib/libc/.DS_Store
+rm lib/libc/include/.DS_Store
+clear
+git status
+git commit --amend
+git rm --cached .DS_Store
+git rm --cached lib/.DS_Store
+git rm --cached lib/libc/.DS_Store
+git rm --cached lib/libc/include/.DS_Store
+clear
+..
+rm -r basic
+mkdir basic
+cd basic
+zig-master init -b
+nvim .
+zig-master build run
+cd ../zig
+clear
+git diff 7947237eec317d9458897f82089f343a05450c2b
+git log
+clear
+zsh
+cd ../zig-fork
+rm -r lib/init
+cp -r ../zig/lib/init lib/
+ls lib
+ls lib/init/**/*
+git diff b9eefe17af2c30855f229f5214679d3766966b85
+clear
+cd ../zig-fork
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release -GNinja ..
+cd ../zig-fork
+git status
+rm lib/.DS_Store
+clear
+git status
+exit
+ninja install
+config nu
+ls
+make install
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make install
+..
+rm -r build
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make install
+env
+config nu
+source ($nu.default-config-dir | path join "config.nu")
+env
+clear
+make install
+ls
+mkdir build-test
+cd build-test
+../stage3/bin/zig init -b
+nvim .
+..
+clear
+git status
+rm .DS_Store
+rm lib/.DS_Store
+clear
+git status
+rm .DS_Store
+git status
+rm lib/.DS_Store
+git status
+nvim ~/.gitignore
+git config --global core.excludesfile ~/.gitignore
+clear
+git status
+git add .
+git commit -am 'added "basic" init option to `zig init`'
+clear
+git push
+clear
+ls ~/..sh
+ls ~/.ssh
+cat ~/.ssh/id_ed25519.pub
+git remote -v
+git remote set-url origin git@codeberg.org:dtasada/zig.git
+git remote -v
+ssh-keygen -t ed25519 -C "daniteeem@gmail.com"
+cat ~/.ssh/id_ed25519.private.pub
+ssh -T git@codeberg.org
+echo -n '539eadc8f371442493d2f9faa965023980636f21aa47dc9ced51fca122eb7e53' | ssh-keygen -Y sign -n gitea -f ~/.ssh/id_ed25519 # or the path to the private key if it is different.
+echo -n '539eadc8f371442493d2f9faa965023980636f21aa47dc9ced51fca122eb7e53' | ssh-keygen -Y sign -n gitea -f ~/.ssh/id_ed25519.private # or the path to the private key if it is different.
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+nvim .
+clear
+mvn -pl client -am javafx:run
+clear
+lazygit
+clear
+git checkout -b ui-edit-recipe-window
+clear
+nvim .
+clear
+ls
+tmutil listlocalsnapshots /
+cd `Library/Application Support/`
+clear
+ls
+clear
+ls | sort-by size
+clear
+..
+cd Caches/
+ls
+ls | sort-by size
+clear
+..
+ls
+ls | sort-by size
+brew --help
+brew cleanup
+nvim src/main.zig
+brew update; brew upgrade
+clear
+brew cleanup
+pip list
+pip3 list
+pip3.14 list
+which pip3
+which pip3.14
+clear
+pip3.13 list
+pipx list
+pipx remove open-webui
+pipx uninstall open-webui
+clear
+xcode-select --install
+xcrun
+xcrun simctl list runtimes
+clear
+xcode-select -p
+mvn -pl server -am spring-boot:run
+cclear
+clear
+git stash list
+git stash
+git stash list
+git stash --help
+git stash apply 1
+git diff
+clear
+git status
+git add .
+git diff
+git log
+clear
+git diff ce90f634cc02095cb42d4d03f87a60d895d1b2d1
+cl
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+nvim .
+zsh
+clear
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release -GNinja ..
+brew list
+brew bundle
+clear
+brew bundle
+clear
+brew lsit
+clear
+brew list --help
+brew list --installed-on-request
+duti
+exit
+which 7zip
+brew info p7zip
+clear
+brew list --installed-on-request
+ninja install
+clear
+brew list --installed-on-request
+zig-master
+zig-master version
+which zig-master
+ls ~/.local/bin/zig-master
+ls -l ~/.local/bin/zig-master
+clear
+lld
+cd ../zig-fork
+cd build
+ls
+lld stage3/bin/zig
+brew info x86_64-elf-binutils
+ld
+clear
+which ld
+brew list --installed-on-request
+brew remove x86_64-elf-binutils
+clear
+brew list --installed-on-request
+brew list --installed-on-request | wc -l
+brew list
+brew remove godot-mono
+clear
+mvn -pl client -am javafx:run
+clear
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+nvim .
+zig-master build test
+clear
+brew info discord
+brew update discord
+brew upgrade discord
+exit
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+clear
+clear
+git status
+..
+git push
+git pull
+git fetch upstream
+git merge upstream/master
+nvim .
+nvim ~/.config/nvim/lua/plugins/lsp.lua
+clear
+mvn -pl server -am spring-boot:run
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+cl
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+mvn -pl server -am spring-boot:run
+clear
+git diff
+clear
+git diff | wc -l
+git diff
+git diff --help
+clear
+git status
+git add .
+clear
+git status
+ls
+ls -la
+clear
+ls -a
+clear
+cd .local/
+ls
+cd share
+ls
+cd nvim
+ls
+cd mason
+ls
+cd packages
+ls
+..
+cd share
+ls
+cd jdtls
+ls
+..
+rm -r jdtls
+nvim .
+clear
+..
+rm -r nvim
+nvim .
+cd ../state
+ls
+cd nvim
+ls
+..
+rm -r nvim
+cd ../
+cd share
+rm -r nvim
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+nvim ~/.config/nvim/lua/core/options.lua
+nvim .
+nvim ~/.config/nvim/lua/core/options.lua
+nvim .
+nvim
+nvim ~/.config/nvim/lua/core/options.lua
+git diff
+git diff HEAD
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+clear
+git diff HEAD
+clear
+git status
+clear
+mvn -pl client -am javafx:run
+clear
+git add .
+git commit -am 'edit recipe window exists, name change works now'
+mvn -pl server -am spring-boot:run
+clear
+clear
+mvn -pl client -am javafx:run
+clear
+git add .
+git status
+git diff
+git diff HEAD
+clear
+git commit -am 'fixed runtime error'
+clear
+git push
+git push origin ui-edit-recipe-window
+echo "everything seems really good, i would've done it exactly like this. really appreciate the Unit class application as a sum type"
+echo "everything seems really good, i would've done it exactly like this. really appreciate the Unit class application as a sum type" | wc -l
+echo "everything seems really good, i would've done it exactly like this. really appreciate the Unit class application as a sum type" | wc -c
+clear
+git merge
+git merge master
+git branch
+git fetch
+git merge main
+git fetch origin
+git merge main
+git merge --help
+git merge main
+git checkout main
+git pull
+clear
+git branch
+git checkout ui-edit-recipe-window
+git merge main
+nvim .
+mvn -pl server -am spring-boot:run
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -am javafx:run
+clear
+mvn -pl client -B check
+mvn -pl client -B validate
+mvn -pl server -am spring-boot:run
+clear
+mvn -pl server -am -B -ntp clean verify
+clear
+mvn -pl client -am -B -ntp test
+clear
+git add .
+git commit -am 'merged with main'
+clear
+mvn -pl server -am spring-boot:run
+clear
+git checkout main
+nvim .
+clear
+clear
+zigup fetch-index | from json | get master
+git pull
+git log
+clear
+git branch
+git checkout ui-edit-recipe-window
+clear
+git push
+git push origin ui-edit-recipe-window
+git merge main
+git push
+git push origin ui-edit-recipe-window
+clear
+clear
+cd ../GnomeMansLand/
+clear
+cd ../GnomeMansLand/
+clear
+cd ../../GnomeMansLand/
+clear
+zig-master build
+zig-master build run
+clear
+zig version
+zig build run
+nvim .
+zig build run
+clear
+nvim .
+cd ..
+git clone https://github.com/schmee/zig-raylib-imgui-template
+cd zig-raylib-imgui-template/
+clear
+ls
+zig build
+zig build run
+zigup fetch 0.13.0
+clear
+zigup 0.13.0 build run
+zigup run 0.13.0 build run
+clear
+..
+mkdir rlimgui-zig
+cd rlimgui-zig/
+clear
+zig version
+zig default 0.15.2
+zigup default 0.15.2
+clear
+zig version
+zig --help
+zig init-lib
+clear
+zig init
+cd ../rlimgui-zig/
+clear
+ls
+zig fetch --save https://github.com/raylib-extras/rlImGui/archive/dc7f97679a024eee8f5f009e77cc311748200415.tar.gz
+ls -a
+git init rlimgui-zig
+la
+rm -r rlimgui-zig/
+git init
+clear
+la
+clear
+ls
+git submodule add https://github.com/raylib-extras/rlImGui
+clear
+ls
+clear
+nvim .
+clear
+zig fetch --save git+https://github.com/raylib-zig/raylib-zig#devel
+clear
+zig build
+clear
+zig build
+clear
+zig build
+clear
+zig build
+clear
+zig build
+clear
+zig fetch --save https://github.com/zig-gamedev/zgui/archive/7d3fb3302b90bf71dbc93eb02bb208e6f37d555b.tar.gz
+zig build
+clear
+zig build
+clear
+zig build
+clear
+zig build
+nvim .
+clear
+zigup run 0.13.0 build run
+clear
+zig clean
+zig build-exe
+clear
+zigup run 0.13.0 build run
+zig build
+clear
+cd ..
+mkdir paper-zig
+cd paper-zig
+clear
+zig init
+clear
+nvim .
+clear
+nvim .
+clear
+cd ../paper-zig
+nvim .
+cd ../paper-zig
+cd
+cd -
+clear
+zig fetch --save git+https://github.com/raylib-zig/raylib-zig#devel
+zig build
+clear
+zig bulid
+clear
+zig build
+clear
+zig build
+nvim .
+clear
+clear
+zig build
+zig build run
+nvim .
+clear
+nvim
+clear
+clear
+cd ../zls
+clear
+ls
+cd zig-out
+clear
+ls
+cd bin
+clear
+ls
+cp ~/.local/share/nvim/mason/bin/zls zls-0.15.1
+clear
+ls
+mv zls zls-master
+ln -s zls-0.15.1 zls
+clear
+ls
+nvim .
+clear
+ls
+ls /Users/dt/coding/git/zls/zig-out/bin/zls
+ls -l /Users/dt/coding/git/zls/zig-out/bin/zls
+./zls-0.15.1
+clear
+ls
+rm zls
+ln -sf zls-master zls
+clear
+ls
+ls -l zls
+nvim .
+clear
+exit
+zig build
+cl
+zig build run
+clear
+mkdir a
+cd a
+clear
+zig init
+ls **/*
+nvim .
+clear
+...
+cd dt
+clear
+rm -r a
+clear
+nvim .
+ckear
+clear
+cd ../
+git clone https://github.com/dtasada/paper
+cd paper
+git branch
+cd simulation/
+clear
+ls
+make
+nvim Makefile
+clang++
+which clang++
+nvim Makefile
+cc=/opt/homebrew/bin/g++-15 make
+..
+rm -r paper
+exit
+clear
+zig zen
+python3 zen
+pip3 install zen
+python3 -m zen
+python3 --help
+man python3
+zig zen
+eixt
+exit
+python3
+clear
+odin
+odin zen
+clear
+gcc zen
+clear
+zig build
+clear
+zig build
+zig build run
+clear
+zig build run
+clear
+zig build run
+clear
+zig build run
+nvim build.zig
+clear
+cd ../paper-zig
+clkear
+clear
+zig build run
+clear
+git add .
+git init
+git commit -am 'first commit, runtime error'
+git add .
+clear
+la
+nvim .gitignore
+clear
+git add .
+git commit -am 'first commit, runtime error'
+clear
+gemini
+clear
+zig build run
+clear
+zig build run
+clear
+zig build run
+clear
+zig build run
+clear
+zig build run
+clear
+zig build run
+cl
+zig build run
+nvim
+clear
+git add .
+git commit -am 'working with rendering and everything'
+git push
+clear
+zig build run
+clear
+gemini
+clear
+git diff
+clear
+zig build run
+clear
+zig build run
+clear
+samply record ./zig-out/bin/paper_zig
+clear
+cl
+zig build run
+clear
+git diff
+clear
+zig build run
+clear
+zig build run
+clear
+samply record ./zig-out/bin/paper_zig
+zig build run -Doptimize=ReleaseFast
+zig build run
+git add .
+git commit -am 'simplified cfd code'
+clear
+git diff
+clear
+git diff
+clear
+git reset --hard
+clear
+zig build -Doptimize=ReleaseFast
+zig build -Doptimize=ReleaseFast run
+clear
+nvim
+clear
+git diff
+qclear
+clear
+git diff
+clear
+git diff
+clear
+git diff
+clear
+git add .
+git commit -am 'simd in linearSolve'
+git reset --hard
+clear
+gemini
+clear
+samply record ./zig-out/bin/paper_zig
+clear
+ls
+nvim profile.json.gz
+clear
+la
+clear
+zig build -Doptimize=ReleaseFast
+samply record ./zig-out/bin/paper_zig
+ls
+gunzip
+gunzip --help
+gunzip profile.json.gz
+ls
+ls -la
+clear
+ls -a
+gunzip --help
+clear
+ls
+nvim profile.json.gz
+nvim profile.json
+clear
+kperf
+cler
+clear
+xctrace
+gemini
+clear
+zig build -Doptimize=ReleaseFast run
+clear
+ls
+rm parser.py profile.json
+clear
+zig build -Doptimize=ReleaseFast
+gemini
+clear
+samply record ./zig-out/bin/paper_zig
+clear
+git status
+git diff
+clear
+git stash hold on
+git stash
+clear
+zig build -Doptimize=ReleaseFast
+samply record ./zig-out/bin/paper_zig
+clear
+git status
+nvim .gitignore
+clear
+git status
+clear
+git add .
+git status
+git rm --cached profile.josn.gz
+git rm --cached profile.json.gz
+clear
+git status
+git add .
+git status
+clear
+zig build -Doptimize=ReleaseFast
+./zig-out/bin/paper_zig
+clear
+git status
+clear
+git diff
+clear
+git add .
+git commit -am 'ijk -> xyz'
+clear
+zig build -Doptimize=ReleaseFast run
+clear
+git diff
+clear
+zig build -Doptimize=ReleaseFast
+zig build
+samply record ./zig-out/bin/paper_zig
+clear
+git add .
+git commit -am 'simd in project'
+clear
+zig build -Doptimize=ReleaseFast run
+]
+zig build -Doptimize=ReleaseFast run
+0.000001 * 10000
+clear
+zig build -Doptimize=ReleaseFast run
+clear
+zig build -Doptimize=ReleaseFast run
+clear
+zig build
+zig build -Doptimize=ReleaseFast run
+clear
+git add .
+git commit -am 'water'
+clear
+zig build -Doptimize=ReleaseFast run
+clear
+clear
+zig build -Doptimize=ReleaseFast run
+clear
+git status
+git dif
+git difd
+git diff
+clear
+git add .
+git commit -am 'settings'
+clear
+zig build -Doptimize=ReleaseFast run
+clear
+cd coding/git
+gh repo clone LMCuber/QuickPed
+cd QuickPed/
+clear
+ls
+zigup list
+zigup run 0.13.0 build run
+..
+rm -r QuickPed/
+clear
+gh repo clone LMCuber/LWV
+cd LWV
+npm run dev
+npm i
+npm run dev
+npm run build
+npm -v
+node -v
+nvim .
+clear
+ls
+nvim .
+clear
+nvim .
+nvi m~
+nvim ~/.config/nvim/lua/plugins/trl
+nvim ~/.config/nvim/lua/plugins/telescope.lua
+nvim .
+tldr ripgrep
+tldr rg
+nvim ~/.config/nvim/lua/plugins/telescope.lua
+l
+clear
+rg --files | rg "(json|config|settings)"
+nvim ~/.config/nvim/lua/plugins/telescope.lua
+clear
+nvim .
+clear
+cd
+leat
+cl
+let
+let --help
+clear
+cd coding/git
+ls
+cd network-zig
+cd zig-network
+clear
+git fetch origin
+git fetch upstream
+git remote add upstream https://github.com/ikskuh/zig-network
+git fetch upstream
+clear
+git log
+git pull
+clear
+git merge upstream/master
+clear
+zig-master version
+zig build examples
+clear
+zig-master version
+zig-master build examples
+zig version
+clear
+git checkout master
+clear
+git log
+clear
+git checkout zig-master
+clear
+git push
+clear
+git log
+clear
+git reset --hard b73942a8e4f2bf1897c427a3d137ffbfcfe52ba4
+clear
+git rebase
+git rebase --help
+clear
+ls
+clear
+git checkout master
+git pull
+git fetch upstream
+git pull
+git rebase
+clear
+git log
+clear
+git pull
+git pull upstream master
+clear
+git pull
+git log
+clear
+git push
+checkout zig-master
+git checkout zig-master
+git pull upstream zig-master
+clear
+git fetch upstream
+git pull upstream zig-master
+clear
+git log
+clear
+onefetch
+clear
+git log
+clear
+git reset --hard b73942a8e4f2bf1897c427a3d137ffbfcfe52ba4
+clear
+git push --hard
+clear
+git push --hard origin zig-master
+git push --force origin zig-master
+clear
+git fetch upstream
+git rebase
+git rebase upstream/zig-master
+cd
+nvim
+clear
+git rebase --continue
+git status
+git add .
+git rebase --continue
+lear
+clear
+zig-master build examples
+clear
+git status
+git push origin zig-master
+git pull
+git rebase --continue
+git status
+git pull
+git rebase
+git push origin zig-master
+clear
+git log
+clear
+git push
+git push origin zig-master
+git fetch upstream
+clear
+git pull upstream zig-master
+clear
+git log
+clear
+git pull upstream zig-master
+clear
+..
+cd zig-master
+cd zig-network
+clear
+git fetch upstream
+git fetch origin
+git log
+clear
+git rebase upstream/master
+clear
+nvim .
+git add .
+git rebase --continue
+clear
+zig-master build examples
+git add .
+cl
+nvim .
+git rebase --continue
+git add .
+clear
+ls -a
+git rebase --continue
+git add .
+nvim .
+git rebase --continue
+git add .
+git rebase --continue
+clear
+git status
+clear
+git diff
+git add .
+git diff
+git status
+git push
+git rebase
+cl
+git status
+nvim .github/workflows/build.yml
+git commit -am 'solve rebase conflict in build.yml'
+git pull
+git rebase
+clear
+git push
+clear
+git checkout master
+clear
+git rebase zig-master
+git status
+git pull
+git rebase
+nvim .
+git add .
+git rebase --continue
+nvim .
+clear
+git add .
+git rebase --continue
+nvim network.zig
+git add .
+git rebase --continue
+nvim .github/workflows/build.yml
+git add .
+git rebase --continue
+nvim network.zig
+git add .
+git rebase --continue
+clear
+git push
+clear
+git log
+clear
+zig-master build examples
+zig build examples
+clear
+git checkout zig-master
+git log
+cl
+git checkout master
+git log
+clear
+git checkout zig-master
+clear
+git lg
+git log
+clear
+git reset --hard b73942a8e4f2bf1897c427a3d137ffbfcfe52ba4
+clear
+git fetch upstream
+git checkout zig-master
+git rebase upstream/master
+nvim network.zig
+git add .
+git rebase --continue
+nvim .github/workflows/build.yml
+git add .
+git rebase --continue
+git add .
+nvim network.zig
+git rebase --continue
+git add .
+nvim .github/workflows/build.yml
+git rebase --continue
+git add .
+git rebase --continue
+clear
+git rebase
+git status
+git diff
+git restore .github/workflows/build.yml
+clear
+git status
+git restore --staged .github/
+git status
+clear
+nvim .github/workflows/build.yml
+git status
+zig-master build examples
+git log
+git push --help
+clear
+git push --force-with-lease
+clear
+git status
+clear
+git reset --hard
+clear
+git log
+clear
+git status
+clear
+git pull
+clear
+gh
+gh workflow
+gh workflow run
+cl
+§
+clear
+snus
+clear
+zag
+clear
+ls
+clear
+neovide
+clear
+zig build run -- build
+clang-format
+which clang-foramt
+which clang-format
+clear
+zig build run -- build
+clear
+zig build run -- build
+/Users/dt/coding/git/zls/zig-out/bin/zls env
+cat "/Users/dt/Library/Application Support/zls.json"
+nvim "/Users/dt/Library/Application Support/zls.json"
+clear
+nvim
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+zig build run -freference-trace=17 -- build
+zig build run -- build
+clear
+zig build run -- build
+cl
+zig build run -- build
+cl
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+anyzig
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+cd ~/Downloads/
+clear
+ls
+ffmpeg -i `ScreenRecording_12-23-2025 21-54-53_1.mov` -filter:v "setpts=0.5*PTS" 2x.mov
+clear
+clear
+zig build
+clear
+zig build
+clear
+zig build
+ls
+open 2x.mov
+clear
+exit
+clear
+zig build
+cklear
+cl
+zig build
+clear
+zig build
+clear
+zig build
+clear
+zig build
+zig build run -- build
+clear
+zig build run -- build
+cl
+zig build run -- build
+cl
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+cl
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+git add .
+git commit -am 'started c transpiler'
+git push
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+anyzig
+zig build run -- build
+clear
+gemini
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+git diff
+git add .
+git commit -am 'if statement and struct methods'
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+nvim .
+clear
+zig build run -- build
+clear; zig build run -- build
+clear
+clear; zig build run -- build
+clear
+clear; zig build run -- build
+clear
+clear; zig build run -- build
+clear
+clear; zig build run -- build
+clear; zig build run -- builear
+clear
+clear; zig build run -- builear
+clear; zig build run -- build
+clear
+zig build run -- build
+celar
+zig build run -- build
+clear
+git diff
+clear
+git add .
+git commit -am 'while and for loops but bug in negative range expression'
+git push
+git diff
+gemini
+clear
+zig build run -- build
+clear
+ls -a
+rm .DS_Store
+clear
+ls -a **/* | find .DS_Store
+rm .DS_Store
+rm src/.DS_Store
+rm .DS_Store
+ls -a **/* | find .DS_Store
+rm src/.DS_Store
+ls -a **/* | find .DS_Store
+clear
+zig build run -- build
+r
+cl
+zig build run -- build
+celar
+clear
+celar
+zig build run -- build
+clear
+zig build run -- build
+clear
+celar
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+git add .
+git commit -am 'fixed range error'
+git push
+clear
+zig build run -- build
+clear
+git diff
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear; zig build run -- build
+nvim .
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+cler
+cl
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+lcear
+cl
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+celar
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+z
+zig build run -- build
+cl
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+z
+zig build run -- build
+clear
+zig build run -- build
+cleqar
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+cl
+zig build run -- build
+clear; zig build run -- build
+clear
+clear; zig build run -- build
+clear
+clear; zig build run -- build
+clear
+clear; zig build run -- build
+clear
+clear; zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+git add .
+git diff HEAD
+git commit -am 'types'
+clear
+git push
+clear
+clear; zig build run -- build
+clear
+clear; zig build run -- build
+clear
+clear; zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+cl
+zig build run -- build
+clear; zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+claer
+clear
+clear; zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+clear
+clear; zig build run -- build
+clear
+clear; zig build run -- build
+clear
+clear; zig build run -- build
+clear
+clear; zig build run -- build
+clear
+clear; zig build run -- build
+clear
+clear; zig build run -- build
+clear
+git add .
+git commit -am 'reference types!!'
+cl
+git push
+nvim .
+clkear
+clear
+ls -a
+rm .dmr-out/
+rm -r .dmr-out/
+clear
+ls -a
+clear
+zig build run -- build
+nvim .
+nvim build.zig.zon
+clear
+git push
+clear
+git diff
+clear
+git add .
+git commit -am 'rename to zag'
+clear
+git push
+cd coding/git
+mv llvm-wrapper/ zag
+clear
+cd
+gh repo rename
+clear
+nvim
+clear
+..
+clear
+cd zag
+clear
+ls
+tree-sitter
+which tree-sitter
+clear
+mkdir tree-sitter-zag
+cd tree-sitter-zag
+clear
+tree-sitter init
+clear
+ls
+tree-sitter generate
+clear
+nvim .
+..
+cd tree-sitter-zag
+tree-sitter generate
+clear
+tree-sitter generate
+clear
+tree-sitter generate
+clear
+..
+zig build run -- build
+git add .
+git commit -am 'started tree-sitter grammar'
+clear
+git push
+cd tree-sitter-zag/
+clear
+tree-sitter generate
+clear
+gemini
+clear
+cd ..
+tree-sitter --help
+clear
+git push
+clear
+cd tree-sitter-zag/
+tree-sitter parse ../src/main.zag
+cl
+tree-sitter generate
+tree-sitter parse ../src/main.zag
+tree-sitter generate
+tree-sitter parse ../src/main.zag
+..
+env -C tree-sitter-zag/ tree-sitter parse ../src/main.zag
+git diff
+clear
+env -C tree-sitter-zag/ tree-sitter generate
+env -C tree-sitter-zag/ tree-sitter parse ../src/main.zag
+env -C tree-sitter-zag/ tree-sitter generate
+env -C tree-sitter-zag/ tree-sitter parse ../src/main.zag
+env -C tree-sitter-zag/ tree-sitter generate
+env -C tree-sitter-zag/ tree-sitter parse ../src/main.zag
+clear
+env -C tree-sitter-zag/ tree-sitter parse ../src/main.zag
+env -C tree-sitter-zag/ tree-sitter generate
+env -C tree-sitter-zag/ tree-sitter parse ../src/main.zag
+clear
+env -C tree-sitter-zag/ tree-sitter parse ../src/main.zag
+env -C tree-sitter-zag/ tree-sitter generate
+env -C tree-sitter-zag/ tree-sitter parse ../src/main.zag
+clear
+env -C tree-sitter-zag/ tree-sitter parse ../src/main.zag
+clear
+env -C tree-sitter-zag/ tree-sitter parse ../src/main.zag
+env -C tree-sitter-zag/ tree-sitter generate
+env -C tree-sitter-zag/ tree-sitter parse ../src/main.zag
+env -C tree-sitter-zag/ tree-sitter generate
+env -C tree-sitter-zag/ tree-sitter parse ../src/main.zag
+clear
+env -C tree-sitter-zag/ tree-sitter generate
+env -C tree-sitter-zag/ tree-sitter parse ../src/main.zag
+env -C tree-sitter-zag/ tree-sitter generate
+env -C tree-sitter-zag/ tree-sitter parse ../src/main.zag
+clear
+gemini
+nvim .
+clear
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+nvim ~/.config/nvim/lua/core/options.lua
+nvim .
+nvim ~/.config/nvim/lua/core/options.lua
+nvim .
+nvim ~/.config/nvim/lua/core/options.lua
+nvim .
+nvim ~/.config/nvim/lua/core/options.lua
+zig zag
+clear
+nvim .
+nvim ~/.config/nvim/lua/core/options.lua
+clear
+nvim .
+clear
+nvim .
+cd tree-sitter-zag/
+tree-sitter
+tree-sitter generate
+tree-sitter build
+tree-sitter test
+tree-sitter highlight ../src/main.zag
+..
+nvim ..
+nvim .
+nvim ~/.config/nvim/lua/core/options.lua
+nvim .
+nvim
+nvim ~/.config/nvim/lua/core/options.lua
+nvim .
+nvim ~/.config/nvim/lua/core/options.lua
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+nvim .
+clear
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+nvim .
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+nvim .
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+cd tree-sitter-zag/
+tree-sitter generate
+tree-sitter build
+tree-sitter generate
+nvim .
+clear
+cd ~/.local/share/nvim
+ls
+cd lazy
+ls
+cd nvim-treesitter/
+clear
+ls
+ls **/* | find zag
+ls **/* | find lua
+clear
+ls **/* | find java
+ls **/* | find grammar.js
+ls **/* | find grammar
+clear
+ls
+cd runtime
+ls
+cd queries
+ls
+clear
+..
+ls
+..
+clear
+ls
+cd plugin/
+ls
+..
+ls scripts
+ls
+clear
+ls scripts/
+ls
+clear
+ls
+clear
+cd ~/coding/git/zag
+clear
+rm -rf ~/.local/share/nvim/site/pack/packer/start/nvim-treesitter<\n>rm -rf ~/.cache/nvim/treesitter<\n>rm -rf ~/.local/share/nvim/site/queries<\n>rm -rf ~/.local/share/nvim/site/parser<\n>rm -rf ~/.local/share/nvim/site/parser-info
+clear
+nvim .
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+nvim .
+rm ~/.local/share/nvim/lazy/nvim-treesitter
+rm ~/.local/share/nvim/lazy/nvim-treesitter -r
+clear
+nvim .
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+clear
+cd .local
+ls
+cd ..
+cd .cache
+ls
+cd nvim
+clear
+ls
+cd luac
+ls
+clear
+..
+ls **/* | find treesitter
+ls **/* | find treesitter | find zag
+ls **/* | find treesitter | find zig
+ls **/* | find treesitter | find java
+clear
+ls
+cd luac
+ls
+clear
+..
+cd .local/share/nvim
+ls
+cd lazy
+ls
+cd nvim-treesitter/
+clear
+ls
+ls -a
+ls -a **/* | find zag
+ls -a **/* | find zig
+ear
+clear
+cd ~/coding/git/zag
+cd tree-sitter-zag/
+ls
+cd src
+ls
+..
+clear
+nvim .
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+nvim .
+nvim 
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+nvim .
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+..
+nvim .
+mkdir ~/.config/nvim/parser
+ln -s /Users/dt/coding/git/zag/tree-sitter-zag/parser.so ~/.config/nvim/parser/zag.so
+rm ~/.config/nvim/parser/zag.so
+sudo rm ~/.config/nvim/parser/zag.so
+nvim .
+clear
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+nvim .
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+nvim .
+clear
+rm -r ~/.local/share/nvim/lazy/nvim-treesitter/
+nvim .
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+nvim .
+clear
+cd tree-sitter-zag/
+tree-sitter generate
+tree-sitter build
+..
+nvim .
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+nvim .
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+clear
+cd .config/nvim
+cd ~/.config/nvim
+ls
+rm queries
+sudo rm queries
+ls parser
+rm parser
+clear
+ls
+mkdir zag
+rm zag
+mkdir -p queries/zag
+mkdir queries
+mkdir queries/zag
+rm queries/zag
+clear
+ln -s /Users/dt/coding/git/zag/tree-sitter-zag/queries/ ~/.config/nvim/queries/zag
+clear
+ls
+cd queries
+ls
+..
+cd ~/coding/git/zag
+clear
+nvim .
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+clear
+nvim .
+ls /Users/dt/coding/git/zag/tree-sitter-zag
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+cd tree-sitter-zag/
+ls
+cd src
+ls
+..
+nvim package.json
+clear
+nvim .
+clear
+ls /Users/dt/coding/git/zag/treesitter-zag
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+clear
+nvim .
+clear
+nvim .
+nvim src/main.zag
+ls
+nvim .
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+nvim .
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+nvim .
+clear
+cd ..
+zig build run -- build
+clear
+zig build run -- build
+clear
+zig build run -- build
+nvim .
+clear
+tree-sitter generate
+tree-sitter build
+clear
+tree-sitter generate
+tree-sitter build
+nvim .
+clear
+tree-sitter generate
+clear
+tree-sitter build
+tree-sitter generate
+nvim .
+tree-sitter generate
+tree-sitter build
+tree-sitter generate
+nvim .
+cd ~/.local/share/nvim
+ls
+cd lazy
+ls
+cd nvim-treesitter/
+clear
+ls
+ls **/* zag
+ls **/* | find zag
+ls
+cd parser
+ls
+rm zag.so
+clear
+nvim .
+nvim 
+gemini
+clear
+nvim .
+cd tree-sitter-zag/
+tree-sitter parse ../src/main.zag
+clear
+tree-sitter parse ../src/main.zag
+cd -
+cd ~/coding/git/zag
+clear
+cd tree-sitter-zag/
+tree-sitter parse ../src/main.zag
+gemini
+clear
+tree-sitter parse ../src/main.zag
+clear
+ls
+clear
+tree-sitter generate
+clear
+tree-sitter generate
+clear
+tree-sitter parse ../src/main.zag
+nvim .
+tree-sitter parse ../src/main.zag
+clear
+tree-sitter generate
+clear
+tree-sitter generate
+nvim .
+clear
+tree-sitter generate
+nvim .
+tree-sitter build
+tree-sitter generate
+tree-sitter build
+tree-sitter generate
+tree-sitter build
+nvim .
+tree-sitter generate
+tree-sitter build
+tree-sitter generate
+tree-sitter build
+clear
+nvim .
+clear
+tree-sitter generate
+nvim .
+tree-sitter build
+tree-sitter generate
+clear
+tree-sitter generate
+tree-sitter build
+tree-sitter generate
+nvim .
+clear
+tree-sitter generate
+tree-sitter build
+tree-sitter generate
+clear
+cd ~/.local/share/nvim
+cd lazy/nvim-treesitter/
+ls
+cd parser
+ls
+clear
+..
+ls
+ls **/* | find zag
+rm parser-info/zag.revision
+nvim .
+nvim 
+clear
+clear
+tree-sitter generate
+nvim .
+tree-sitter generate
+tree-sitter parse ../src/main.zag
+clear
+tree-sitter generate
+tree-sitter parse ../src/main.zag
+clear
+tree-sitter generate
+clear
+tree-sitter generate
+nvim .
+nvim . 
+clear
+clear
+cd
+clear
+cd .local/share/nvim
+ls
+cd lazy
+ls
+cd nvim-treesitter/
+clear
+..
+rm -r nvim-treesitter/
+cd ~/.cache/nvim
+ls
+cd luac
+ls
+clear
+..
+rm -r nvim
+clear
+nvim .
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+clear
+clear
+tree-sitter generate
+ls /Users/dt/.local/share/nvim/site/parser
+clear
+rm -r /Users/dt/.local/share/nvim/site/parser
+rm -r /opt/homebrew/Cellar/neovim/0.11.5_1/lib/nvim/parser
+clear
+nvim .
+cl
+tree-sitter generate
+nvim .
+clear
+nvim .
+clear
+nvim .
+clear
+nvim .
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+clear
+nvim .
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+nvim .
+nvim ~/.config/nvim/lua/plugins/treesitter.lua
+clear
+cd
+exit
+git add .
+git diff HEAD
+clear
+nvim .
+clear
+git add .
+git commit -am 'tree-sitter grammar working, and highlights'
+cl
+git push
+cd ~/coding/git/dotfiles/
+clear
+git status
+git add .

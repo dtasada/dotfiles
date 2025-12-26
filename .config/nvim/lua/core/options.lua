@@ -34,28 +34,19 @@ vim.opt.mouse = "a"
 vim.opt.winborder = 'rounded'
 
 vim.api.nvim_create_autocmd("TextYankPost", {
-	group = vim.api.nvim_create_augroup("highlight_yank", {}),
-	desc = "Hightlight selection on yank",
-	pattern = "*",
-	callback = function()
-		vim.highlight.on_yank({ higroup = "IncSearch", timeout = 150 })
-	end,
+    group = vim.api.nvim_create_augroup("highlight_yank", {}),
+    desc = "Hightlight selection on yank",
+    pattern = "*",
+    callback = function()
+        vim.highlight.on_yank({ higroup = "IncSearch", timeout = 150 })
+    end,
 })
 
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-	pattern = "*.mcc",
-	callback = function()
-		vim.bo.filetype = "mcc"
-	end,
-})
-
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "gleam",
-	callback = function()
-		vim.bo.shiftwidth  = 2
-		vim.bo.tabstop     = 2
-		vim.bo.softtabstop = 2
-	end,
+    pattern = "*.mcc",
+    callback = function()
+        vim.bo.filetype = "mcc"
+    end,
 })
 
 vim.api.nvim_create_autocmd("BufWritePre", {
@@ -73,12 +64,5 @@ vim.api.nvim_create_autocmd("BufWritePre", {
                 timeout_ms = 2000,
             })
         end
-    end,
-})
-
-vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-vim.api.nvim_create_autocmd("FileType", {
-    callback = function()
-        pcall(function () vim.treesitter.start() end)
     end,
 })
