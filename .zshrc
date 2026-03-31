@@ -1,27 +1,3 @@
-export EDITOR=nvim
-export VISUAL=nvim
-
-export TERM=xterm-256color
-export DISPLAY=172.19.32.1:0.0
-export HOMEBREW_NO_INSTALL_FROM_API=1
-export XDG_CONFIG_HOME="$HOME/.config"
-
-export RUSTFLAGS="-C link-arg=-mmacosx-version-min=15.0"
-
-export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:$HOME/go/bin"
-
-export PATH="$PATH:/Applications/IntelliJ IDEA CE.app/Contents/MacOS"
-export PATH="$PATH:/Applications/IntelliJ IDEA CE.app/Contents/MacOS"
-export PATH="$PATH:/opt/homebrew/Cellar/zigup/2025.05.24/bin/zig"
-
-export VCPKG_ROOT="$HOME/coding/git/vcpkg"
-export PATH="$PATH:$VCPKG_ROOT"
-
-export DOCKER_HOST=unix:///$HOME/.colima/docker.sock
-
-export CMAKE_EXPORT_COMPILE_COMMANDS=1
-
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE

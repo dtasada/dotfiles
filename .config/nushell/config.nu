@@ -4,6 +4,7 @@ $env.PATH ++= [
 	"/opt/homebrew/opt/llvm/bin",
 	"/opt/homebrew/bin",
     "/opt/homebrew/Cellar/zigup/2025.05.24/bin",
+    $"($env.HOME)/.bun/bin"
 ]
 
 $env.LIBRARY_PATH = "/opt/homebrew/lib"
