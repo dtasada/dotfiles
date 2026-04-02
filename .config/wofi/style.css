@@ -1,0 +1,23 @@
+@define-color background #181926;
+@define-color text #d3d3d3;
+
+* {
+    font-family: CascadiaCode;
+    font-size: 20px;
+    background-color: @background;
+    color: @text;
+}
+
+#window, #outer-box {
+    border: 0;
+    border-radius: 20px;
+    overflow: hidden
+}
+
+#input {
+    border-radius: inherit;
+}
+
+#outer-box {
+    padding: 8px;
+}

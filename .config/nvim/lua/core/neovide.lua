@@ -1,5 +1,5 @@
 if vim.g.neovide then
-    vim.o.guifont = "CaskaydiaCove Nerd Font"
+    vim.o.guifont = "Cascadia Code:20"
     vim.g.neovide_padding_top = 20
     vim.g.neovide_padding_bottom = 20
     vim.g.neovide_padding_right = 20
@@ -12,7 +12,7 @@ if vim.g.neovide then
     vim.g.neovide_detach_on_quit = 'prompt'
     vim.g.neovide_highlight_matching_pair = true
     vim.g.neovide_input_macos_option_key_is_meta = 'only_left'
-    vim.g.neovide_scale_factor = 1.5
+    vim.g.neovide_scale_factor = 1.0
     local function save() vim.cmd.write() end
     local function copy() vim.cmd([[normal! "+y]]) end
     local function paste() vim.api.nvim_paste(vim.fn.getreg("+"), true, -1) end

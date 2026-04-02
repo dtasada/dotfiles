@@ -1,0 +1,8 @@
+width=800
+term=ghostty
+insensitive=true
+matching=fuzzy
+lines=8
+gtk_dark=true
+key_forward=Ctrl-n
+key_backward=Ctrl-p
