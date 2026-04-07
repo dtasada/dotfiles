@@ -1,95 +1,44 @@
-@import "themes/gruvbox.css";
+@define-color background #181926;
+@define-color text #d3d3d3;
 
 * {
-	border: none;
-	border-radius: 16px;
-	font-family: "CaskaydiaCove NF";
-	font-weight: bold;
-	font-size: 12px;
-	min-height: 10px;
+    font-family: Cascadia Code;
+    font-size: 20px;
+    color: @text;
+}
+
+.modules-left, .modules-right, .modules-center {
+    margin-top: 8px;
+}
+.modules-left {
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.modules-right {
+    margin-right: 20px;
 }
 
 window#waybar {
-	background-color: rgba(255, 0, 0, 0.0);
-}
-
-#battery,
-#temperature,
-#clock,
-#workspaces,
-#window,
-#tray,
-#pulseaudio,
-#backlight,
-#network {
-	color: @text;
-	background: @crust;
-	margin: 4px 2px;
-	padding: 0px 8px;
-	opacity: 1;
-	border: 0px solid @crust;
-}
-
-tooltip {
-	background: @tool-bg;
-	color: @tool-color;
-	border-width: 2px;
-	border-style: solid;
-	border-color: @crust;
+    background-color: rgba(0, 0, 0, 0.0);
+    transition-property: background-color;
+    transition-duration: .5s;
 }
 
 #workspaces {
-	margin-left: 12px;
+    background-color: @background;
+    border-radius: 10px;
 }
 
-#workspaces button {
-	box-shadow: none;
-	text-shadow: none;
-	padding: 0px;
-	margin-top: 3px;
-	margin-bottom: 3px;
-	padding-left: 3px;
-	padding-right: 3px;
-	color: @text;
-	animation: gradient_f 20s ease-in infinite;
-	transition: all 0.5s cubic-bezier(.55, -0.68, .48, 1.682);
-}
-
-#workspaces button.active {
-	background: @blue;
-	color: @crust;
-	margin-left: 3px;
-	padding-left: 12px;
-	padding-right: 12px;
-	margin-right: 3px;
-	animation: gradient_f 20s ease-in infinite;
-	transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
-}
-
-#workspaces button:hover {
-	background: @purple;
-	border: none;
+#cpu, #memory, #pulseaudio, #clock, #network {
+    background-color: @background;
+    border-radius: 10px;
+    margin-left: 8px;
+    padding: 0 8px;
 }
 
 #window {
-	color: @aqua;
-}
-
-#battery {
-	color: @aqua;
-	margin-right: 12px;
-}
-
-#pulseaudio {
-	color: @purple;
-	padding: 4px 12px;
-}
-
-#backlight {
-	color: @subtext0;
-}
-
-#clock {
-	color: @subtext0;
-	padding: 0px 8px;
+    background-color: @background;
+    border-radius: 10px;
+    padding: 0 8px;
 }
