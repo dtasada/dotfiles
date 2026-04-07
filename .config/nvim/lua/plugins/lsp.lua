@@ -1,106 +1,33 @@
-return {
-	"neovim/nvim-lspconfig",
+vim.pack.add({
+    "https://github.com/neovim/nvim-lspconfig",
+    "https://github.com/mason-org/mason.nvim",
+    "https://github.com/mason-org/mason-lspconfig.nvim",
+    "https://github.com/hrsh7th/nvim-cmp",
+    "https://github.com/hrsh7th/cmp-nvim-lsp",
+})
 
-	dependencies = {
-		{ "mason-org/mason.nvim" },
-		{ "mason-org/mason-lspconfig.nvim" },
+vim.diagnostic.config({ virtual_text = true })
 
-		{ "hrsh7th/nvim-cmp" },
-		{ "hrsh7th/cmp-nvim-lsp" },
-	},
+require("mason").setup({})
+require("mason-lspconfig").setup({})
 
-	config = function()
-		vim.diagnostic.config({ virtual_text = true })
+local cmp = require("cmp")
+cmp.setup({
+    mapping = {
+        ["<C-n>"] = cmp.mapping.select_next_item(select_opts),
+        ["<C-p>"] = cmp.mapping.select_prev_item(select_opts),
+        ["<C-u>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-d>"] = cmp.mapping.scroll_docs(4),
+        ["<C-e>"] = cmp.mapping.abort(),
 
-		require("mason").setup({})
-		require("mason-lspconfig").setup({
-			handlers = {
-				function(server_name) vim.lsp.config[server_name].setup({}) end,
+        ["<Tab>"] = cmp.mapping.confirm({ select = true }),
+        ["<cr>"] = cmp.mapping.confirm({ select = true }),
+    },
 
-				omnisharp = function()
-					vim.lsp.config.omnisharp.setup({
-						cmd = { "omnisharp", "--languageserver" },
-						root_dir = vim.lsp.config.util.root_pattern("*.sln"),
-					})
-				end,
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+    },
 
-				zls = function()
-					vim.lsp.config.zls.setup({
-						root_dir = vim.lsp.config.util.root_pattern("build.zig"),
-						settings = {
-							zls = {
-								enable_inlay_hints = true,
-								enable_snippets = true,
-								warn_style = true,
-							},
-						},
-					})
-					vim.g.zig_fmt_parse_errors = 1
-					vim.g.zig_fmt_autosave = 1
-					-- vim.g.zig_enable_build_on_save = 1
-					-- vim.g.zig_build_on_save_step = "check"
-				end,
-
-				--[[ clangd = function()
-					vim.lsp.config.clangd.setup({
-						init_options = {
-							fallbackFlags = { "--std=c++23" },
-						},
-					})
-				end, ]]
-
-				sourcekit_lsp = function() 
-					vim.lsp.config.sourcekit_lsp.setup({
-						cmd = { "sourcekit-lsp" },
-						filetypes = { "swift" },
-						-- root_dir = require("lspconfig.util").root_pattern({
-						root_dir = vim.lsp.config.util.root_pattern({
-							"Package.swift",
-							"Sources/",
-							".*.xcodeproj/",
-						}),
-					})
-				end,
-			},
-		})
-
-		local cmp = require("cmp")
-		cmp.setup({
-			mapping = {
-				["<C-n>"] = cmp.mapping.select_next_item(select_opts),
-				["<C-p>"] = cmp.mapping.select_prev_item(select_opts),
-				["<C-u>"] = cmp.mapping.scroll_docs(-4),
-				["<C-d>"] = cmp.mapping.scroll_docs(4),
-				["<C-e>"] = cmp.mapping.abort(),
-
-				["<Tab>"] = cmp.mapping.confirm({ select = true }),
-				["<cr>"] = cmp.mapping.confirm({ select = true }),
-			},
-
-			window = {
-				completion = cmp.config.window.bordered(),
-				documentation = cmp.config.window.bordered(),
-			},
-
-			sources = { { name = "nvim_lsp" } },
-		})
-
-        vim.lsp.config.zls = {
-            cmd = {"/Users/dt/coding/git/zls/zig-out/bin/zls"},
-            root_markers = {"build.zig"},
-            filetypes = {"zig"},
-            settings = {
-                zls = {
-                    enable_inlay_hints = true,
-                    enable_snippets = true,
-                    warn_style = true,
-                },
-            },
-        }
-        vim.g.zig_fmt_parse_errors = 1
-        vim.g.zig_fmt_autosave = 1
-        vim.g.zig_enable_build_on_save = 1
-        vim.g.zig_build_on_save_step = "check"
-        vim.lsp.enable("zls")
-	end,
-}
+    sources = { { name = "nvim_lsp" } },
+})

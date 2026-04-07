@@ -1,3 +1,11 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+vim.g.barbar_auto_setup = false
+vim.o.timeout = true
+vim.o.timeoutlen = 300
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
 vim.opt.clipboard = "unnamedplus"
 
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
@@ -28,6 +36,7 @@ vim.opt.ignorecase = true
 vim.opt.updatetime = 50
 
 vim.opt.termguicolors = true
+vim.opt.background = "dark"
 
 vim.opt.mouse = "a"
 
@@ -39,30 +48,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     pattern = "*",
     callback = function()
         vim.highlight.on_yank({ higroup = "IncSearch", timeout = 150 })
-    end,
-})
-
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-    pattern = "*.mcc",
-    callback = function()
-        vim.bo.filetype = "mcc"
-    end,
-})
-
-vim.api.nvim_create_autocmd("BufWritePre", {
-    group = vim.api.nvim_create_augroup("LspFormatOnSave", { clear = true }),
-
-    callback = function(args)
-        if vim.bo[args.buf].filetype == "java" then
-            return
-        end
-
-        local clients = vim.lsp.get_active_clients({ bufnr = args.buf })
-        if #clients > 0 then
-            vim.lsp.buf.format({
-                bufnr = args.buf,
-                timeout_ms = 2000,
-            })
-        end
     end,
 })
