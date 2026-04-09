@@ -1,4 +1,4 @@
 .git/
 .config/tmux/plugins
-**/.DS_Store
+.DS_Store
 nvim-pack-lock.json
