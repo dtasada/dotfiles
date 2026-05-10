@@ -3,6 +3,8 @@ vim.pack.add({
     "https://github.com/MagicDuck/grug-far.nvim",
     "https://github.com/folke/trouble.nvim",
     "https://github.com/folke/which-key.nvim",
+    "https://github.com/hrsh7th/cmp-nvim-lsp",
+    "https://github.com/hrsh7th/nvim-cmp",
     "https://github.com/ibhagwan/fzf-lua",
     "https://github.com/lewis6991/gitsigns.nvim",
     "https://github.com/mason-org/mason-lspconfig.nvim",
@@ -17,8 +19,6 @@ vim.pack.add({
     "https://github.com/stevearc/conform.nvim",
     "https://github.com/stevearc/oil.nvim",
     "https://github.com/windwp/nvim-autopairs",
-    "https://github.com/hrsh7th/nvim-cmp",
-    "https://github.com/hrsh7th/cmp-nvim-lsp",
 })
 
 require("Comment").setup({ toggler = { line = "gcc" } })

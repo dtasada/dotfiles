@@ -1,7 +1,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.g.barbar_auto_setup = false
 vim.o.timeout = true
 vim.o.timeoutlen = 300
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
@@ -51,3 +50,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
         vim.highlight.on_yank({ higroup = "IncSearch", timeout = 150 })
     end,
 })
+
+vim.treesitter.language.add('zag', { path = '/Users/dt/coding/git/zag/tree-sitter-zag/parser.so' })
+vim.filetype.add({ extension = { zag = "zag" } })
+vim.api.nvim_create_autocmd('FileType', { pattern = { 'zag' }, callback = function(ev) vim.treesitter.start() end, })
