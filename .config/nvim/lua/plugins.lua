@@ -3,8 +3,9 @@ vim.pack.add({
     "https://github.com/MagicDuck/grug-far.nvim",
     "https://github.com/folke/trouble.nvim",
     "https://github.com/folke/which-key.nvim",
-    "https://github.com/hrsh7th/cmp-nvim-lsp",
-    "https://github.com/hrsh7th/nvim-cmp",
+    { src = "https://github.com/Saghen/blink.cmp", version = vim.version.range("1.*") },
+    "https://github.com/Saghen/blink.lib",
+    "https://github.com/rafamadriz/friendly-snippets",
     "https://github.com/ibhagwan/fzf-lua",
     "https://github.com/lewis6991/gitsigns.nvim",
     "https://github.com/mason-org/mason-lspconfig.nvim",
@@ -65,26 +66,36 @@ require("telescope").setup({
 vim.diagnostic.config({ virtual_text = true })
 require("mason").setup({})
 require("mason-lspconfig").setup({})
-local cmp = require("cmp")
-cmp.setup({
-    mapping = {
-        ["<C-n>"] = cmp.mapping.select_next_item(select_opts),
-        ["<C-p>"] = cmp.mapping.select_prev_item(select_opts),
-        ["<C-u>"] = cmp.mapping.scroll_docs(-4),
-        ["<C-d>"] = cmp.mapping.scroll_docs(4),
-        ["<C-e>"] = cmp.mapping.abort(),
 
-        ["<Tab>"] = cmp.mapping.confirm({ select = true }),
-        ["<cr>"] = cmp.mapping.confirm({ select = true }),
+require('blink.cmp').build():wait(60000)
+require("blink.cmp").setup({
+    keymap = { preset = 'default' },
+    appearance = {
+        use_nvim_cmp_as_default = true,
+        nerd_font_variant = 'mono',
     },
-
-    window = {
-        completion = cmp.config.window.bordered(),
-        documentation = cmp.config.window.bordered(),
+    sources = {
+        default = { 'lsp', 'path', 'snippets' },
     },
-
-    sources = { { name = "nvim_lsp" } },
+    signature = { enabled = true },
+	completion = { menu = { auto_show = true } },
+    keymap = {
+        preset = 'none',
+		["<C-Space>"] = { "show", "hide" },
+		["<CR>"] = { "accept", "fallback" },
+		["<C-n>"] = { "select_next", "fallback" },
+		["<C-p>"] = { "select_prev", "fallback" },
+		["<Tab>"] = { "accept", "fallback" },
+    },
+    fuzzy = {
+        implementation = "prefer_rust",
+    },
 })
+
+vim.lsp.config["*"] = {
+	capabilities = require("blink.cmp").get_lsp_capabilities(),
+}
+
 
 local tsb = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff",  tsb.find_files,   { desc = "Telescope: Find file" })

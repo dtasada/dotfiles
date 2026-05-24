@@ -7,8 +7,6 @@ vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
 vim.o.clipboard = "unnamedplus"
 
-vim.o.completeopt = "menu,menuone,noselect"
-
 vim.o.cursorline = true
 
 vim.o.number = true
@@ -40,7 +38,6 @@ vim.o.background = "dark"
 vim.o.mouse = "a"
 
 vim.o.winborder = 'rounded'
-vim.o.autocomplete = true
 
 vim.api.nvim_create_autocmd("TextYankPost", {
     group = vim.api.nvim_create_augroup("highlight_yank", {}),
